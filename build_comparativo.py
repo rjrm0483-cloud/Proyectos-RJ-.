@@ -93,7 +93,7 @@ for i,(desc,uni,pj,pa,obs) in enumerate(items,start=1):
     # tendencia (etiqueta derivada, snapshot)
     if pa<pj:  txt,col="▼ más barato",VERDE
     elif pa>pj:txt,col="▲ más caro",ROJO
-    else:      txt,col="= igual",GRIST
+    else:      txt,col="Igual",GRIST
     ct=ws.cell(row=row,column=7,value=txt); ct.font=F(10,True,col)
     co=ws.cell(row=row,column=8,value=obs); co.font=F(9,italic=True,color="595959")
     ws.cell(row=row,column=1).alignment=CENTER
