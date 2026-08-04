@@ -156,7 +156,7 @@ materiales_porton = [
     ("Pintura anticorrosiva",                            "Cuarto", 2,  180.00),
     ("Diluyente (thinner corriente)",                    "Galón",  1,  400.00),
     ("Tubo cuadrado de 1 1/2\" chapa 14 (6 m)",          "Unidad", 3,  580.00),
-    ("Lámina negra de 4x8 pies x 1/16\"",                "Unidad", 1,  1600.00),
+    ("Lámina negra de 4x8 pies x 1 mm (cal. 20)",        "Unidad", 1,  1250.00),
     ("Par de bisagra de bala",                           "Par",    1,  120.00),
     ("Pasador (aldaba) de 5\"",                          "Unidad", 1,  90.00),
     ("Disco de corte fino de 7\" para metal",            "Unidad", 2,  75.00),
@@ -201,15 +201,13 @@ def fila_resumen(row, etiqueta, formula, fmt=MONEDA, fill=None, blanco=False, bo
     ws.row_dimensions[row].height = 26 if big else 22
 
 r_mat  = res + 1
-r_mo   = res + 2
-r_subg = res + 3
-r_imp  = res + 4
-r_tot  = res + 5
-fila_resumen(r_mat,  "Subtotal materiales (IVA incluido)", f"=F{sub1}+F{sub2}", fill=GRIS_SUB, bold=False)
-fila_resumen(r_mo,   "Subtotal mano de obra",              f"=F{sub3}",         fill=GRIS_SUB, bold=False)
-fila_resumen(r_subg, "Subtotal general",                   f"=F{r_mat}+F{r_mo}", fill=GRIS_SUB)
-fila_resumen(r_imp,  "Imprevistos (5%)",                   f"=F{r_subg}*0.05",   fill=GRIS_SUB)
-fila_resumen(r_tot,  "TOTAL GENERAL (C$)",                 f"=F{r_subg}+F{r_imp}", fill=GRIS_TOT, blanco=True, big=True)
+r_imp  = res + 2
+r_mo   = res + 3
+r_tot  = res + 4
+fila_resumen(r_mat, "Subtotal materiales (IVA incluido)",    f"=F{sub1}+F{sub2}",  fill=GRIS_SUB, bold=False)
+fila_resumen(r_imp, "Imprevistos (5% sobre materiales)",     f"=F{r_mat}*0.05",    fill=GRIS_SUB, bold=False)
+fila_resumen(r_mo,  "Subtotal mano de obra",                 f"=F{sub3}",          fill=GRIS_SUB, bold=False)
+fila_resumen(r_tot, "TOTAL GENERAL (C$)",                    f"=F{r_mat}+F{r_imp}+F{r_mo}", fill=GRIS_TOT, blanco=True, big=True)
 
 r_iva = r_tot + 1
 merge_set(f"A{r_iva}:E{r_iva}", "IVA (15%) ya contenido en el monto de materiales:",
@@ -341,7 +339,7 @@ specs = [
     ("Viga corona / solera", "Viga de amarre (corona) de concreto reforzado en la parte superior del muro, ligada a las columnas de confinamiento para dar rigidez al conjunto.", "RNC-07 mampostería confinada"),
     ("Amarres y fijación", "Alambre de amarre recocido cal. 18 para el armado del acero. Clavos corrientes y de acero de 2 1/2\" para la formaleta de madera (tabla y regla de pino).", "Práctica constructiva"),
     ("Encofrado / formaleta", "Formaleta de madera de pino (tabla 1x12 y regla 1x2) para columnas y viga; apuntalada, aplomada y humedecida antes del colado. Material reutilizable.", "Práctica constructiva"),
-    ("Estructura del portón", "Marco de tubo cuadrado de 1 1/2\" chapa 14 con forro de lámina negra de 1/16\" (4x8 pies). Uniones soldadas con electrodo 6011 de 3/32\".", "AWS D1.1 / práctica de taller"),
+    ("Estructura del portón", "Marco de tubo cuadrado de 1 1/2\" chapa 14 con forro de lámina negra de 1 mm (cal. 20, 4x8 pies). Uniones soldadas con electrodo 6011 de 3/32\".", "AWS D1.1 / práctica de taller"),
     ("Herrajes del portón", "Par de bisagra de bala para el giro y pasador (aldaba) de 5\" para el cierre. Ajuste y lubricación final.", "Ferretería estándar"),
     ("Protección anticorrosiva", "Limpieza de escoria y desengrase; una mano de pintura anticorrosiva (base) diluida con thinner sobre el portón y los elementos metálicos.", "SSPC-SP2 / ficha técnica"),
     ("Concertina / serpentina", "Concertina de 450 mm fijada sobre la corona del muro con grapas y soportes, para seguridad perimetral. Tensado uniforme y anclaje firme.", "Práctica de seguridad"),
@@ -411,13 +409,14 @@ for (_d, _u, cant, pu) in mano_obra:
 val_map[f"F{sub3}"] = round(sum(c * p for _a, _b, c, p in mano_obra), 2)
 
 sub1v = val_map[f"F{sub1}"]; sub2v = val_map[f"F{sub2}"]; sub3v = val_map[f"F{sub3}"]
-matv = round(sub1v + sub2v, 2); mov = sub3v
-subgv = round(matv + mov, 2); impv = round(subgv * 0.05, 2); totv = round(subgv + impv, 2)
+matv = round(sub1v + sub2v, 2)
+impv = round(matv * 0.05, 2)
+mov = sub3v
+totv = round(matv + impv + mov, 2)
 ivav = round((sub1v + sub2v) / 1.15 * 0.15, 2); usdv = round(totv / 36.62, 2)
 val_map[f"F{r_mat}"] = matv
-val_map[f"F{r_mo}"] = mov
-val_map[f"F{r_subg}"] = subgv
 val_map[f"F{r_imp}"] = impv
+val_map[f"F{r_mo}"] = mov
 val_map[f"F{r_tot}"] = totv
 val_map[f"F{r_iva}"] = ivav
 val_map[f"F{r_usd}"] = usdv
@@ -441,6 +440,5 @@ with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
         zout.writestr(n, blobs[n])
 os.replace(tmp, ARCH)
 
-print("OK. sub1:", sub1v, "sub2:", sub2v, "sub3:", sub3v,
-      "| subtotal general:", subgv, "imprevistos:", impv, "TOTAL:", totv,
-      "| USD:", usdv)
+print("OK. materiales:", matv, "| imprevistos(5%):", impv,
+      "| mano de obra:", mov, "| TOTAL:", totv, "| USD:", usdv)
