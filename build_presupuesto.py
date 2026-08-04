@@ -246,22 +246,29 @@ for o in observaciones:
 ley = ro + 1
 merge_set(f"A{ley}:F{ley}", "LEYENDA DE COLORES", F(11, True, AZUL), align=LEFT)
 ws.row_dimensions[ley].height = 20
+# muestra_texto: lo que se ve en el cuadrito de la col A · fill_swatch/font_swatch: color del cuadrito
 leyendas = [
-    ("Texto azul", AZUL_EDIT, "Celdas editables por el usuario (cantidad y precio unitario). El total se calcula automáticamente."),
-    ("Fondo gris claro", GRIS_SUB, "Subtotales y resumen del presupuesto."),
-    ("Fondo gris oscuro", GRIS_TOT, "Total general del presupuesto."),
+    ("123", "FFFFFF", AZUL_EDIT, "Texto azul", "Celdas que puede editar (cantidad y precio unitario); el total se calcula solo."),
+    ("",    GRIS_SUB, "000000",   "Fondo gris claro", "Subtotales y resumen del presupuesto."),
+    ("",    GRIS_TOT, "FFFFFF",   "Fondo gris oscuro", "Total general del presupuesto."),
 ]
+CENTERNW = Alignment(horizontal="center", vertical="center", wrap_text=False)
 rl = ley + 1
-for etq, color, desc in leyendas:
-    c = ws.cell(row=rl, column=1, value=etq)
-    c.fill = PatternFill("solid", fgColor="FFFFFF" if color == AZUL_EDIT else color)
-    c.font = F(10, True, AZUL_EDIT if color == AZUL_EDIT else ("FFFFFF" if color == GRIS_TOT else "000000"))
-    c.alignment = CENTER; c.border = BORDER
-    ws.merge_cells(f"B{rl}:F{rl}")
-    d = ws[f"B{rl}"]; d.value = desc; d.font = F(10); d.alignment = LEFT; d.border = BORDER
+for muestra, fill_sw, font_sw, etq, desc in leyendas:
+    # A: cuadrito de muestra
+    a = ws.cell(row=rl, column=1, value=muestra)
+    a.fill = PatternFill("solid", fgColor=fill_sw)
+    a.font = F(10, True, font_sw); a.alignment = CENTERNW; a.border = BORDER
+    # B: etiqueta
+    b = ws.cell(row=rl, column=2, value=etq); b.font = F(10, True); b.alignment = LEFT; b.border = BORDER
+    # C:F: descripción
+    ws.merge_cells(f"C{rl}:F{rl}")
+    d = ws[f"C{rl}"]; d.value = desc; d.font = F(10)
+    d.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
     for cc in range(1, 7):
         ws.cell(row=rl, column=cc).border = BORDER
-    ws.row_dimensions[rl].height = 18
+    lineas = max(1, int(len(desc) / 52) + 1)   # C:F ancho ~55
+    ws.row_dimensions[rl].height = max(20, 15 * lineas + 6)
     rl += 1
 
 # ---- Firmas ----------------------------------------------------------------
