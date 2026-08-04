@@ -56,24 +56,24 @@ ws.row_dimensions[5].height=38
 
 # (descripción, unidad, precio_jul, precio_actual, observación)
 items=[
- ("Bloque de concreto de 6\" (15x20x40 cm)","Unidad",40,24,""),
- ("Varilla corrugada de 3/8\" G-40","Unidad",1700,195,"30-jul: 19 u @ C$1,700 (precio atípico); Actual: 79 u @ C$195. Validar."),
+ ("Bloque de concreto de 6\" (15x20x40 cm)","Unidad",40,22,"Ref. CONCRENIC/ARCON"),
+ ("Varilla corrugada de 3/8\" G-40","Unidad",1700,185,"30-jul: 19 u @ C$1,700 (precio atípico); Actual: 79 u @ C$185. Validar."),
  ("Estribo de 1/4\" de 10x10 cm","Unidad",22,15,""),
- ("Alambre de amarre recocido","Libra",48,28,"30-jul cal.16 / Actual cal.18"),
- ("Cemento gris tipo GU (bolsa 42.5 kg)","Bolsa",465,385,""),
- ("Arena de construcción","m³",950,800,""),
- ("Piedrín de 1/2\"","m³",1300,1000,""),
- ("Tabla de pino de 1x12x6 varas","Unidad",320,520,"Actual más alto"),
+ ("Alambre de amarre recocido","Libra",48,28,"Ref. Padua ≈C$2,050/qq. 30-jul cal.16 / Actual cal.18"),
+ ("Cemento gris tipo GU (bolsa 42.5 kg)","Bolsa",465,395,"Ref. SINSA ≈C$385–400"),
+ ("Arena de construcción","m³",950,700,"Ref. mercado ≈C$600–800"),
+ ("Piedrín de 1/2\"","m³",1300,1000,"Ref. mercado C$900–1,000"),
+ ("Tabla de pino de 1x12x6 varas","Unidad",320,500,"Actual más alto"),
  ("Regla de pino de 1x2x6 varas","Unidad",110,110,""),
  ("Clavos corrientes de 2 1/2\"","Libra",48,35,""),
  ("Clavos de acero de 2 1/2\"","Docena",70,55,""),
  ("Adhesivo Plaster Bond","Litro",185,230,"Actual más alto"),
- ("Rollo de concertina / serpentina","Rollo",950,2300,"Mercado usual C$1,800–2,500; validar el de 30-jul"),
+ ("Rollo de concertina / serpentina","Rollo",950,2200,"Mercado usual C$1,800–2,500; validar el de 30-jul"),
  ("Grapas","Libra",55,35,""),
  ("Electrodo soldadura 6011 3/32\" (caja)","Caja",520,780,"Actual más alto"),
  ("Pintura anticorrosiva","Cuarto",190,180,"30-jul: C$380 el juego de 2 cuartos (≈C$190 c/u)"),
  ("Diluyente (thinner)","Galón",320,400,"Actual más alto"),
- ("Tubo cuadrado 1 1/2\" chapa 14 (6 m)","Unidad",480,580,"Actual más alto"),
+ ("Tubo cuadrado 1 1/2\" chapa 14 (6 m)","Unidad",480,700,"Ref. SOFECONSA: 1\"x1\" ch14 ≈C$420+IVA"),
  ("Lámina negra de 4x8 pies","Unidad",1050,1250,"30-jul: cal.14 (~2 mm) / Actual: 1 mm (cal.20)"),
  ("Par de bisagra de bala","Par",220,120,""),
  ("Pasador (aldaba) de 5\"","Unidad",95,90,""),
@@ -126,10 +126,10 @@ ws.row_dimensions[h2].height=32
 
 # filas: (concepto, valor_jul, valor_act) ; diferencia y % con fórmula
 tot_rows=[
- ("Subtotal materiales (IVA incluido)",51217,36387,False),
- ("Imprevistos 5%",3335.85,1819.35,False),
+ ("Subtotal materiales (IVA incluido)",51217,35387,False),
+ ("Imprevistos 5%",3335.85,1769.35,False),
  ("Subtotal mano de obra",15500,15500,False),
- ("TOTAL GENERAL",70052.85,53706.35,True),
+ ("TOTAL GENERAL",70052.85,52656.35,True),
 ]
 tot_cache={}
 rr=h2+1
@@ -168,9 +168,9 @@ merge_set(f"A{vr}:H{vr}","VEREDICTO",F(12,True,AZUL),fill="F2F2F2",
           align=Alignment("left",vertical="center"),border=True)
 ws.row_dimensions[vr].height=22
 veredicto=[
- "• En conjunto NO: la versión actual es MÁS BARATA. El total bajó de C$ 70,052.85 (30-jul) a C$ 53,706.35, una reducción de C$ 16,346.50 (−23.3%).",
+ "• En conjunto NO: la versión actual es MÁS BARATA. El total bajó de C$ 70,052.85 (30-jul) a C$ 52,656.35, una reducción de C$ 17,396.50 (−24.8%). Los precios actuales están contrastados con el mercado nicaragüense (SINSA, SOFECONSA, Padua, tecnoguias).",
  "• En precios unitarios, la versión actual es más barata en 15 de 22 materiales; 7 subieron (tabla de pino, Plaster Bond, concertina, soldadura, thinner, tubo y lámina) y 1 quedó igual (regla).",
- "• El mayor efecto viene de la varilla de 3/8\": el 30-jul se registró a C$ 1,700 por unidad —precio atípico, pues una varilla ronda C$ 180–200— frente a C$ 195 en la versión actual. Además cambió la cantidad (19 vs 79 u); conviene confirmar cuál es la correcta según la lista.",
+ "• El mayor efecto viene de la varilla de 3/8\": el 30-jul se registró a C$ 1,700 por unidad —precio atípico, pues una varilla ronda C$ 180–200— frente a C$ 185 en la versión actual. Además cambió la cantidad (19 vs 79 u); conviene confirmar cuál es la correcta según la lista.",
  "• Puntos a validar con cotización formal: varilla de 3/8\" (precio y cantidad), rollo de concertina y el calibre de la lámina del portón (cal.14 vs 1 mm).",
 ]
 rv=vr+1

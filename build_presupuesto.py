@@ -136,26 +136,26 @@ def fila_subtotal(row, etiqueta, formula):
 
 # ---- Datos -----------------------------------------------------------------
 materiales_muro = [
-    ("Bloque de concreto de 6\" (15x20x40 cm)",          "Unidad", 80,  24.00),
-    ("Varilla corrugada de 3/8\" G-40 (barra de 6 m)",   "Unidad", 79,  195.00),
+    ("Bloque de concreto de 6\" (15x20x40 cm)",          "Unidad", 80,  22.00),
+    ("Varilla corrugada de 3/8\" G-40 (barra de 6 m)",   "Unidad", 79,  185.00),
     ("Estribo de 1/4\" armado de 10x10 cm",              "Unidad", 100, 15.00),
     ("Alambre de amarre recocido cal. 18",               "Libra",  4,   28.00),
-    ("Cemento gris tipo GU (bolsa de 42.5 kg)",          "Bolsa",  5,   385.00),
-    ("Arena de construcción",                            "m³",     1,   800.00),
+    ("Cemento gris tipo GU (bolsa de 42.5 kg)",          "Bolsa",  5,   395.00),
+    ("Arena de construcción",                            "m³",     1,   700.00),
     ("Piedrín de 1/2\"",                                 "m³",     0.5, 1000.00),
-    ("Tabla de pino de 1x12x6 varas",                    "Unidad", 3,   520.00),
+    ("Tabla de pino de 1x12x6 varas",                    "Unidad", 3,   500.00),
     ("Regla de pino de 1x2x6 varas",                     "Unidad", 2,   110.00),
     ("Clavos corrientes de 2 1/2\"",                     "Libra",  5,   35.00),
     ("Clavos de acero de 2 1/2\"",                       "Docena", 2,   55.00),
     ("Adhesivo Plaster Bond (concreto-concreto)",        "Litro",  1,   230.00),
 ]
 materiales_porton = [
-    ("Rollo de concertina / serpentina de 450 mm",       "Rollo",  3,  2300.00),
+    ("Rollo de concertina / serpentina de 450 mm",       "Rollo",  3,  2200.00),
     ("Grapas para cerca",                                "Libra",  4,  35.00),
     ("Electrodo de soldadura 6011 de 3/32\" (caja)",     "Caja",   1,  780.00),
     ("Pintura anticorrosiva",                            "Cuarto", 2,  180.00),
     ("Diluyente (thinner corriente)",                    "Galón",  1,  400.00),
-    ("Tubo cuadrado de 1 1/2\" chapa 14 (6 m)",          "Unidad", 3,  580.00),
+    ("Tubo cuadrado de 1 1/2\" chapa 14 (6 m)",          "Unidad", 3,  700.00),
     ("Lámina negra de 4x8 pies x 1 mm (cal. 20)",        "Unidad", 1,  1250.00),
     ("Par de bisagra de bala",                           "Par",    1,  120.00),
     ("Pasador (aldaba) de 5\"",                          "Unidad", 1,  90.00),
@@ -226,13 +226,14 @@ ws.row_dimensions[r_usd].height = 16
 obs_title = r_usd + 2
 escribir_seccion(obs_title, "OBSERVACIONES", "F2F2F2")
 observaciones = [
-    "1. Precios unitarios según el mercado de ferreterías de Managua, Nicaragua (agosto 2026); incluyen IVA (15%). Están sujetos a variación por disponibilidad y fluctuación del mercado.",
+    "1. Precios unitarios de referencia del mercado nicaragüense (SINSA, Ferretería Jenny, SOFECONSA, CONCRENIC y datos de mercado 2025–2026); incluyen IVA (15%). Están sujetos a variación por proveedor, disponibilidad y fluctuación del mercado.",
     "2. El muro se levanta sobre un muro de cantera existente y se continúa con bloque de 6\" en mampostería confinada (columnas y viga corona de amarre con refuerzo de 3/8\" y estribos de 1/4\").",
     "3. Las cantidades provienen de la lista entregada por el cliente. No se incluye desperdicio adicional al 5% de imprevistos ni acarreo de materiales fuera del sitio.",
     "4. No incluye: excavación o refuerzo de cimiento nuevo, trazo topográfico, permisos municipales, ni acabado fino (repello/afinado), salvo indicación contraria.",
     "5. La mano de obra es por trato (precio global) con maestro de obra; no incluye prestaciones de ley ni alimentación, salvo acuerdo por escrito.",
     "6. La madera (tablas y reglas) es para formaleta/encofrado de columnas y viga; es material reutilizable no consumido en su totalidad.",
     "7. Validez de la oferta: 30 días calendario a partir de la fecha de emisión. Tipo de cambio referencial: 1 USD ≈ C$ 36.62.",
+    "8. Fuentes de precios: piedrín, arena y cemento (tecnoguias.net / SINSA); tubo cuadrado de hierro negro (Ferretería SOFECONSA, 1\"x1\" ch.14 ≈ C$420+IVA); alambre de amarre (Padua Materiales ≈ C$2,050/quintal); lámina negra 4x8 (referencia regional 1/16\"≈US$44). Se recomienda confirmar con cotización formal de SINSA o Ferretería Jenny antes de comprar.",
 ]
 ro = obs_title + 1
 for o in observaciones:
