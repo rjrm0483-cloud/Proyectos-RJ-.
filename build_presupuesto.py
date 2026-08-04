@@ -242,37 +242,8 @@ for o in observaciones:
     ws.row_dimensions[ro].height = 15 * lineas + 6
     ro += 1
 
-# ---- Leyenda ---------------------------------------------------------------
-ley = ro + 1
-merge_set(f"A{ley}:F{ley}", "LEYENDA DE COLORES", F(11, True, AZUL), align=LEFT)
-ws.row_dimensions[ley].height = 20
-# muestra_texto: lo que se ve en el cuadrito de la col A · fill_swatch/font_swatch: color del cuadrito
-leyendas = [
-    ("123", "FFFFFF", AZUL_EDIT, "Texto azul", "Celdas que puede editar (cantidad y precio unitario); el total se calcula solo."),
-    ("",    GRIS_SUB, "000000",   "Fondo gris claro", "Subtotales y resumen del presupuesto."),
-    ("",    GRIS_TOT, "FFFFFF",   "Fondo gris oscuro", "Total general del presupuesto."),
-]
-CENTERNW = Alignment(horizontal="center", vertical="center", wrap_text=False)
-rl = ley + 1
-for muestra, fill_sw, font_sw, etq, desc in leyendas:
-    # A: cuadrito de muestra
-    a = ws.cell(row=rl, column=1, value=muestra)
-    a.fill = PatternFill("solid", fgColor=fill_sw)
-    a.font = F(10, True, font_sw); a.alignment = CENTERNW; a.border = BORDER
-    # B: etiqueta
-    b = ws.cell(row=rl, column=2, value=etq); b.font = F(10, True); b.alignment = LEFT; b.border = BORDER
-    # C:F: descripción
-    ws.merge_cells(f"C{rl}:F{rl}")
-    d = ws[f"C{rl}"]; d.value = desc; d.font = F(10)
-    d.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
-    for cc in range(1, 7):
-        ws.cell(row=rl, column=cc).border = BORDER
-    lineas = max(1, int(len(desc) / 52) + 1)   # C:F ancho ~55
-    ws.row_dimensions[rl].height = max(20, 15 * lineas + 6)
-    rl += 1
-
 # ---- Firmas ----------------------------------------------------------------
-fir = rl + 2
+fir = ro + 2
 top = Side(style="thin", color="000000")
 ws.merge_cells(f"B{fir}:C{fir}")
 ws.merge_cells(f"E{fir}:F{fir}")
