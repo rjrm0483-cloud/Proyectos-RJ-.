@@ -38,6 +38,9 @@ const im = {
   cerebroNeu:IMG+"90f42778-1000206864.jpg",
   redNeuronal:IMG+"d425260d-1000207007.jpg",
   consulta:  IMG+"ac2a47e1-1000207008.jpg",
+  pasillo:   IMG+"74db021a-1000207011.jpg",
+  salaEspera:IMG+"fe937a36-1000207009.jpg",
+  bosque:    IMG+"8e707161-1000207012.jpg",
 };
 
 // ---------- helpers ----------
@@ -110,7 +113,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
   header(s, 1, "Agenda de la sesión");
-  framedImage(s, im.cerebroLuz, 7.35, 1.55, 5.45, 5.35);
+  framedImage(s, im.salaEspera, 7.35, 1.55, 5.45, 5.35);
   const cols = [
     ["Fundamentos", ["Introducción y contexto clínico","Historia y desarrollo","Estructura y clasificación"]],
     ["Farmacología", ["Mecanismo de acción","Farmacodinamia receptorial","Farmacocinética (ADME)"]],
@@ -369,7 +372,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
   header(s, 12, "Depresión mayor: terapia adyuvante");
-  framedImage(s, im.manoRx, 0.6, 1.6, 5.35, 5.3);
+  framedImage(s, im.bosque, 0.6, 1.6, 5.35, 5.3);
   s.addText(bullets([
     { t:"Indicado como complemento del antidepresivo cuando la respuesta es inadecuada.", },
     { t:"Ensayos pivotales (PYXIS/POLARIS): reducción significativa de la escala MADRS frente a antidepresivo + placebo.", },
@@ -388,7 +391,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
   header(s, 13, "Agitación en la demencia de Alzheimer");
-  framedImage(s, im.molCerebro, 8.55, 1.6, 4.25, 4.2);
+  framedImage(s, im.pasillo, 8.55, 1.6, 4.25, 4.2);
   s.addText([
     { text:"Primer y único fármaco con indicación aprobada por la FDA (2023) para esta condición.", options:{ fontFace:HEAD, bold:true, fontSize:15.5, color:NAVY, breakLine:true, paraSpaceAfter:8 } },
   ], { x:0.6, y:1.55, w:7.75, h:0.6 });
