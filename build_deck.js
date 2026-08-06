@@ -36,6 +36,8 @@ const im = {
   mecCerebro:IMG+"403a44db-1000206766.jpg",
   molBlanca: IMG+"03076ebf-1000206863.jpg",
   cerebroNeu:IMG+"90f42778-1000206864.jpg",
+  redNeuronal:IMG+"d425260d-1000207007.jpg",
+  consulta:  IMG+"ac2a47e1-1000207008.jpg",
 };
 
 // ---------- helpers ----------
@@ -407,7 +409,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
   header(s, 14, "Brexpiprazol y los trastornos de la conducta");
-  framedImage(s, im.cerebroNeu, 8.55, 1.6, 4.25, 4.2);
+  framedImage(s, im.redNeuronal, 8.55, 1.6, 4.25, 4.2);
   s.addText(bullets([
     { t:"Los trastornos de la conducta agrupan patrones persistentes de agresividad, impulsividad y transgresión de normas sociales.", },
     { t:"En el paciente psiquiátrico y en la demencia se expresan como agitación, hostilidad y conducta disruptiva.", },
@@ -580,7 +582,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
   header(s, 21, "Perlas clínicas para la práctica");
-  framedImage(s, im.lab, 8.55, 1.6, 4.25, 4.2);
+  framedImage(s, im.consulta, 8.55, 1.6, 4.25, 4.2);
   const pearls = [
     "Titular siempre de forma gradual: es la mejor estrategia frente a la acatisia inicial.",
     "Monitorizar peso, glucemia y lípidos al inicio y periódicamente.",
