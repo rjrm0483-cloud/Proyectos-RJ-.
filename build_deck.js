@@ -60,7 +60,7 @@ function bullets(items){
   return items.map((it,i)=>({
     text: it.t,
     options: Object.assign({ bullet:{ code:"2022", indent:14 }, color:INK, fontFace:BODY,
-      fontSize: it.s||15, bold:!!it.b, breakLine:true, paraSpaceAfter: it.sp!=null?it.sp:8 }, it.o||{})
+      fontSize: it.s||16, bold:!!it.b, breakLine:true, paraSpaceAfter: it.sp!=null?it.sp:8 }, it.o||{})
   }));
 }
 
@@ -70,7 +70,7 @@ function infoCard(slide, x, y, w, h, title, body, opt={}){
     fill:{color: opt.fill||WHITE}, line:{ color: opt.line||"D9E2F5", width:1 }, shadow: opt.shadow?shadow():undefined });
   slide.addText([
     { text:title, options:{ fontFace:HEAD, fontSize: opt.ts||16, bold:true, color: opt.tc||NAVY, breakLine:true, paraSpaceAfter:4 } },
-    ...(Array.isArray(body)? body : [{ text:body, options:{ fontFace:BODY, fontSize: opt.bs||13, color: opt.bc||INK } }])
+    ...(Array.isArray(body)? body : [{ text:body, options:{ fontFace:BODY, fontSize: opt.bs||14, color: opt.bc||INK } }])
   ], { x:x+0.22, y:y+0.16, w:w-0.44, h:h-0.32, valign:"top", align:"left" });
 }
 
@@ -119,7 +119,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     s.addShape(p.ShapeType.ellipse, { x:0.6, y:yy, w:0.5, h:0.5, fill:{color: idx%2?NAVY:ACCENT} });
     s.addText(String(idx+1), { x:0.6, y:yy, w:0.5, h:0.5, align:"center", valign:"middle", fontFace:HEAD, bold:true, fontSize:18, color:WHITE });
     s.addText(c[0], { x:1.25, y:yy-0.05, w:5.9, h:0.4, fontFace:HEAD, bold:true, fontSize:17, color:NAVY });
-    s.addText(c[1].join("   ·   "), { x:1.25, y:yy+0.36, w:5.9, h:0.7, fontFace:BODY, fontSize:12.5, color:MUTE });
+    s.addText(c[1].join("   ·   "), { x:1.25, y:yy+0.36, w:5.9, h:0.7, fontFace:BODY, fontSize:13.5, color:MUTE });
   });
   s.addNotes("Recorrido: de los fundamentos farmacológicos a la aplicación clínica práctica del brexpiprazol.");
 })();
@@ -162,7 +162,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     const yy = 1.6 + i*1.32;
     s.addShape(p.ShapeType.roundRect, { x:6.45, y:yy, w:6.35, h:1.12, rectRadius:0.07, fill:{color:LIGHT}, line:{color:"D9E2F5",width:1} });
     s.addText(it[0], { x:6.65, y:yy+0.12, w:2.2, h:0.9, fontFace:HEAD, bold:true, fontSize:15, color:ACCENT, valign:"top" });
-    s.addText(it[1], { x:8.55, y:yy+0.12, w:4.05, h:0.9, fontFace:BODY, fontSize:12.5, color:INK, valign:"middle" });
+    s.addText(it[1], { x:8.55, y:yy+0.12, w:4.05, h:0.9, fontFace:BODY, fontSize:13.5, color:INK, valign:"middle" });
   });
   s.addNotes("Otsuka + Lundbeck. Aprobación FDA 2015 (esquizofrenia y TDM adyuvante). 2023: primer fármaco para agitación en Alzheimer.");
 })();
@@ -203,7 +203,7 @@ function stat(slide, x, y, w, big, label, opt={}){
   ];
   cards.forEach((c,i)=>{
     const yy = 1.6 + i*1.3;
-    infoCard(s, 0.6, yy, 6.6, 1.12, c[0], [{text:c[1], options:{fontFace:BODY, fontSize:13.5, color:INK}}], { fill:LIGHT, ts:15 });
+    infoCard(s, 0.6, yy, 6.6, 1.12, c[0], [{text:c[1], options:{fontFace:BODY, fontSize:14.5, color:INK}}], { fill:LIGHT, ts:16 });
   });
   s.addNotes("Atípico de 2.ª generación. Concepto SDAM. ATC N05AX16. La firma es el agonismo parcial combinado con antagonismo 5-HT2A.");
 })();
@@ -244,7 +244,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     s.addText(c[0], { x:7.2, y:yy+0.16, w:1.85, h:1.15, fontFace:HEAD, bold:true, fontSize:24, color:ICE, valign:"middle", align:"center" });
     s.addText([
       { text:c[1], options:{ fontFace:HEAD, bold:true, fontSize:14, color:WHITE, breakLine:true, paraSpaceAfter:3 } },
-      { text:c[2], options:{ fontFace:BODY, fontSize:12, color:ICE } },
+      { text:c[2], options:{ fontFace:BODY, fontSize:13, color:ICE } },
     ], { x:9.05, y:yy+0.14, w:3.7, h:1.2, valign:"middle" });
   });
   s.addNotes("Los tres pilares: agonismo parcial D2/D3, agonismo parcial 5-HT1A, antagonismo 5-HT2A. Concepto de 'sintonización' de circuitos límbico y cortical.");
@@ -333,7 +333,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     s.addText(String(i+1), { x:0.6, y:yy, w:0.7, h:0.7, align:"center", valign:"middle", fontFace:HEAD, bold:true, fontSize:22, color:WHITE });
     s.addText([
       { text:c[0], options:{ fontFace:HEAD, bold:true, fontSize:19, color:NAVY, breakLine:true, paraSpaceAfter:4 } },
-      { text:c[1], options:{ fontFace:BODY, fontSize:13.5, color:INK } },
+      { text:c[1], options:{ fontFace:BODY, fontSize:14.5, color:INK } },
     ], { x:1.5, y:yy-0.05, w:6.7, h:1.5, valign:"top" });
   });
   s.addNotes("Tres indicaciones: esquizofrenia, TDM adyuvante y agitación en Alzheimer (2023). Enfatizar que la agitación en demencia mantiene la advertencia de mortalidad.");
@@ -464,11 +464,11 @@ function stat(slide, x, y, w, big, label, opt={}){
   ];
   common.forEach((c,i)=>{
     const yy = 1.65 + i*1.02;
-    infoCard(s, 0.6, yy, 7.75, 0.88, c[0], [{text:c[1], options:{fontFace:BODY, fontSize:12.5, color:INK}}], { fill:LIGHT, ts:14.5, bs:12.5 });
+    infoCard(s, 0.6, yy, 7.75, 0.88, c[0], [{text:c[1], options:{fontFace:BODY, fontSize:12.5, color:INK}}], { fill:LIGHT, ts:14.5, bs:13.5 });
   });
   s.addText([
     { text:"Perfil metabólico y cardiovascular", options:{ fontFace:HEAD, bold:true, fontSize:13.5, color:NAVY, breakLine:true, paraSpaceAfter:4 } },
-    { text:"Efecto moderado sobre peso y lípidos; elevación discreta de prolactina; impacto mínimo sobre el intervalo QTc. Menor activación/insomnio que el aripiprazol.", options:{ fontFace:BODY, fontSize:12, color:INK } },
+    { text:"Efecto moderado sobre peso y lípidos; elevación discreta de prolactina; impacto mínimo sobre el intervalo QTc. Menor activación/insomnio que el aripiprazol.", options:{ fontFace:BODY, fontSize:13, color:INK } },
   ], { x:8.6, y:5.45, w:4.2, h:1.5, valign:"top" });
   s.addNotes("Más frecuentes: peso, acatisia (menor que aripiprazol), somnolencia, cefalea. QTc mínimo, prolactina discreta. Menos activación que aripiprazol.");
 })();
@@ -484,7 +484,7 @@ function stat(slide, x, y, w, big, label, opt={}){
   s.addShape(p.ShapeType.roundRect, { x:0.6, y:1.55, w:7.85, h:1.35, rectRadius:0.07, fill:{color:"5A1712"}, line:{color:GOLD,width:1.5} });
   s.addText([
     { text:"ADVERTENCIA ENMARCADA (BOXED WARNING)", options:{ fontFace:HEAD, bold:true, fontSize:13.5, color:GOLD, breakLine:true, paraSpaceAfter:3 } },
-    { text:"Mayor mortalidad en ancianos con psicosis por demencia. Riesgo de ideación/conducta suicida en jóvenes tratados con antidepresivos.", options:{ fontFace:BODY, fontSize:12, color:WHITE } },
+    { text:"Mayor mortalidad en ancianos con psicosis por demencia. Riesgo de ideación/conducta suicida en jóvenes tratados con antidepresivos.", options:{ fontFace:BODY, fontSize:13, color:WHITE } },
   ], { x:0.85, y:1.68, w:7.35, h:1.1, valign:"middle" });
   s.addText(bullets([
     { t:"Síndrome neuroléptico maligno y discinesia tardía.", o:{color:WHITE} },
@@ -547,7 +547,7 @@ function stat(slide, x, y, w, big, label, opt={}){
   });
   s.addText([
     { text:"Idea clave:  ", options:{ fontFace:HEAD, bold:true, fontSize:13.5, color:NAVY } },
-    { text:"la menor actividad intrínseca D2 hace del brexpiprazol una opción con perfil de tolerabilidad motora más favorable, útil en pacientes sensibles a la acatisia o la activación.", options:{ fontFace:BODY, fontSize:13, color:INK } },
+    { text:"la menor actividad intrínseca D2 hace del brexpiprazol una opción con perfil de tolerabilidad motora más favorable, útil en pacientes sensibles a la acatisia o la activación.", options:{ fontFace:BODY, fontSize:14, color:INK } },
   ], { x:0.6, y:5.55, w:7.6, h:1.3, valign:"top" });
   s.addNotes("Frente a aripiprazol: menor actividad intrínseca D2, menos acatisia/activación, mayor antagonismo 5-HT2A; a cambio, algo más de somnolencia/peso. Elegir según el paciente.");
 })();
@@ -570,7 +570,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     const yy = 1.65 + i*1.02;
     s.addShape(p.ShapeType.ellipse, { x:0.6, y:yy, w:0.55, h:0.55, fill:{color: i%2?NAVY:ACCENT} });
     s.addText("✓", { x:0.6, y:yy, w:0.55, h:0.55, align:"center", valign:"middle", fontFace:BODY, bold:true, fontSize:18, color:WHITE });
-    s.addText(t, { x:1.3, y:yy-0.05, w:6.95, h:0.95, valign:"middle", fontFace:BODY, fontSize:13.5, color:INK });
+    s.addText(t, { x:1.3, y:yy-0.05, w:6.95, h:0.95, valign:"middle", fontFace:BODY, fontSize:14.5, color:INK });
   });
   s.addNotes("Cinco perlas: titulación gradual, monitorización metabólica, interacciones CYP, ventaja de t½ larga, individualización en demencia.");
 })();
@@ -617,7 +617,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     const x = 0.6 + ci*6.35;
     s.addText(col.map((r,i)=>({
       text: `${ci*half+i+1}.  ${r}`,
-      options:{ fontFace:BODY, fontSize:11.5, color:INK, breakLine:true, paraSpaceAfter:11 }
+      options:{ fontFace:BODY, fontSize:12.5, color:INK, breakLine:true, paraSpaceAfter:10 }
     })), { x, y:1.6, w:6.05, h:5.4, valign:"top" });
   });
   s.addNotes("Fuentes primarias: ficha técnica de Rexulti, estudios de Maeda/Citrome/Correll/Thase/Grossberg/Lee y revisiones de Stahl. Referencias formativas.");
