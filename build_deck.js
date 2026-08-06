@@ -34,6 +34,8 @@ const im = {
   cajaRex:   IMG+"ec29a529-1000206767.jpg",
   pastColor: IMG+"9c748f5c-1000206768.jpg",
   mecCerebro:IMG+"403a44db-1000206766.jpg",
+  molBlanca: IMG+"03076ebf-1000206863.jpg",
+  cerebroNeu:IMG+"90f42778-1000206864.jpg",
 };
 
 // ---------- helpers ----------
@@ -303,7 +305,7 @@ function stat(slide, x, y, w, big, label, opt={}){
     s.addText(st[0], { x, y:1.7, w:2.85, h:0.8, align:"center", fontFace:HEAD, bold:true, fontSize:32, color:ACCENT, margin:0 });
     s.addText(st[1], { x:x+0.1, y:2.5, w:2.65, h:0.5, align:"center", fontFace:BODY, fontSize:12, color:MUTE, margin:0 });
   });
-  framedImage(s, im.molecula, 8.9, 3.55, 3.9, 3.35);
+  framedImage(s, im.molBlanca, 8.9, 3.55, 3.9, 3.35);
   s.addText(bullets([
     { t:"Absorción: buena por vía oral; sin efecto clínicamente relevante de los alimentos.", },
     { t:"Distribución: amplia; unión a albúmina y α1-glicoproteína ácida >99%.", },
@@ -345,7 +347,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
   header(s, 11, "Esquizofrenia: evidencia clínica");
-  framedImage(s, im.cerebroLuz, 8.55, 1.6, 4.25, 4.15);
+  framedImage(s, im.cerebroNeu, 8.55, 1.6, 4.25, 4.15);
   s.addText(bullets([
     { t:"Ensayos pivotales de fase 3 (p. ej. VECTOR y BEACON), doble ciego y controlados con placebo, a 6 semanas.", },
     { t:"Reducción significativa de la puntuación total PANSS con 2–4 mg/día frente a placebo.", },
@@ -400,11 +402,31 @@ function stat(slide, x, y, w, big, label, opt={}){
 })();
 
 // ============================================================
+// SLIDE 14B — TRASTORNOS DE LA CONDUCTA
+// ============================================================
+(() => {
+  const s = p.addSlide(); bg(s, WHITE);
+  header(s, 14, "Brexpiprazol y los trastornos de la conducta");
+  framedImage(s, im.cerebroNeu, 8.55, 1.6, 4.25, 4.2);
+  s.addText(bullets([
+    { t:"Los trastornos de la conducta agrupan patrones persistentes de agresividad, impulsividad y transgresión de normas sociales.", },
+    { t:"En el paciente psiquiátrico y en la demencia se expresan como agitación, hostilidad y conducta disruptiva.", },
+    { t:"Racional SDAM: el equilibrio dopamina-serotonina (agonismo parcial D2/5-HT1A + antagonismo 5-HT2A) atenúa la impulsividad y la agresividad.", },
+    { t:"Evidencia aprobada limitada a la agitación en la demencia de Alzheimer; otros usos conductuales son off-label y con evidencia emergente.", },
+    { t:"No aprobado en el trastorno de conducta de niños y adolescentes; requiere valoración especializada.", b:true, o:{color:NAVY} },
+  ]), { x:0.6, y:1.65, w:7.75, h:4.15, valign:"top" });
+  infoCard(s, 0.6, 5.95, 7.75, 0.95, "Principio de uso",
+    [{text:"Siempre como complemento de las intervenciones psicosociales de primera línea, iniciando a dosis bajas y con monitorización estrecha.", options:{fontFace:BODY, fontSize:13, color:INK}}],
+    { fill:LIGHT, ts:14 });
+  s.addNotes("Trastornos de la conducta: agresividad/impulsividad. Racional SDAM. Solo la agitación en Alzheimer está aprobada; el resto es off-label con evidencia limitada. No aprobado en conducta infanto-juvenil. Complemento de intervenciones psicosociales.");
+})();
+
+// ============================================================
 // SLIDE 15 — POSOLOGÍA Y PRESENTACIONES
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
-  header(s, 14, "Posología y administración");
+  header(s, 15, "Posología y administración");
   framedImage(s, im.cajaRex, 8.5, 1.6, 4.3, 4.1);
   const rows = [
     ["Indicación","Inicio","Objetivo","Máx."],
@@ -437,7 +459,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
-  header(s, 15, "Titulación e individualización");
+  header(s, 16, "Titulación e individualización");
   framedImage(s, im.pastColor, 7.4, 1.6, 5.4, 5.3);
   s.addText(bullets([
     { t:"Amplio abanico de concentraciones (0,25–4 mg) que facilita una titulación fina y personalizada.", },
@@ -454,7 +476,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
-  header(s, 16, "Reacciones adversas");
+  header(s, 17, "Reacciones adversas");
   framedImage(s, im.pastGlass, 8.6, 1.65, 4.2, 3.6);
   const common = [
     ["Aumento de peso","Frecuente; vigilar parámetros metabólicos."],
@@ -478,7 +500,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, NAVYD);
-  header(s, 17, "Advertencias y contraindicaciones", { dark:true });
+  header(s, 18, "Advertencias y contraindicaciones", { dark:true });
   s.addImage({ path: im.manoRx, x:8.75, y:1.5, w:4.58, h:6.0, sizing:{type:"cover", w:4.58, h:6.0} });
   // boxed warning band
   s.addShape(p.ShapeType.roundRect, { x:0.6, y:1.55, w:7.85, h:1.35, rectRadius:0.07, fill:{color:"5A1712"}, line:{color:GOLD,width:1.5} });
@@ -501,7 +523,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
-  header(s, 18, "Interacciones y poblaciones especiales");
+  header(s, 19, "Interacciones y poblaciones especiales");
   const left = [
     ["Inhibidores CYP3A4/CYP2D6","Reducir la dosis (a la mitad con inhibidores potentes)."],
     ["Inductores de CYP3A4","Aumentar la dosis (hasta duplicarla)."],
@@ -524,7 +546,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
-  header(s, 19, "Posicionamiento: brexpiprazol vs aripiprazol");
+  header(s, 20, "Posicionamiento: brexpiprazol vs aripiprazol");
   framedImage(s, im.escritorio, 8.5, 1.7, 4.3, 3.65);
   const rows = [
     ["Atributo","Brexpiprazol","Aripiprazol"],
@@ -557,7 +579,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, LIGHT);
-  header(s, 20, "Perlas clínicas para la práctica");
+  header(s, 21, "Perlas clínicas para la práctica");
   framedImage(s, im.lab, 8.55, 1.6, 4.25, 4.2);
   const pearls = [
     "Titular siempre de forma gradual: es la mejor estrategia frente a la acatisia inicial.",
@@ -598,7 +620,7 @@ function stat(slide, x, y, w, big, label, opt={}){
 // ============================================================
 (() => {
   const s = p.addSlide(); bg(s, WHITE);
-  header(s, 21, "Referencias bibliográficas");
+  header(s, 22, "Referencias bibliográficas");
   const refs = [
     "Otsuka America Pharmaceutical. Rexulti® (brexpiprazol): Información de prescripción (Prescribing Information). 2023.",
     "Maeda K, et al. Brexpiprazole I: In vitro and in vivo characterization of a novel serotonin-dopamine activity modulator. J Pharmacol Exp Ther. 2014;350(3):589–604.",
