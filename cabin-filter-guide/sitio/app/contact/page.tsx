@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
   description:
     "Cómo reportar un error de compatibilidad o sugerir un vehículo para Cabin Filter Guide.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: `${SITE_URL}/contact` },
 };
 
 export default function ContactPage() {

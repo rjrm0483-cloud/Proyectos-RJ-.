@@ -64,3 +64,17 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
 - La publicación al sitio en chatgpt.site se hace aplicando la versión del
   repositorio a la plataforma de alojamiento hasta que Rodrigo autorice otro
   alojamiento.
+
+## 30 de agosto de 2026 — publicación controlada por Claude (GitHub Pages)
+
+- Rodrigo autorizó mover el control de la publicación a Claude.
+- Se añadió compilación estática (`npm run build:static`, output export con
+  basePath) coexistiendo con la compilación vinext original.
+- Se creó el workflow `.github/workflows/deploy-pages.yml`: cada push a la
+  rama designada valida los datos, compila y despliega automáticamente a
+  GitHub Pages.
+- Nueva URL pública: https://rjrm0483-cloud.github.io/Proyectos-RJ-.
+- Canónicas, Open Graph, sitemap y robots ahora apuntan a la URL nueva; la
+  copia de chatgpt.site queda obsoleta (retirarla o dejarla canonicalizando).
+- El dominio propio CabinFilterGuide.com puede conectarse a GitHub Pages
+  cuando Rodrigo lo compre (CNAME + actualizar SITE_URL y basePath).

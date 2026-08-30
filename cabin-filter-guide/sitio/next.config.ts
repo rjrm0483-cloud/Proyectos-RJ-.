@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+// STATIC_EXPORT=1 produce una exportación estática para GitHub Pages
+// (npm run build:static). Sin la variable, la configuración queda vacía y
+// aplica la compilación vinext del alojamiento original.
+const isStaticExport = process.env.STATIC_EXPORT === "1";
+
+const nextConfig: NextConfig = isStaticExport
+  ? {
+      output: "export",
+      basePath: "/Proyectos-RJ-.",
+      images: { unoptimized: true },
+    }
+  : {};
 
 export default nextConfig;

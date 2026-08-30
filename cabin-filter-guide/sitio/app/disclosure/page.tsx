@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Divulgación de afiliados",
   description:
     "Divulgación de afiliados de Cabin Filter Guide: estado actual, reglas de identificación y por qué las comisiones nunca afectarán las fichas.",
-  alternates: { canonical: "/disclosure" },
+  alternates: { canonical: `${SITE_URL}/disclosure` },
 };
 
 export default function DisclosurePage() {

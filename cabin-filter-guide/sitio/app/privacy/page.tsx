@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
   description:
     "Política de privacidad de Cabin Filter Guide: qué datos recopila el sitio y cuáles no.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: `${SITE_URL}/privacy` },
 };
 
 export default function PrivacyPage() {

@@ -42,10 +42,10 @@ export async function generateMetadata({ params }: DetailPageProps): Promise<Met
   return {
     title,
     description,
-    alternates: { canonical: `/filters/${record.slug}` },
+    alternates: { canonical: `${SITE_URL}/filters/${record.slug}` },
     openGraph: {
       type: "article",
-      url: `/filters/${record.slug}`,
+      url: `${SITE_URL}/filters/${record.slug}`,
       title,
       description,
       siteName: SITE_NAME,

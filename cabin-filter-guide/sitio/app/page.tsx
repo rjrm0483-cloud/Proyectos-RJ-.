@@ -4,7 +4,7 @@ import { filterRecords } from "@/data/filters";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${SITE_URL}/` },
 };
 
 export default function Home() {

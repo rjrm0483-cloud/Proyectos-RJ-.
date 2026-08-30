@@ -29,10 +29,10 @@ export async function generateMetadata({ params }: PartPageProps): Promise<Metad
   return {
     title,
     description,
-    alternates: { canonical: `/parts/${ref}` },
+    alternates: { canonical: `${SITE_URL}/parts/${ref}` },
     openGraph: {
       type: "article",
-      url: `/parts/${ref}`,
+      url: `${SITE_URL}/parts/${ref}`,
       title,
       description,
       siteName: SITE_NAME,

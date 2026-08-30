@@ -1,4 +1,7 @@
 import { filterRecords, getUniquePartSlugs } from "@/data/filters";
+import { SITE_URL } from "@/lib/site";
+
+export const dynamic = "force-static";
 
 function escapeXml(value: string) {
   return value
@@ -9,26 +12,25 @@ function escapeXml(value: string) {
     .replaceAll("'", "&apos;");
 }
 
-export function GET(request: Request) {
-  const origin = new URL(request.url).origin;
+export function GET() {
   const lastModified = filterRecords.reduce(
     (latest, record) => (record.verifiedAt > latest ? record.verifiedAt : latest),
     "2026-08-30",
   );
   const urls = [
-    { loc: origin, lastmod: lastModified, priority: "1.0" },
+    { loc: `${SITE_URL}/`, lastmod: lastModified, priority: "1.0" },
     ...filterRecords.map((record) => ({
-      loc: `${origin}/filters/${record.slug}`,
+      loc: `${SITE_URL}/filters/${record.slug}`,
       lastmod: record.verifiedAt,
       priority: "0.8",
     })),
     ...getUniquePartSlugs().map((ref) => ({
-      loc: `${origin}/parts/${ref}`,
+      loc: `${SITE_URL}/parts/${ref}`,
       lastmod: lastModified,
       priority: "0.7",
     })),
     ...["about", "disclosure", "privacy", "contact"].map((page) => ({
-      loc: `${origin}/${page}`,
+      loc: `${SITE_URL}/${page}`,
       lastmod: lastModified,
       priority: "0.5",
     })),

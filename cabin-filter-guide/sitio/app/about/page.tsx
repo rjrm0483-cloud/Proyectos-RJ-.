@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Acerca de y metodología",
   description:
     "Cómo Cabin Filter Guide verifica cada ficha de compatibilidad de filtros de cabina: jerarquía de fuentes, niveles de confianza y reglas de publicación.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: `${SITE_URL}/about` },
 };
 
 export default function AboutPage() {

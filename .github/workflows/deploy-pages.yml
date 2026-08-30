@@ -1,0 +1,66 @@
+name: Publicar Cabin Filter Guide en GitHub Pages
+
+on:
+  push:
+    branches:
+      - claude/autonomous-webpage-review-gn511e
+      - main
+    paths:
+      - "cabin-filter-guide/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        working-directory: cabin-filter-guide/sitio
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cabin-filter-guide/sitio/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar los datos de las fichas
+        run: node --test tests/data-validation.test.mjs
+
+      - name: Compilar exportación estática
+        run: npm run build:static
+
+      - name: Evitar procesamiento Jekyll
+        run: touch out/.nojekyll
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Subir artefacto del sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: cabin-filter-guide/sitio/out
+
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

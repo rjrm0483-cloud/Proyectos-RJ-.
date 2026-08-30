@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE_NAME,
     locale: "es_NI",
-    url: "/",
+    url: SITE_URL,
     title: `${SITE_NAME} — El filtro de cabina exacto para tu vehículo`,
     description: SITE_DESCRIPTION,
   },
