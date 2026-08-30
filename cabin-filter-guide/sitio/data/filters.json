@@ -1,0 +1,189 @@
+[
+  {
+    "slug": "2025-suzuki-fronx",
+    "year": "2023–2026",
+    "make": "Suzuki",
+    "model": "Fronx",
+    "focus": "Central America",
+    "market": "1.5L K15B / K15C applications",
+    "partReference": "MANN-FILTER CU 17 001",
+    "filterCount": "1 filter",
+    "replacementInterval": "Follow the Suzuki schedule; inspect more often in dusty service.",
+    "access": "Passenger side, behind the glove box",
+    "airflow": "Follow the direction marked on the filter and the removed unit.",
+    "confidence": "Verified",
+    "verifiedAt": "2026-08-30",
+    "summary": "MANN-FILTER lists CU 17 001 for the Fronx 1.5 K15B from August 2023 and the 1.5 MHEV K15C from May 2025.",
+    "caution": "Confirm the 1.5L engine code and the 163 × 193 × 20 mm filter size. Fronx equipment can differ by country and HVAC specification.",
+    "sources": [
+      {
+        "label": "MANN-FILTER application catalog",
+        "url": "https://www.mann-filter.com/es/catalogo/resultados-de-busqueda/producto.html/cu17001_mann-filter.html",
+        "type": "Filter-maker catalog",
+        "supports": "Engine fitment, filter dimensions, and glove-box access location."
+      },
+      {
+        "label": "Maruti Suzuki Genuine Accessories",
+        "url": "https://www.marutisuzuki.com/genuine-accessories/cabin-air-filter-antimicrobial-swift-baleno-fronx-ertiga-xl6/990j0m56rs0-040",
+        "type": "Manufacturer catalog",
+        "supports": "Independent manufacturer confirmation for 2023-and-later Fronx trims."
+      }
+    ]
+  },
+  {
+    "slug": "2015-2026-toyota-hilux",
+    "year": "2015–2026",
+    "make": "Toyota",
+    "model": "Hilux / Hilux Revo",
+    "focus": "Central America",
+    "market": "Hilux VIII / Revo, selected engines",
+    "partReference": "MANN-FILTER CU 22 032",
+    "filterCount": "1 filter",
+    "replacementInterval": "Follow the Toyota schedule; inspect more often in dusty or commercial use.",
+    "access": "Passenger side, behind the glove box",
+    "airflow": "Match the arrow orientation on the removed filter.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-08-30",
+    "summary": "MANN-FILTER lists CU 22 032 for multiple Hilux VIII and Hilux Revo engines, including 2.5D, 2.7, and 2.8D applications from 2015 onward.",
+    "caution": "This generation has several engine and market combinations. Confirm the engine code—such as 2KD-FTV, 2TR-FE, or 1GD-FTV—and compare the 216 × 186 × 30 mm dimensions before ordering.",
+    "sources": [
+      {
+        "label": "MANN-FILTER Hilux application catalog",
+        "url": "https://www.mann-filter.com/en/catalog/search-results/product.html/cu22032_mann-filter.html",
+        "type": "Filter-maker catalog",
+        "supports": "Hilux engine applications, dimensions, and glove-box access location."
+      }
+    ]
+  },
+  {
+    "slug": "2020-2026-toyota-yaris-cross",
+    "year": "2020–2026",
+    "make": "Toyota",
+    "model": "Yaris Cross",
+    "focus": "Central America",
+    "market": "MXP-series 1.5L applications",
+    "partReference": "MANN-FILTER CU 22 032",
+    "filterCount": "1 filter",
+    "replacementInterval": "Follow the Toyota schedule; inspect sooner in dust, smoke, or weak airflow.",
+    "access": "Passenger side, behind the glove box",
+    "airflow": "Match the arrow orientation on the removed filter.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-08-30",
+    "summary": "MANN-FILTER lists CU 22 032 for Yaris IV / Yaris Cross 1.5L petrol and hybrid MXP applications from February 2020 onward.",
+    "caution": "The catalog groups Yaris IV and Yaris Cross applications and lists several Toyota OE cross-references. Confirm the MXP chassis, engine, and country-specific part number before purchase.",
+    "sources": [
+      {
+        "label": "MANN-FILTER Yaris Cross application catalog",
+        "url": "https://www.mann-filter.com/en/catalog/search-results/product.html/cu22032_mann-filter.html",
+        "type": "Filter-maker catalog",
+        "supports": "MXP engine applications, filter dimensions, and glove-box access location."
+      }
+    ]
+  },
+  {
+    "slug": "2022-2026-hyundai-tucson",
+    "year": "2022–2026",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "focus": "Central America",
+    "market": "NX4 generation; verify country catalog",
+    "partReference": "Hyundai 97133-L1000",
+    "filterCount": "1 filter",
+    "replacementInterval": "The cited schedule replaces it every 15,000 km or 12 months; country schedules can differ.",
+    "access": "Behind the glove box",
+    "airflow": "Install with the airflow arrow facing down.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-08-30",
+    "summary": "A genuine-parts catalog lists 97133-L1000 for 2022–2026 Tucson, while Hyundai's 2025 manual documents glove-box access and the downward airflow arrow.",
+    "caution": "Hyundai cabin-filter references can vary by engine, trim, and sales market. Confirm the VIN in the Nicaragua or regional dealer catalog before ordering.",
+    "sources": [
+      {
+        "label": "Hyundai 2025 Tucson owner’s manual",
+        "url": "https://ownersmanual.hyundai.com/full_webhelp/NX4/2025/en_US/id62b7e48c4d9.html",
+        "type": "Manufacturer guide",
+        "supports": "Glove-box access and the downward airflow-arrow direction."
+      },
+      {
+        "label": "Genuine Hyundai parts catalog",
+        "url": "https://www.hyundaipartsdeal.com/genuine/hyundai-filter-assy-air~97133-l1000.html",
+        "type": "OEM dealer catalog",
+        "supports": "97133-L1000 fitment for 2022–2026 Tucson applications."
+      }
+    ]
+  },
+  {
+    "slug": "2025-subaru-forester",
+    "year": "2025",
+    "make": "Subaru",
+    "model": "Forester",
+    "focus": "International",
+    "market": "United States",
+    "partReference": "Subaru 72880AJ010",
+    "filterCount": "1 filter",
+    "replacementInterval": "Inspect at scheduled service; replace when restricted or dirty.",
+    "access": "Behind the glove box",
+    "airflow": "Match the airflow arrow on the removed filter before installation.",
+    "confidence": "Verified",
+    "verifiedAt": "2026-08-30",
+    "summary": "The Subaru catalog lists OEM cabin filter 72880AJ010 for the 2025 Forester.",
+    "caution": "Confirm the vehicle and market on the seller page before ordering; catalog fitment can vary outside the United States.",
+    "sources": [
+      {
+        "label": "Subaru OEM parts catalog",
+        "url": "https://parts.subaru.com/p/Subaru_2025_Forester/Cabin-Air-Filter/49282008/72880AJ010.html",
+        "type": "OEM catalog",
+        "supports": "2025 Forester OEM cabin-filter reference."
+      }
+    ]
+  },
+  {
+    "slug": "2022-jeep-grand-cherokee",
+    "year": "2022",
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "focus": "International",
+    "market": "United States",
+    "partReference": "Mopar 68608193AA",
+    "filterCount": "1 filter",
+    "replacementInterval": "Inspect annually or sooner in dusty or smoky conditions.",
+    "access": "Behind the glove box",
+    "airflow": "Copy the arrow orientation from the installed filter.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-08-30",
+    "summary": "The Mopar catalog lists 68608193AA across 2021–2026 Jeep applications, including Grand Cherokee trims.",
+    "caution": "Grand Cherokee and Grand Cherokee L fitment can differ by trim and build. Verify by VIN before purchase.",
+    "sources": [
+      {
+        "label": "Mopar OEM catalog",
+        "url": "https://parts.moparonlineparts.com/oem-parts/mopar-cabin-air-filter-68608193aa",
+        "type": "OEM catalog",
+        "supports": "Mopar part reference and listed Grand Cherokee applications."
+      }
+    ]
+  },
+  {
+    "slug": "tesla-model-3",
+    "year": "2017–2026",
+    "make": "Tesla",
+    "model": "Model 3",
+    "focus": "EV / premium",
+    "market": "Global guide",
+    "partReference": "Tesla cabin filter set",
+    "filterCount": "2 filters",
+    "replacementInterval": "Every 2 years; Tesla specifies every year in China.",
+    "access": "Passenger footwell and center-console side panel",
+    "airflow": "Both arrows face toward the rear of the vehicle.",
+    "confidence": "Verified",
+    "verifiedAt": "2026-08-30",
+    "summary": "Tesla’s official DIY guide specifies a two-filter stack, replacement timing, and installation direction.",
+    "caution": "The cover fastener location can vary by build date. Use Tesla’s guide for the exact hardware shown in your vehicle.",
+    "sources": [
+      {
+        "label": "Tesla official service guide",
+        "url": "https://service.tesla.com/docs/Public/diy/model3/en_us/GUID-DB0A1E3C-926E-498C-A2FD-A27B8421A471.html",
+        "type": "Manufacturer guide",
+        "supports": "Filter count, replacement timing, access, and installation direction."
+      }
+    ]
+  }
+]

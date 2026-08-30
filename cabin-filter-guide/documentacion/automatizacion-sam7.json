@@ -1,0 +1,28 @@
+{
+  "title": "Sam7 nocturno",
+  "version": 2,
+  "enabled_at_backup": true,
+  "timezone": "America/Managua",
+  "timing_mode": "flexible_schedule",
+  "schedule_ical": "BEGIN:VEVENT\nDTSTART:20260830T190000\nRRULE:FREQ=DAILY\nEND:VEVENT",
+  "site": {
+    "name": "Cabin Filter Guide",
+    "slug": "cabin-filter-guide",
+    "public_url": "https://cabin-filter-guide.heamilendk.chatgpt.site"
+  },
+  "prompt": "Ejecuta el ciclo nocturno de Sam7 para el Site Cabin Filter Guide (slug: cabin-filter-guide).\n\nCICLO DE MANTENIMIENTO (una de cada siete ejecuciones, por ejemplo los domingos): en lugar de añadir una ficha, re-verifica los enlaces de las fuentes de las fichas existentes en data/filters.json. Si un enlace está roto o el catálogo cambió, corrige la URL con la fuente oficial equivalente o, si la fuente ya no confirma el dato, baja la ficha a confianza 'Conditional' y anótalo en la cautela. Registra el resultado y termina.\n\nCICLO NORMAL (las demás noches): busca quejas y preguntas recientes y repetidas en Reddit y X sobre compatibilidad de filtros de cabina de vehículos. Revisa primero las fichas existentes —tanto por modelo como por referencia de pieza— y elige exactamente una consulta útil que no esté duplicada. Mantén una mezcla objetivo aproximada de 60% vehículos comunes en Nicaragua y Centroamérica, 30% modelos internacionales con demanda alta de búsqueda y 10% eléctricos o premium; cuando la mezcla esté desviada, prioriza la categoría más rezagada. Entre los vehículos regionales da prioridad a marcas y modelos realmente comunes o relevantes en Nicaragua —por ejemplo Suzuki, Toyota, Hyundai, Kia, Nissan y Mitsubishi— sin asumir que una referencia de otro país aplica localmente.\n\nVerifica cada respuesta con una guía oficial del fabricante, catálogo OEM o catálogo técnico del fabricante del filtro; si no logras verificarla con una fuente sólida, no publiques esa noche. Cuando sí esté verificada, agrega una sola ficha completa editando el archivo de datos data/filters.json (NO edites código TypeScript ni componentes; el esquema se valida al compilar). La ficha lleva año, marca, modelo, enfoque regional, referencia de pieza cuando exista, cantidad de filtros, acceso, orientación, intervalo documentado, cautela por mercado/versión/motor/VIN, nivel de confianza, fecha y enlaces a las fuentes, siguiendo exactamente el formato de las fichas existentes.\n\nDespués de editar, valida antes de publicar: la ficha debe cumplir el esquema (slug único en kebab-case, al menos una fuente https, fecha ISO). Si la validación o la compilación fallan, revierte el cambio, no publiques y reporta el motivo. Conserva el diseño, los filtros regionales y la divulgación de afiliados.\n\nSIEMPRE, en ambos ciclos: añade una entrada al final de data/registro.json con fecha (YYYY-MM-DD), accion ('ficha-agregada', 'sin-publicar' o 'mantenimiento'), detalle breve, ficha (slug o null), categoria regional o null, fuente principal o null y totalFichas. No copies texto ajeno ni inventes datos.\n\nNo inicies gestiones de afiliados ni referidos antes del 6 de septiembre de 2026 en la zona America/Managua. Después de esa fecha, actúa solo cuando el sitio tenga al menos 20 fichas verificadas y existan métricas reales de tráfico: identifica únicamente programas o contactos oficiales, verifica el destinatario y usa datos verdaderos. El primer acercamiento comercial debe quedar como borrador en Outlook para que Rodrigo apruebe tono, firma y propuesta; después de existir un precedente aprobado, limita cualquier gestión a un contacto o respuesta por ejecución y evita envíos masivos.\n\nEntrega un informe breve en español con la ficha añadida o el motivo de no publicar (o el resultado del mantenimiento), fuente usada, categoría regional, total de fichas, resultado de publicación y tráfico o ingresos realmente disponibles; si no hay datos, indica 0 o no disponible sin estimarlos.",
+  "safety_gates": [
+    "Publicar como máximo una ficha por ejecución",
+    "No publicar sin una fuente sólida",
+    "Editar solo data/filters.json y data/registro.json, nunca código",
+    "Validar el esquema de datos y revertir si la validación o la compilación fallan",
+    "No duplicar fichas ni por modelo ni por referencia de pieza",
+    "Registrar cada ejecución en data/registro.json",
+    "Dedicar una de cada siete ejecuciones a re-verificar enlaces de fuentes",
+    "No inventar métricas ni ingresos",
+    "No iniciar afiliados antes del 6 de septiembre de 2026",
+    "Exigir 20 fichas y tráfico real antes de contacto comercial",
+    "Dejar el primer correo comercial como borrador para aprobación",
+    "No realizar envíos masivos"
+  ]
+}

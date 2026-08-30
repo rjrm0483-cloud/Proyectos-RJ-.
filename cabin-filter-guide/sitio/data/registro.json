@@ -1,0 +1,11 @@
+[
+  {
+    "fecha": "2026-08-30",
+    "accion": "linea-base",
+    "detalle": "Respaldo v2: 7 fichas existentes al momento de incorporar el registro persistente.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": null,
+    "totalFichas": 7
+  }
+]
