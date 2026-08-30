@@ -70,10 +70,12 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
 - Rodrigo autorizó mover el control de la publicación a Claude.
 - Se añadió compilación estática (`npm run build:static`, output export con
   basePath) coexistiendo con la compilación vinext original.
-- Se creó el workflow `.github/workflows/deploy-pages.yml`: cada push a la
-  rama designada valida los datos, compila y despliega automáticamente a
-  GitHub Pages.
-- Nueva URL pública: https://rjrm0483-cloud.github.io/Proyectos-RJ-.
+- El Pages del repositorio Proyectos-RJ-. ya publicaba la política de
+  privacidad de Agenda Psiquiátrica Pro, así que se conservó intacta y el
+  sitio se publica desde un repositorio dedicado: rjrm0483-cloud/cabin-filter-guide.
+- El workflow publish.yml de ese repositorio compila desde la rama designada
+  de Proyectos-RJ-. y despliega a GitHub Pages cada noche y bajo demanda.
+- Nueva URL pública: https://rjrm0483-cloud.github.io/cabin-filter-guide
 - Canónicas, Open Graph, sitemap y robots ahora apuntan a la URL nueva; la
   copia de chatgpt.site queda obsoleta (retirarla o dejarla canonicalizando).
 - El dominio propio CabinFilterGuide.com puede conectarse a GitHub Pages

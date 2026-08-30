@@ -8,7 +8,7 @@ const isStaticExport = process.env.STATIC_EXPORT === "1";
 const nextConfig: NextConfig = isStaticExport
   ? {
       output: "export",
-      basePath: "/Proyectos-RJ-.",
+      basePath: "/cabin-filter-guide",
       images: { unoptimized: true },
     }
   : {};
