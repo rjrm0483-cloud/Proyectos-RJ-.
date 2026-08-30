@@ -5,21 +5,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Exact cabin filter fitment`,
+    default: `${SITE_NAME} — El filtro de cabina exacto para tu vehículo`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    locale: "en_US",
+    locale: "es_NI",
     url: "/",
-    title: `${SITE_NAME} — Exact cabin filter fitment`,
+    title: `${SITE_NAME} — El filtro de cabina exacto para tu vehículo`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary",
-    title: `${SITE_NAME} — Exact cabin filter fitment`,
+    title: `${SITE_NAME} — El filtro de cabina exacto para tu vehículo`,
     description: SITE_DESCRIPTION,
   },
   icons: {
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className="antialiased">{children}</body>
     </html>
   );

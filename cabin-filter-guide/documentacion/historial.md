@@ -50,3 +50,17 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
 - Paquete renombrado a `cabin-filter-guide`.
 - Pendientes: versión en español, correo de contacto, re-verificación
   Hilux/Yaris Cross, referencia real del Tesla Model 3, dominio propio.
+
+## 30 de agosto de 2026 — versión 3: sitio en español y operación por Claude
+
+- Todo el sitio se convirtió al español: interfaz, las 7 fichas, metadatos,
+  Open Graph (es_NI), JSON-LD (inLanguage es), páginas legales y `lang="es"`.
+- Los campos internos focus y confidence conservan sus valores en inglés como
+  claves estables; la interfaz los traduce con `lib/labels.ts`.
+- La rutina nocturna pasó a v3: redacta las fichas en español y ahora la opera
+  Claude Code mediante una rutina programada que trabaja sobre el repositorio
+  GitHub (fuente de verdad). La rutina de Sam7 en ChatGPT debe pausarse para
+  evitar ediciones duplicadas.
+- La publicación al sitio en chatgpt.site se hace aplicando la versión del
+  repositorio a la plataforma de alojamiento hasta que Rodrigo autorice otro
+  alojamiento.

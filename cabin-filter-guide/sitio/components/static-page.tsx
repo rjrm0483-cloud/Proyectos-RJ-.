@@ -14,18 +14,18 @@ export function StaticPage({
   return (
     <main className="detail-page">
       <header className="site-header">
-        <Link href="/" className="brand-lockup" aria-label="Cabin Filter Guide home">
+        <Link href="/" className="brand-lockup" aria-label="Inicio de Cabin Filter Guide">
           <span className="brand-mark">CFG</span>
           <span>
             <strong>Cabin Filter Guide</strong>
-            <small>verified by Sam7</small>
+            <small>verificado con fuentes</small>
           </span>
         </Link>
         <span className="header-note">{headerNote}</span>
       </header>
 
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link href="/"><ArrowLeft aria-hidden="true" /> All fitment records</Link>
+      <nav className="breadcrumb" aria-label="Ruta de navegación">
+        <Link href="/"><ArrowLeft aria-hidden="true" /> Todas las fichas</Link>
         <span>/</span>
         <span>{breadcrumb}</span>
       </nav>

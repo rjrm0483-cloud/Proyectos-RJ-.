@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { SiteFooter } from "@/components/site-footer";
+import { confidenceLabels } from "@/lib/labels";
 import {
   filterRecords,
   getFilterRecord,
@@ -35,8 +36,8 @@ export async function generateMetadata({ params }: DetailPageProps): Promise<Met
   const record = getFilterRecord(slug);
   if (!record) return {};
 
-  const title = `${record.year} ${record.make} ${record.model} cabin air filter`;
-  const description = `${record.summary} Part reference: ${record.partReference}. Sources and fitment caveats included.`;
+  const title = `Filtro de cabina ${record.make} ${record.model} ${record.year}`;
+  const description = `${record.summary} Referencia: ${record.partReference}. Incluye fuentes y cautelas de compatibilidad.`;
 
   return {
     title,
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: DetailPageProps): Promise<Met
       title,
       description,
       siteName: SITE_NAME,
+      locale: "es_NI",
     },
     twitter: {
       card: "summary",
@@ -68,11 +70,12 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    headline: `${record.year} ${record.make} ${record.model} cabin air filter fitment`,
+    headline: `Filtro de cabina ${record.make} ${record.model} ${record.year}`,
     description: record.summary,
+    inLanguage: "es",
     dateModified: record.verifiedAt,
     mainEntityOfPage: `${SITE_URL}/filters/${record.slug}`,
-    author: { "@type": "Organization", name: `${SITE_NAME} by Sam7` },
+    author: { "@type": "Organization", name: SITE_NAME },
     citation: record.sources.map((source) => source.url),
   };
 
@@ -83,7 +86,7 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "All fitment records",
+        name: "Todas las fichas",
         item: SITE_URL,
       },
       {
@@ -108,18 +111,18 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
       ))}
 
       <header className="site-header">
-        <Link href="/" className="brand-lockup" aria-label="Cabin Filter Guide home">
+        <Link href="/" className="brand-lockup" aria-label="Inicio de Cabin Filter Guide">
           <span className="brand-mark">CFG</span>
           <span>
             <strong>Cabin Filter Guide</strong>
-            <small>verified by Sam7</small>
+            <small>verificado con fuentes</small>
           </span>
         </Link>
-        <span className="header-note">Record {record.slug}</span>
+        <span className="header-note">Ficha {record.slug}</span>
       </header>
 
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link href="/"><ArrowLeft aria-hidden="true" /> All fitment records</Link>
+      <nav className="breadcrumb" aria-label="Ruta de navegación">
+        <Link href="/"><ArrowLeft aria-hidden="true" /> Todas las fichas</Link>
         <span>/</span>
         <span>{record.make} {record.model}</span>
       </nav>
@@ -128,57 +131,59 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
         <div>
           <div className="detail-badges">
             <Badge className={record.confidence === "Verified" ? "status-badge" : "status-badge conditional"}>
-              <CheckCircle2 aria-hidden="true" /> {record.confidence} fitment
+              <CheckCircle2 aria-hidden="true" /> Compatibilidad {confidenceLabels[record.confidence].toLowerCase()}
             </Badge>
-            <span>Checked {record.verifiedAt}</span>
+            <span>Revisada el {record.verifiedAt}</span>
           </div>
           <p className="detail-year">{record.year}</p>
           <h1>{record.make}<br />{record.model}</h1>
           <p className="detail-summary">{record.summary}</p>
         </div>
 
-        <aside className="part-plate" aria-label="Filter part reference">
-          <p>PART REFERENCE</p>
+        <aside className="part-plate" aria-label="Referencia de la pieza">
+          <p>REFERENCIA DE PIEZA</p>
           <strong>{record.partReference}</strong>
           <span>{record.filterCount} / {record.market}</span>
           <Link href={`/parts/${partSlug}`} className="part-plate-link">
-            All vehicles using this part <ArrowUpRight aria-hidden="true" />
+            Todos los vehículos con esta pieza <ArrowUpRight aria-hidden="true" />
           </Link>
         </aside>
       </section>
 
-      <section className="spec-grid" aria-label="Fitment specifications">
+      <section className="spec-grid" aria-label="Especificaciones de compatibilidad">
         <article>
           <PackageCheck aria-hidden="true" />
-          <p>Configuration</p>
+          <p>Configuración</p>
           <h2>{record.filterCount}</h2>
         </article>
         <article>
           <MapPin aria-hidden="true" />
-          <p>Access point</p>
+          <p>Punto de acceso</p>
           <h2>{record.access}</h2>
         </article>
         <article>
           <Wind aria-hidden="true" />
-          <p>Airflow orientation</p>
+          <p>Orientación del flujo</p>
           <h2>{record.airflow}</h2>
         </article>
         <article>
           <CalendarClock aria-hidden="true" />
-          <p>Replacement timing</p>
+          <p>Intervalo de reemplazo</p>
           <h2>{record.replacementInterval}</h2>
         </article>
       </section>
 
       <section className="evidence-section">
         <div>
-          <p className="eyebrow">FITMENT EVIDENCE</p>
-          <h2>Every claim.<br />Visible sources.</h2>
+          <p className="eyebrow">EVIDENCIA DE COMPATIBILIDAD</p>
+          <h2>Cada dato.<br />Con su fuente.</h2>
           <p>
-            Cabin Filter Guide separates a confirmed catalog match from a general product
-            recommendation. When trim, market, or build date can change the answer,
-            the record says so before sending you to a seller. Some records use a
-            second source to separate part fitment from installation instructions.
+            Cabin Filter Guide separa una coincidencia confirmada de catálogo de
+            una recomendación general de producto. Cuando la versión, el mercado
+            o la fecha de fabricación pueden cambiar la respuesta, la ficha lo
+            dice antes de enviarte a un vendedor. Algunas fichas usan una
+            segunda fuente para separar la compatibilidad de la pieza de las
+            instrucciones de instalación.
           </p>
         </div>
 
@@ -192,7 +197,7 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
               <h3>{source.label}</h3>
               <p>{source.supports}</p>
               <a href={source.url} target="_blank" rel="noreferrer">
-                Inspect original source <ArrowUpRight aria-hidden="true" />
+                Ver la fuente original <ArrowUpRight aria-hidden="true" />
               </a>
             </article>
           ))}
@@ -202,15 +207,15 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
       <section className="caution-strip">
         <AlertTriangle aria-hidden="true" />
         <div>
-          <p>What could change this fitment</p>
+          <p>Qué podría cambiar esta compatibilidad</p>
           <strong>{record.caution}</strong>
         </div>
       </section>
 
       {related.length > 0 && (
         <section className="related-section" aria-labelledby="related-title">
-          <p className="eyebrow">SAME PART REFERENCE</p>
-          <h2 id="related-title">Vehicles that share this filter</h2>
+          <p className="eyebrow">MISMA REFERENCIA</p>
+          <h2 id="related-title">Vehículos que comparten este filtro</h2>
           <ul className="related-list">
             {related.map((other) => (
               <li key={other.slug}>
@@ -227,15 +232,16 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
 
       <section className="commerce-section">
         <div>
-          <p className="eyebrow">BUYING LINKS</p>
-          <h2>Accuracy before commission.</h2>
+          <p className="eyebrow">ENLACES DE COMPRA</p>
+          <h2>Precisión antes que comisión.</h2>
         </div>
         <div className="commerce-status">
-          <span>Affiliate status</span>
-          <strong>Not activated</strong>
+          <span>Estado de afiliados</span>
+          <strong>No activados</strong>
           <p>
-            Sam7 will only add clearly labeled buying links after the merchant
-            confirms trackable terms and the product match is independently verified.
+            Solo se añadirán enlaces de compra claramente identificados cuando
+            el comercio confirme términos rastreables y la coincidencia del
+            producto haya sido verificada de forma independiente.
           </p>
         </div>
       </section>

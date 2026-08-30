@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { SiteFooter } from "@/components/site-footer";
+import { confidenceLabels, coverageLabels } from "@/lib/labels";
 import { getRecordsByPartSlug, getUniquePartSlugs } from "@/data/filters";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }: PartPageProps): Promise<Metad
 
   const partReference = records[0].partReference;
   const vehicles = records.map((r) => `${r.make} ${r.model}`).join(", ");
-  const title = `${partReference} cabin air filter — vehicle applications`;
-  const description = `Verified vehicle applications for cabin air filter ${partReference}: ${vehicles}. Every fitment keeps its source.`;
+  const title = `Filtro de cabina ${partReference} — vehículos compatibles`;
+  const description = `Aplicaciones verificadas del filtro de cabina ${partReference}: ${vehicles}. Cada ficha conserva su fuente.`;
 
   return {
     title,
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: PartPageProps): Promise<Metad
       title,
       description,
       siteName: SITE_NAME,
+      locale: "es_NI",
     },
     twitter: { card: "summary", title, description },
   };
@@ -50,7 +52,8 @@ export default async function PartPage({ params }: PartPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `${partReference} cabin air filter applications`,
+    name: `Aplicaciones del filtro de cabina ${partReference}`,
+    inLanguage: "es",
     numberOfItems: records.length,
     itemListElement: records.map((record, index) => ({
       "@type": "ListItem",
@@ -70,51 +73,52 @@ export default async function PartPage({ params }: PartPageProps) {
       />
 
       <header className="site-header">
-        <Link href="/" className="brand-lockup" aria-label="Cabin Filter Guide home">
+        <Link href="/" className="brand-lockup" aria-label="Inicio de Cabin Filter Guide">
           <span className="brand-mark">CFG</span>
           <span>
             <strong>Cabin Filter Guide</strong>
-            <small>verified by Sam7</small>
+            <small>verificado con fuentes</small>
           </span>
         </Link>
-        <span className="header-note">Part {partReference}</span>
+        <span className="header-note">Pieza {partReference}</span>
       </header>
 
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link href="/"><ArrowLeft aria-hidden="true" /> All fitment records</Link>
+      <nav className="breadcrumb" aria-label="Ruta de navegación">
+        <Link href="/"><ArrowLeft aria-hidden="true" /> Todas las fichas</Link>
         <span>/</span>
         <span>{partReference}</span>
       </nav>
 
       <section className="part-page-hero">
-        <p className="eyebrow">PART REFERENCE</p>
+        <p className="eyebrow">REFERENCIA DE PIEZA</p>
         <h1>{partReference}</h1>
         <p className="hero-deck">
-          {records.length} verified vehicle application{records.length === 1 ? "" : "s"} in
-          this directory. Open a record to see sources, access point, airflow
-          orientation, and the caveat that could change fitment.
+          {records.length} aplicación{records.length === 1 ? "" : "es"} verificada{records.length === 1 ? "" : "s"} en
+          este directorio. Abre una ficha para ver fuentes, punto de acceso,
+          orientación del flujo y la cautela que podría cambiar la
+          compatibilidad.
         </p>
       </section>
 
-      <section className="directory-section" aria-label="Vehicles using this part">
+      <section className="directory-section" aria-label="Vehículos que usan esta pieza">
         <div className="record-grid">
           {records.map((record) => (
             <article className="record-card" key={record.slug}>
               <div className="record-topline">
                 <Badge className={record.confidence === "Verified" ? "status-badge" : "status-badge conditional"}>
-                  <CheckCircle2 aria-hidden="true" /> {record.confidence}
+                  <CheckCircle2 aria-hidden="true" /> {confidenceLabels[record.confidence]}
                 </Badge>
                 <span>{record.sources[0].type}</span>
               </div>
-              <p className="record-focus">{record.focus}</p>
+              <p className="record-focus">{coverageLabels[record.focus]}</p>
               <p className="record-year">{record.year}</p>
               <h3>{record.make} {record.model}</h3>
               <dl>
-                <div><dt>Market</dt><dd>{record.market}</dd></div>
-                <div><dt>Configuration</dt><dd>{record.filterCount}</dd></div>
+                <div><dt>Mercado</dt><dd>{record.market}</dd></div>
+                <div><dt>Configuración</dt><dd>{record.filterCount}</dd></div>
               </dl>
               <Link href={`/filters/${record.slug}`} className="record-link">
-                Open fitment record <ArrowUpRight aria-hidden="true" />
+                Abrir ficha completa <ArrowUpRight aria-hidden="true" />
               </Link>
             </article>
           ))}

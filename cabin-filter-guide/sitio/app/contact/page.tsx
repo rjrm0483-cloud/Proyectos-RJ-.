@@ -2,38 +2,39 @@ import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contacto",
   description:
-    "How to report a fitment error or suggest a vehicle for Cabin Filter Guide.",
+    "Cómo reportar un error de compatibilidad o sugerir un vehículo para Cabin Filter Guide.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
-    <StaticPage headerNote="Contact" breadcrumb="Contact">
-      <p className="eyebrow">CONTACT</p>
-      <h1>Found an error? Tell us.</h1>
+    <StaticPage headerNote="Contacto" breadcrumb="Contacto">
+      <p className="eyebrow">CONTACTO</p>
+      <h1>¿Encontraste un error? Cuéntanos.</h1>
       <p>
-        Corrections are the fastest way to make this directory better. If a
-        record does not match your vehicle, or a source link is broken, we want
-        to know — and the record will be re-verified against its sources.
+        Las correcciones son la vía más rápida para mejorar este directorio. Si
+        una ficha no coincide con tu vehículo, o un enlace a una fuente está
+        roto, queremos saberlo — y la ficha se volverá a verificar contra sus
+        fuentes.
       </p>
 
-      <h2>What helps most in a report</h2>
+      <h2>Qué ayuda más en un reporte</h2>
       <ul>
-        <li>The record page (year, make, model) you are reporting.</li>
-        <li>Your vehicle&apos;s market and, if possible, engine or trim.</li>
-        <li>What the record says versus what you found.</li>
+        <li>La ficha (año, marca, modelo) que estás reportando.</li>
+        <li>El mercado de tu vehículo y, si es posible, el motor o la versión.</li>
+        <li>Qué dice la ficha y qué encontraste tú.</li>
       </ul>
 
-      <h2>How to reach us</h2>
+      <h2>Cómo escribirnos</h2>
       <p>
-        A public contact address for this site is being set up and will be
-        published on this page. Until then, corrections gathered from public
-        forums and manufacturer catalog updates are reviewed on a nightly
-        schedule.
+        La dirección pública de contacto de este sitio está en proceso de
+        configurarse y se publicará en esta página. Mientras tanto, las
+        correcciones detectadas en foros públicos y en actualizaciones de los
+        catálogos de fabricantes se revisan en un ciclo nocturno.
       </p>
-      {/* TODO(Rodrigo): publish the approved public contact email here. */}
+      {/* TODO(Rodrigo): publicar aquí el correo de contacto aprobado. */}
     </StaticPage>
   );
 }

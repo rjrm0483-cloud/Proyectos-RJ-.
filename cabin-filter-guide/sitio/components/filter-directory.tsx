@@ -6,17 +6,18 @@ import { ArrowUpRight, CheckCircle2, Search, ShieldCheck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { SiteFooter } from "@/components/site-footer";
+import { confidenceLabels, coverageLabels } from "@/lib/labels";
 import type { Coverage, FilterRecord } from "@/data/filters";
 
-const focusOptions: Array<"All" | Coverage> = [
-  "All",
-  "Central America",
-  "International",
-  "EV / premium",
+const focusOptions: Array<{ value: "All" | Coverage; label: string }> = [
+  { value: "All", label: "Todas" },
+  { value: "Central America", label: "Centroamérica" },
+  { value: "International", label: "Internacional" },
+  { value: "EV / premium", label: "EV / premium" },
 ];
 
-// Fold accents so "eléctrico" matches "electrico"; compact strips separators
-// so "CU17001" still finds "CU 17 001".
+// Ignora acentos para que "electrico" encuentre "eléctrico"; compact quita
+// separadores para que "CU17001" encuentre "CU 17 001".
 function fold(value: string) {
   return value
     .toLowerCase()
@@ -44,6 +45,7 @@ export function FilterDirectory({ records }: { records: FilterRecord[] }) {
         record.partReference,
         record.market,
         record.focus,
+        coverageLabels[record.focus],
       ].join(" ");
       const matchesQuery =
         !needle ||
@@ -60,28 +62,29 @@ export function FilterDirectory({ records }: { records: FilterRecord[] }) {
   return (
     <main>
       <header className="site-header">
-        <Link href="/" className="brand-lockup" aria-label="Cabin Filter Guide home">
+        <Link href="/" className="brand-lockup" aria-label="Inicio de Cabin Filter Guide">
           <span className="brand-mark">CFG</span>
           <span>
             <strong>Cabin Filter Guide</strong>
-            <small>verified by Sam7</small>
+            <small>verificado con fuentes</small>
           </span>
         </Link>
-        <span className="header-note">Central America + global demand</span>
+        <span className="header-note">Centroamérica + demanda global</span>
       </header>
 
       <section className="hero-shell">
         <div className="hero-copy">
-          <p className="eyebrow">CABIN FILTER FITMENT DIRECTORY / 001</p>
-          <h1>The right cabin filter. First try.</h1>
+          <p className="eyebrow">DIRECTORIO DE FILTROS DE CABINA / 001</p>
+          <h1>El filtro de cabina correcto. A la primera.</h1>
           <p className="hero-deck">
-            Everyday vehicles in Central America first, plus international
-            models people search for at scale. Every fitment keeps its source.
+            Primero los vehículos de uso diario en Centroamérica, más los
+            modelos internacionales que el mundo busca. Cada ficha conserva su
+            fuente.
           </p>
         </div>
 
         <div className="search-panel">
-          <label htmlFor="vehicle-search">Search year, make, model, or part reference</label>
+          <label htmlFor="vehicle-search">Busca por año, marca, modelo o referencia</label>
           <div className="search-field">
             <Search aria-hidden="true" />
             <Input
@@ -89,40 +92,40 @@ export function FilterDirectory({ records }: { records: FilterRecord[] }) {
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Try Suzuki Fronx or Toyota Hilux"
+              placeholder="Prueba Suzuki Fronx o Toyota Hilux"
               autoComplete="off"
             />
           </div>
-          <p>{filtered.length} verified reference{filtered.length === 1 ? "" : "s"}</p>
+          <p>{filtered.length} referencia{filtered.length === 1 ? "" : "s"} verificada{filtered.length === 1 ? "" : "s"}</p>
         </div>
       </section>
 
-      <section className="metric-rail" aria-label="Directory facts">
-        <div><strong>{records.length}</strong><span>fitment pages</span></div>
-        <div><strong>{centralAmericaCount}</strong><span>Central America focus</span></div>
-        <div><strong>100%</strong><span>source-linked</span></div>
-        <div><strong>$0</strong><span>paid influence</span></div>
+      <section className="metric-rail" aria-label="Datos del directorio">
+        <div><strong>{records.length}</strong><span>fichas publicadas</span></div>
+        <div><strong>{centralAmericaCount}</strong><span>enfoque Centroamérica</span></div>
+        <div><strong>100%</strong><span>con fuente enlazada</span></div>
+        <div><strong>$0</strong><span>influencia pagada</span></div>
       </section>
 
       <section className="directory-section" aria-labelledby="directory-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">THE LEDGER</p>
-            <h2 id="directory-title">Verified fitment</h2>
+            <p className="eyebrow">EL REGISTRO</p>
+            <h2 id="directory-title">Compatibilidad verificada</h2>
           </div>
-          <p>Every page shows its source, confidence, and the exact caveat that could change fitment.</p>
+          <p>Cada ficha muestra su fuente, su nivel de confianza y la cautela exacta que podría cambiar la compatibilidad.</p>
         </div>
 
-        <div className="focus-filters" aria-label="Filter by market focus">
+        <div className="focus-filters" aria-label="Filtrar por enfoque de mercado">
           {focusOptions.map((option) => (
             <button
               type="button"
-              key={option}
-              className={focus === option ? "active" : ""}
-              aria-pressed={focus === option}
-              onClick={() => setFocus(option)}
+              key={option.value}
+              className={focus === option.value ? "active" : ""}
+              aria-pressed={focus === option.value}
+              onClick={() => setFocus(option.value)}
             >
-              {option}
+              {option.label}
             </button>
           ))}
         </div>
@@ -132,48 +135,49 @@ export function FilterDirectory({ records }: { records: FilterRecord[] }) {
             <article className="record-card" key={record.slug}>
               <div className="record-topline">
                 <Badge className={record.confidence === "Verified" ? "status-badge" : "status-badge conditional"}>
-                  <CheckCircle2 aria-hidden="true" /> {record.confidence}
+                  <CheckCircle2 aria-hidden="true" /> {confidenceLabels[record.confidence]}
                 </Badge>
                 <span>{record.sources[0].type}</span>
               </div>
-              <p className="record-focus">{record.focus}</p>
+              <p className="record-focus">{coverageLabels[record.focus]}</p>
               <p className="record-year">{record.year}</p>
               <h3>{record.make} {record.model}</h3>
               <dl>
-                <div><dt>Part reference</dt><dd>{record.partReference}</dd></div>
-                <div><dt>Configuration</dt><dd>{record.filterCount}</dd></div>
+                <div><dt>Referencia</dt><dd>{record.partReference}</dd></div>
+                <div><dt>Configuración</dt><dd>{record.filterCount}</dd></div>
               </dl>
               <Link href={`/filters/${record.slug}`} className="record-link">
-                Open fitment record <ArrowUpRight aria-hidden="true" />
+                Abrir ficha completa <ArrowUpRight aria-hidden="true" />
               </Link>
             </article>
           ))}
           {filtered.length === 0 && (
             <div className="empty-state">
               <Search aria-hidden="true" />
-              <h3>No verified page yet</h3>
-              <p>Sam7 only publishes after it can attach a primary or OEM source.</p>
+              <h3>Aún no hay una ficha verificada</h3>
+              <p>Solo se publica cuando la respuesta puede enlazarse a una fuente primaria u OEM.</p>
             </div>
           )}
         </div>
       </section>
 
       <section className="method-section">
-        <div className="method-stamp"><ShieldCheck aria-hidden="true" /><span>SOURCE<br />BEFORE<br />SCALE</span></div>
+        <div className="method-stamp"><ShieldCheck aria-hidden="true" /><span>FUENTE<br />ANTES QUE<br />ESCALA</span></div>
         <div>
-          <p className="eyebrow">SAM7’S PUBLISHING MIX</p>
-          <h2>Local usefulness. Global search demand.</h2>
+          <p className="eyebrow">MEZCLA EDITORIAL</p>
+          <h2>Utilidad local. Demanda global.</h2>
           <p>
-            Sam7 aims for 60% Central America, 30% international high-demand
-            vehicles, and 10% EV or premium models. A Tesla can earn global
-            searches without crowding out the Fronx, Hilux, or Yaris Cross.
+            El objetivo es 60% Centroamérica, 30% vehículos internacionales de
+            alta demanda y 10% eléctricos o premium. Un Tesla puede ganar
+            búsquedas globales sin desplazar al Fronx, al Hilux o al Yaris
+            Cross.
           </p>
         </div>
         <ol className="source-order">
-          <li><span>01</span>Manufacturer service guide</li>
-          <li><span>02</span>OEM parts catalog</li>
-          <li><span>03</span>Filter-maker fitment tool</li>
-          <li><span>04</span>Retailer listing, never alone</li>
+          <li><span>01</span>Guía de servicio del fabricante</li>
+          <li><span>02</span>Catálogo de repuestos OEM</li>
+          <li><span>03</span>Catálogo del fabricante del filtro</li>
+          <li><span>04</span>Listado de vendedor, nunca solo</li>
         </ol>
       </section>
 

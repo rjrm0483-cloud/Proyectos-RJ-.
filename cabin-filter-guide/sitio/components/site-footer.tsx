@@ -4,17 +4,18 @@ export function SiteFooter() {
   return (
     <footer>
       <div className="footer-copy">
-        <p>Cabin Filter Guide is an independent reference directory built by Sam7.</p>
+        <p>Cabin Filter Guide es un directorio de referencia independiente.</p>
         <p>
-          Affiliate links, if added, will be labeled. Always confirm fitment for
-          your VIN, market, and build date before purchase.
+          Si algún día se añaden enlaces de afiliados, estarán claramente
+          identificados. Confirma siempre la compatibilidad con tu VIN, mercado
+          y fecha de fabricación antes de comprar.
         </p>
       </div>
-      <nav className="footer-nav" aria-label="Site pages">
-        <Link href="/about">About &amp; methodology</Link>
-        <Link href="/disclosure">Affiliate disclosure</Link>
-        <Link href="/privacy">Privacy policy</Link>
-        <Link href="/contact">Contact</Link>
+      <nav className="footer-nav" aria-label="Páginas del sitio">
+        <Link href="/about">Acerca de y metodología</Link>
+        <Link href="/disclosure">Divulgación de afiliados</Link>
+        <Link href="/privacy">Política de privacidad</Link>
+        <Link href="/contact">Contacto</Link>
       </nav>
     </footer>
   );

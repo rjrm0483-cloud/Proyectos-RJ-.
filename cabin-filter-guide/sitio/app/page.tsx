@@ -11,12 +11,13 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `${SITE_NAME} fitment directory`,
+    name: `Directorio de compatibilidad de ${SITE_NAME}`,
+    inLanguage: "es",
     numberOfItems: filterRecords.length,
     itemListElement: filterRecords.map((record, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: `${record.year} ${record.make} ${record.model} cabin air filter`,
+      name: `Filtro de cabina ${record.make} ${record.model} ${record.year}`,
       url: `${SITE_URL}/filters/${record.slug}`,
     })),
   };

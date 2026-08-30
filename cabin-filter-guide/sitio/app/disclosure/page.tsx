@@ -2,44 +2,45 @@ import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
 
 export const metadata: Metadata = {
-  title: "Affiliate disclosure",
+  title: "Divulgación de afiliados",
   description:
-    "Cabin Filter Guide's affiliate disclosure: current status, labeling rules, and how commissions will never affect fitment records.",
+    "Divulgación de afiliados de Cabin Filter Guide: estado actual, reglas de identificación y por qué las comisiones nunca afectarán las fichas.",
   alternates: { canonical: "/disclosure" },
 };
 
 export default function DisclosurePage() {
   return (
-    <StaticPage headerNote="Disclosure" breadcrumb="Affiliate disclosure">
-      <p className="eyebrow">AFFILIATE DISCLOSURE</p>
-      <h1>Accuracy before commission.</h1>
+    <StaticPage headerNote="Divulgación" breadcrumb="Divulgación de afiliados">
+      <p className="eyebrow">DIVULGACIÓN DE AFILIADOS</p>
+      <h1>Precisión antes que comisión.</h1>
       <p>
-        <strong>Current status: no affiliate links are active on this site.</strong>{" "}
-        Cabin Filter Guide currently earns no money from any link, product, or
-        recommendation it publishes.
+        <strong>Estado actual: no hay enlaces de afiliados activos en este sitio.</strong>{" "}
+        Cabin Filter Guide no gana dinero por ningún enlace, producto o
+        recomendación que publica.
       </p>
 
-      <h2>If affiliate links are added later</h2>
+      <h2>Si en el futuro se añaden enlaces de afiliados</h2>
       <ul>
         <li>
-          Every affiliate or referral link will be clearly labeled as such where
-          it appears.
+          Todo enlace de afiliado o referido estará claramente identificado
+          como tal en el lugar donde aparezca.
         </li>
         <li>
-          A link will only be added after the product match has been
-          independently verified against the record&apos;s sources.
+          Un enlace solo se añadirá después de verificar de forma independiente
+          que el producto coincide con las fuentes de la ficha.
         </li>
         <li>
-          Commissions will never change what a record says about fitment,
-          confidence, or caveats. Fitment data is verified first; buying links,
-          if any, come after.
+          Las comisiones nunca cambiarán lo que una ficha dice sobre
+          compatibilidad, confianza o cautelas. Los datos se verifican primero;
+          los enlaces de compra, si los hay, vienen después.
         </li>
-        <li>This page will be updated before any program goes live.</li>
+        <li>Esta página se actualizará antes de activar cualquier programa.</li>
       </ul>
 
       <p>
-        Regardless of how you reach a seller, always confirm fitment for your
-        VIN, market, and build date before purchase.
+        Sin importar cómo llegues a un vendedor, confirma siempre la
+        compatibilidad con tu VIN, mercado y fecha de fabricación antes de
+        comprar.
       </p>
     </StaticPage>
   );

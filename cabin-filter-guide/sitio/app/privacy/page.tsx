@@ -2,54 +2,54 @@ import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
 
 export const metadata: Metadata = {
-  title: "Privacy policy",
+  title: "Política de privacidad",
   description:
-    "Cabin Filter Guide's privacy policy: what data the site does and does not collect.",
+    "Política de privacidad de Cabin Filter Guide: qué datos recopila el sitio y cuáles no.",
   alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
   return (
-    <StaticPage headerNote="Privacy" breadcrumb="Privacy policy">
-      <p className="eyebrow">PRIVACY POLICY</p>
-      <h1>What this site knows about you.</h1>
-      <p>Last updated: 30 August 2026.</p>
+    <StaticPage headerNote="Privacidad" breadcrumb="Política de privacidad">
+      <p className="eyebrow">POLÍTICA DE PRIVACIDAD</p>
+      <h1>Qué sabe este sitio de ti.</h1>
+      <p>Última actualización: 30 de agosto de 2026.</p>
 
-      <h2>What we collect</h2>
+      <h2>Qué recopilamos</h2>
       <p>
-        Cabin Filter Guide does not require accounts, does not set its own
-        tracking cookies, and does not ask for personal information. The search
-        box on the home page filters records in your browser; queries are not
-        sent to or stored on our servers.
+        Cabin Filter Guide no requiere cuentas, no coloca cookies de rastreo
+        propias y no pide información personal. El buscador de la portada
+        filtra las fichas en tu navegador; las búsquedas no se envían ni se
+        guardan en nuestros servidores.
       </p>
 
-      <h2>Hosting</h2>
+      <h2>Alojamiento</h2>
       <p>
-        The site is served by a third-party hosting platform, which may log
-        standard technical data (such as IP address, browser type, and pages
-        requested) to operate and secure the service, as described in the
-        host&apos;s own privacy documentation.
+        El sitio se sirve desde una plataforma de alojamiento de terceros, que
+        puede registrar datos técnicos estándar (como dirección IP, tipo de
+        navegador y páginas solicitadas) para operar y proteger el servicio,
+        según la documentación de privacidad del propio proveedor.
       </p>
 
-      <h2>External links</h2>
+      <h2>Enlaces externos</h2>
       <p>
-        Records link to manufacturer guides, OEM catalogs, and filter-maker
-        catalogs. Those sites have their own privacy policies; this policy does
-        not cover them.
+        Las fichas enlazan a guías de fabricantes, catálogos OEM y catálogos de
+        fabricantes de filtros. Esos sitios tienen sus propias políticas de
+        privacidad; esta política no los cubre.
       </p>
 
-      <h2>Advertising and analytics</h2>
+      <h2>Publicidad y analítica</h2>
       <p>
-        No advertising or third-party analytics are active on this site today.
-        If advertising, analytics, or affiliate programs are added in the
-        future, this policy will be updated first to describe exactly what
-        changes, including any cookies or identifiers involved.
+        Hoy no hay publicidad ni analítica de terceros activa en este sitio. Si
+        en el futuro se añade publicidad, analítica o programas de afiliados,
+        esta política se actualizará primero para describir exactamente qué
+        cambia, incluidas las cookies o identificadores involucrados.
       </p>
 
-      <h2>Changes</h2>
+      <h2>Cambios</h2>
       <p>
-        Material changes to this policy will be reflected on this page with a
-        new &quot;last updated&quot; date.
+        Los cambios importantes de esta política se reflejarán en esta página
+        con una nueva fecha de última actualización.
       </p>
     </StaticPage>
   );

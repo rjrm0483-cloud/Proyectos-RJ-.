@@ -2,61 +2,64 @@ import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
 
 export const metadata: Metadata = {
-  title: "About & methodology",
+  title: "Acerca de y metodología",
   description:
-    "How Cabin Filter Guide verifies every cabin air filter fitment record: source hierarchy, confidence levels, and publishing rules.",
+    "Cómo Cabin Filter Guide verifica cada ficha de compatibilidad de filtros de cabina: jerarquía de fuentes, niveles de confianza y reglas de publicación.",
   alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
-    <StaticPage headerNote="About" breadcrumb="About & methodology">
-      <p className="eyebrow">ABOUT CABIN FILTER GUIDE</p>
-      <h1>Source before scale.</h1>
+    <StaticPage headerNote="Acerca de" breadcrumb="Acerca de y metodología">
+      <p className="eyebrow">ACERCA DE CABIN FILTER GUIDE</p>
+      <h1>La fuente antes que la escala.</h1>
       <p>
-        Cabin Filter Guide is an independent reference directory of cabin air
-        filter fitment, focused first on vehicles that are common in Nicaragua
-        and Central America, plus international models with high search demand.
-        It is researched and maintained by Sam7, an automated research agent,
-        under human supervision.
+        Cabin Filter Guide es un directorio de referencia independiente sobre
+        compatibilidad de filtros de cabina, enfocado primero en los vehículos
+        comunes en Nicaragua y Centroamérica, más los modelos internacionales
+        con alta demanda de búsqueda. Lo investiga y mantiene un agente
+        automatizado de investigación bajo supervisión humana.
       </p>
 
-      <h2>How a record gets published</h2>
+      <h2>Cómo se publica una ficha</h2>
       <ol>
         <li>
-          A real, repeated question or complaint about cabin filter
-          compatibility is identified.
+          Se identifica una pregunta o queja real y repetida sobre
+          compatibilidad de filtros de cabina.
         </li>
         <li>
-          The answer is verified against a source in this order of preference:
-          manufacturer service guide, OEM parts catalog, filter-maker fitment
-          tool. A retailer listing is never used alone.
+          La respuesta se verifica contra una fuente en este orden de
+          preferencia: guía de servicio del fabricante, catálogo de repuestos
+          OEM, catálogo del fabricante del filtro. Un listado de vendedor nunca
+          se usa solo.
         </li>
         <li>
-          If the fitment cannot be verified with a solid source, it is not
-          published. No exceptions.
+          Si la compatibilidad no puede verificarse con una fuente sólida, no
+          se publica. Sin excepciones.
         </li>
         <li>
-          Every published record links its sources and states the exact caveat —
-          market, trim, engine, or build date — that could change the answer.
+          Cada ficha publicada enlaza sus fuentes y declara la cautela exacta
+          —mercado, versión, motor o fecha de fabricación— que podría cambiar
+          la respuesta.
         </li>
       </ol>
 
-      <h2>Confidence levels</h2>
+      <h2>Niveles de confianza</h2>
       <p>
-        <strong>Verified</strong> means the source confirms the fitment for the
-        stated years and configuration. <strong>Conditional</strong> means the
-        source is solid but the fitment depends on a variable the buyer must
-        confirm, such as engine code or sales market. In both cases, confirm
-        against your VIN before purchase.
+        <strong>Verificada</strong> significa que la fuente confirma la
+        compatibilidad para los años y la configuración indicados.{" "}
+        <strong>Condicional</strong> significa que la fuente es sólida pero la
+        compatibilidad depende de una variable que el comprador debe confirmar,
+        como el código de motor o el mercado de venta. En ambos casos, confirma
+        con tu VIN antes de comprar.
       </p>
 
-      <h2>Independence</h2>
+      <h2>Independencia</h2>
       <p>
-        No manufacturer, filter maker, or retailer pays for placement in this
-        directory. If affiliate links are ever added, they will be clearly
-        labeled and covered by the affiliate disclosure page — and they will
-        never change what a record says about fitment.
+        Ningún fabricante, marca de filtros o vendedor paga por aparecer en
+        este directorio. Si algún día se añaden enlaces de afiliados, estarán
+        claramente identificados y cubiertos por la página de divulgación — y
+        nunca cambiarán lo que una ficha dice sobre compatibilidad.
       </p>
     </StaticPage>
   );
