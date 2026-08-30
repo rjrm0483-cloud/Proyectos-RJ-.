@@ -1,0 +1,74 @@
+name: Publicar Cabin Filter Guide
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obtener la rama de trabajo del directorio
+        uses: actions/checkout@v4
+        with:
+          ref: claude/autonomous-webpage-review-gn511e
+          path: fuente
+
+      - name: Obtener main (política de privacidad de la raíz)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: raiz
+
+      - name: Preparar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: fuente/cabin-filter-guide/sitio/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+        working-directory: fuente/cabin-filter-guide/sitio
+
+      - name: Validar los datos de las fichas
+        run: node --test tests/data-validation.test.mjs
+        working-directory: fuente/cabin-filter-guide/sitio
+
+      - name: Compilar exportación estática
+        run: npm run build:static
+        working-directory: fuente/cabin-filter-guide/sitio
+
+      - name: Componer el sitio (política en la raíz + directorio en /guia)
+        run: |
+          mkdir -p _site/guia
+          cp raiz/index.html _site/index.html
+          cp -r fuente/cabin-filter-guide/sitio/out/. _site/guia/
+          touch _site/.nojekyll
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Subir artefacto del sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
