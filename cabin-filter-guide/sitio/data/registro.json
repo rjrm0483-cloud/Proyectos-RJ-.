@@ -7,5 +7,14 @@
     "categoria": null,
     "fuente": null,
     "totalFichas": 7
+  },
+  {
+    "fecha": "2026-08-31",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo del sábado ejecutado manualmente por el supervisor: la sesión nocturna 1 quedó bloqueada por un permiso y el reintento terminó sin publicar (el proxy del entorno bloquea WebFetch a catálogos; verificación hecha vía búsqueda con dominios oficiales).",
+    "ficha": "2016-2026-nissan-frontier-np300",
+    "categoria": "Central America",
+    "fuente": "https://catalog.mann-filter.com/EU/eng/vehicle/MANN-FILTER%20Katalog%20Europa/Vehicles/CARS%20%2B%20TRANSPORTERS/NISSAN/Navara%20NP300%20(D23)/2.3%20dCi%20(%20(D23))%20YS23DDT%20(T256052)",
+    "totalFichas": 8
   }
 ]

@@ -185,5 +185,42 @@
         "supports": "Cantidad de filtros, intervalo de reemplazo, acceso y dirección de instalación."
       }
     ]
+  },
+  {
+    "slug": "2016-2026-nissan-frontier-np300",
+    "year": "2016–2026",
+    "make": "Nissan",
+    "model": "Frontier / NP300",
+    "focus": "Central America",
+    "market": "Navara / NP300 (D23); verifica motor y mercado",
+    "partReference": "MANN-FILTER CU 22 028",
+    "filterCount": "1 filtro",
+    "replacementInterval": "Sigue el plan de mantenimiento de Nissan; inspecciónalo más seguido en caminos con polvo.",
+    "access": "Detrás de la guantera",
+    "airflow": "Copia la orientación de la flecha del filtro retirado.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-08-31",
+    "summary": "El catálogo MANN-FILTER lista el CU 22 028 para el Nissan Navara / Frontier NP300 (D23) 2.3 dCi desde enero de 2016, con referencia cruzada OE Nissan 27277-4KJ0A.",
+    "caution": "La aplicación verificada es la 2.3 dCi (YS23DDT) desde 2016. Las unidades centroamericanas del Frontier / NP300 pueden montar otros motores según año y país; confirma el motor y el VIN en el catálogo de tu concesionario antes de comprar.",
+    "sources": [
+      {
+        "label": "Catálogo en línea MANN-FILTER — aplicación Navara NP300 (D23)",
+        "url": "https://catalog.mann-filter.com/EU/eng/vehicle/MANN-FILTER%20Katalog%20Europa/Vehicles/CARS%20%2B%20TRANSPORTERS/NISSAN/Navara%20NP300%20(D23)/2.3%20dCi%20(%20(D23))%20YS23DDT%20(T256052)",
+        "type": "Catálogo del fabricante del filtro",
+        "supports": "Aplicación del CU 22 028 para Navara NP300 (D23) 2.3 dCi desde enero de 2016."
+      },
+      {
+        "label": "Ficha de producto MANN-FILTER CU 22 028",
+        "url": "https://www.mann-filter.com/mea-en/catalogue/search-results/product.html/cu22028_mann-filter.html",
+        "type": "Catálogo del fabricante del filtro",
+        "supports": "Identidad del producto: filtro de cabina de partículas CU 22 028."
+      },
+      {
+        "label": "Referencia cruzada OE (distribuidor K Motorshop)",
+        "url": "https://www.kmotorshop.com/en/article-detail/view/203579/filter-cabin-air-cu-22-028-mann-filter-27277-4kj0a-4708350000-27277-5xa0a",
+        "type": "Listado de distribuidor (apoyo, nunca solo)",
+        "supports": "Referencias cruzadas OE Nissan 27277-4KJ0A y 27277-5XA0A para el CU 22 028."
+      }
+    ]
   }
 ]
