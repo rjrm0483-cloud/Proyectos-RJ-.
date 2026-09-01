@@ -1,0 +1,21 @@
+name: Verificar enlaces de fuentes
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 0"
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener la rama de trabajo del directorio
+        uses: actions/checkout@v4
+        with:
+          ref: claude/autonomous-webpage-review-gn511e
+
+      - name: Comprobar URLs de las fuentes
+        run: node cabin-filter-guide/sitio/scripts/verificar-enlaces.mjs cabin-filter-guide/sitio/data/filters.json
