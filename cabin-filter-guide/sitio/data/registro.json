@@ -16,5 +16,14 @@
     "categoria": "Central America",
     "fuente": "https://catalog.mann-filter.com/EU/eng/vehicle/MANN-FILTER%20Katalog%20Europa/Vehicles/CARS%20%2B%20TRANSPORTERS/NISSAN/Navara%20NP300%20(D23)/2.3%20dCi%20(%20(D23))%20YS23DDT%20(T256052)",
     "totalFichas": 8
+  },
+  {
+    "fecha": "2026-08-31",
+    "accion": "mantenimiento",
+    "detalle": "Ciclo dominical ejecutado por el supervisor (la sesión nocturna terminó sin registrar). Verificación de las 11 URLs de fuentes con el workflow 'Verificar enlaces de fuentes' (red completa): 7 OK, 1 rota corregida (catálogo MANN del Fronx: la URL /es/ devolvía 404, reemplazada por la versión /en/ del mismo producto CU 17 001), 3 con bloqueo anti-bot 403 (parts.subaru.com, moparonlineparts, kmotorshop) que abren bien en navegador — sin cambios.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": null,
+    "totalFichas": 8
   }
 ]
