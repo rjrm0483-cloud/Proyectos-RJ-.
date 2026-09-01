@@ -297,3 +297,19 @@ footer p { margin: 0; max-width: 520px; }
   .related-list a { grid-template-columns: 1fr auto; }
   .related-list span { grid-column: 1 / -1; }
 }
+
+/* Enlaces de compra (afiliados) y patrocinador local */
+.buy-links { list-style: none; margin: 14px 0 18px; padding: 0; display: grid; gap: 8px; }
+.buy-links a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 13px 14px; border: 1px solid var(--ink); background: var(--white);
+  text-decoration: none; font: 800 13px/1.2 var(--font-mono); text-transform: uppercase;
+}
+.buy-links a:hover, .buy-links a:focus-visible { background: var(--acid); }
+.buy-links svg { width: 16px; }
+.sponsor-box { margin-top: 34px; max-width: 560px; padding: 22px 24px; border: 1px solid var(--ink); background: var(--white); box-shadow: 8px 8px 0 var(--ink); }
+.sponsor-box > span { color: var(--muted); font: 700 10px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
+.sponsor-box strong { display: block; margin: 10px 0 8px; font-size: 24px; letter-spacing: -.03em; }
+.sponsor-box p { margin: 0; color: var(--muted); line-height: 1.5; }
+.sponsor-box a { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--ink); text-decoration: none; font-weight: 800; }
+.sponsor-box a svg { width: 17px; }

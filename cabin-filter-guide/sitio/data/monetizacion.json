@@ -1,0 +1,54 @@
+{
+  "afiliadosActivos": false,
+  "programas": {
+    "amazon": {
+      "activo": false,
+      "etiqueta": "Amazon",
+      "plantillaUrl": "https://www.amazon.com/s?k={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en Amazon Associates (EE.UU.) con Payoneer; al aprobar, poner sufijo '&tag=TU-TAG-20' y activo:true."
+    },
+    "ebay": {
+      "activo": false,
+      "etiqueta": "eBay",
+      "plantillaUrl": "https://www.ebay.com/sch/i.html?_nkw={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en eBay Partner Network; al aprobar, poner sufijo '&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=TU-CAMPID&toolid=10001&mkevt=1' y activo:true."
+    },
+    "aliexpress": {
+      "activo": false,
+      "etiqueta": "AliExpress",
+      "plantillaUrl": "https://www.aliexpress.com/wholesale?SearchText={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Vía AliExpress Portals o Admitad; al aprobar, poner prefijoDeeplink del generador de enlaces y activo:true."
+    },
+    "advance": {
+      "activo": false,
+      "etiqueta": "Advance Auto Parts",
+      "plantillaUrl": "https://shop.advanceautoparts.com/web/SearchResults?searchTerm={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Programa vía red de afiliados (CJ/Impact); al aprobar, poner prefijoDeeplink de la red y activo:true."
+    },
+    "autodoc": {
+      "activo": false,
+      "etiqueta": "AUTODOC",
+      "plantillaUrl": "https://www.autodoc.co.uk/search?keyword={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Programa vía Admitad (Europa); al aprobar, poner prefijoDeeplink de Admitad y activo:true."
+    }
+  },
+  "porEnfoque": {
+    "Central America": ["aliexpress", "amazon", "ebay"],
+    "International": ["amazon", "advance", "ebay"],
+    "EV / premium": ["amazon", "ebay"]
+  },
+  "patrocinadores": {
+    "porDefecto": null,
+    "porFicha": {}
+  }
+}

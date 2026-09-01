@@ -82,3 +82,21 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
   copia de chatgpt.site queda obsoleta (retirarla o dejarla canonicalizando).
 - El dominio propio CabinFilterGuide.com puede conectarse a GitHub Pages
   cuando Rodrigo lo compre (CNAME + actualizar SITE_URL y basePath).
+
+## 1 de septiembre de 2026 — infraestructura de monetización preparada
+
+- Rodrigo pidió recursos de comisión mejores que los anuncios display; se
+  investigaron programas actuales y se definió la estrategia en
+  `documentacion/plan-comercial.md`: patrocinios locales primero, afiliados
+  de repuestos (eBay, Amazon, Advance Auto Parts, AliExpress, AUTODOC) para
+  el tráfico internacional.
+- Se cableó la infraestructura en el sitio, apagada por defecto:
+  `data/monetizacion.json` + `lib/monetizacion.ts` generan enlaces de compra
+  por ficha según su enfoque, con divulgación visible, y un espacio de
+  patrocinador "¿Dónde comprarlo en Nicaragua?". Con todo inactivo, el sitio
+  se ve idéntico ("Estado de afiliados: No activados").
+- Validación nueva (`tests/monetizacion.test.mjs`): un programa activo sin
+  identificador real de afiliado rompe la compilación.
+- Especificación v4: el bot Comercial solo prepara borradores; Rodrigo crea
+  cuentas, pega los identificadores y aprueba; prohibido el tráfico
+  artificial.

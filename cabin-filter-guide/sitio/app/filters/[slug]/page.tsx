@@ -15,6 +15,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { SiteFooter } from "@/components/site-footer";
 import { confidenceLabels } from "@/lib/labels";
+import { getEnlacesCompra, getPatrocinador } from "@/lib/monetizacion";
 import {
   filterRecords,
   getFilterRecord,
@@ -66,6 +67,8 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
 
   const related = getRelatedByPart(record);
   const partSlug = partReferenceSlug(record.partReference);
+  const enlacesCompra = getEnlacesCompra(record);
+  const patrocinador = getPatrocinador(record.slug);
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -234,16 +237,49 @@ export default async function FilterDetailPage({ params }: DetailPageProps) {
         <div>
           <p className="eyebrow">ENLACES DE COMPRA</p>
           <h2>Precisión antes que comisión.</h2>
+          {patrocinador && (
+            <aside className="sponsor-box">
+              <span>¿Dónde comprarlo en Nicaragua? · Patrocinado</span>
+              <strong>{patrocinador.nombre}</strong>
+              <p>{patrocinador.texto}</p>
+              {patrocinador.url && (
+                <a href={patrocinador.url} target="_blank" rel="noreferrer sponsored">
+                  Visitar al patrocinador <ArrowUpRight aria-hidden="true" />
+                </a>
+              )}
+            </aside>
+          )}
         </div>
-        <div className="commerce-status">
-          <span>Estado de afiliados</span>
-          <strong>No activados</strong>
-          <p>
-            Solo se añadirán enlaces de compra claramente identificados cuando
-            el comercio confirme términos rastreables y la coincidencia del
-            producto haya sido verificada de forma independiente.
-          </p>
-        </div>
+        {enlacesCompra.length > 0 ? (
+          <div className="commerce-status">
+            <span>Buscar esta pieza · Enlaces de afiliado</span>
+            <ul className="buy-links">
+              {enlacesCompra.map((enlace) => (
+                <li key={enlace.etiqueta}>
+                  <a href={enlace.url} target="_blank" rel="noreferrer sponsored">
+                    {enlace.etiqueta} <ArrowUpRight aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p>
+              Ganamos una comisión si compras a través de estos enlaces, sin
+              costo extra para ti. La comisión nunca cambia lo que la ficha
+              dice sobre compatibilidad: confirma siempre con tu VIN antes de
+              comprar.
+            </p>
+          </div>
+        ) : (
+          <div className="commerce-status">
+            <span>Estado de afiliados</span>
+            <strong>No activados</strong>
+            <p>
+              Solo se añadirán enlaces de compra claramente identificados cuando
+              el comercio confirme términos rastreables y la coincidencia del
+              producto haya sido verificada de forma independiente.
+            </p>
+          </div>
+        )}
       </section>
 
       <SiteFooter />
