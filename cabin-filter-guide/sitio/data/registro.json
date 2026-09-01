@@ -20,7 +20,7 @@
   {
     "fecha": "2026-08-31",
     "accion": "mantenimiento",
-    "detalle": "Ciclo dominical ejecutado por el supervisor (la sesión nocturna terminó sin registrar). Verificación de las 11 URLs de fuentes con el workflow 'Verificar enlaces de fuentes' (red completa): 7 OK, 1 rota corregida (catálogo MANN del Fronx: la URL /es/ devolvía 404, reemplazada por la versión /en/ del mismo producto CU 17 001), 3 con bloqueo anti-bot 403 (parts.subaru.com, moparonlineparts, kmotorshop) que abren bien en navegador — sin cambios.",
+    "detalle": "Ciclo dominical ejecutado por el supervisor (la sesión nocturna terminó sin registrar). Verificación de las 11 URLs de fuentes con el workflow 'Verificar enlaces de fuentes' (red completa): 1 rota corregida — el catálogo MANN retiró la página del CU 17 001 en /es/ y /en/; se reemplazó por la versión in-en (catálogo India, mercado de origen del Fronx), verificada viva. 3 URLs con bloqueo anti-bot 403 (parts.subaru.com, moparonlineparts, kmotorshop) que abren bien en navegador — sin cambios. Resto OK.",
     "ficha": null,
     "categoria": null,
     "fuente": null,
