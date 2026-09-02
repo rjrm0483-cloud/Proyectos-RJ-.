@@ -100,3 +100,14 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
 - Especificación v4: el bot Comercial solo prepara borradores; Rodrigo crea
   cuentas, pega los identificadores y aprueba; prohibido el tráfico
   artificial.
+
+## 1 de septiembre de 2026 — cambio de mecanismo nocturno
+
+- La rutina de sesiones nuevas terminó tres noches seguidas sin commit
+  (bloqueo por permiso, y dos sesiones que finalizaron sin subir nada pese a
+  la regla de push obligatorio). Queda DESACTIVADA.
+- El ciclo nocturno pasa a ejecutarse directamente en la sesión supervisora
+  de Claude (rutina ligada a la sesión, 01:00 UTC), que ya ejecutó con éxito
+  las fichas del Nissan Frontier y del Honda CR-V y el mantenimiento dominical.
+- Ficha 9 añadida: Honda CR-V 5.ª generación 2017–2022 (Honda 80292-SDA-407,
+  catálogo OEM de concesionario). Mezcla: 5 CA / 3 INT / 1 EV.
