@@ -222,5 +222,36 @@
         "supports": "Referencias cruzadas OE Nissan 27277-4KJ0A y 27277-5XA0A para el CU 22 028."
       }
     ]
+  },
+  {
+    "slug": "2017-2022-honda-cr-v",
+    "year": "2017–2022",
+    "make": "Honda",
+    "model": "CR-V",
+    "focus": "International",
+    "market": "Estados Unidos; 5.ª generación (RW)",
+    "partReference": "Honda 80292-SDA-407",
+    "filterCount": "1 filtro",
+    "replacementInterval": "Sigue el indicador de mantenimiento de Honda; inspecciónalo más seguido en ambientes con polvo.",
+    "access": "Detrás de la guantera",
+    "airflow": "Copia la orientación de la flecha del filtro retirado.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-01",
+    "summary": "El catálogo de repuestos genuinos Honda lista el filtro de cabina 80292-SDA-407 para el CR-V 2019, una referencia consolidada que sustituye a varias versiones anteriores, entre ellas la 80292-T0G-A01.",
+    "caution": "La 80292-SDA-407 es una pieza consolidada que Honda aplica a muchos modelos 2003–2021; confirma en el catálogo de tu país que corresponda a tu año y versión del CR-V de 5.ª generación (2017–2022) antes de comprar.",
+    "sources": [
+      {
+        "label": "Catálogo de repuestos genuinos Honda — CR-V 2019, filtro de cabina",
+        "url": "https://www.hondapartsnow.com/oem-2019-honda-cr_v-cabin_air_filter.html",
+        "type": "Catálogo OEM de concesionario",
+        "supports": "Filtro de cabina genuino listado para el CR-V 2019."
+      },
+      {
+        "label": "Ficha de la pieza genuina 80292-SDA-407",
+        "url": "https://www.hondapartsnow.com/genuine/honda~element~filter~80292-sda-407.html",
+        "type": "Catálogo OEM de concesionario",
+        "supports": "Referencia consolidada y lista de números de parte que sustituye."
+      }
+    ]
   }
 ]
