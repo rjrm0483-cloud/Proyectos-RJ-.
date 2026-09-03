@@ -126,7 +126,7 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
             <span>Checked {record.verifiedAt}</span>
           </div>
           <p className="detail-year">{categoryLabels[record.category]}</p>
-          <h1>{record.origin}<br />to {record.destination}</h1>
+          <h1>{record.title}</h1>
           <p className="detail-summary">{record.summary}</p>
         </div>
 

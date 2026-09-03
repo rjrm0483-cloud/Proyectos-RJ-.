@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { HeroArt } from "@/components/hero-art";
 import { categoryLabels, confidenceLabels } from "@/lib/labels";
 import { categoryValues, type Category, type RouteRecord } from "@/data/routes";
 
@@ -52,8 +53,8 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
 
       <section className="hero-shell">
         <div className="hero-copy">
-          <p className="eyebrow">NICARAGUA ROUTE DIRECTORY / 001</p>
-          <h1>How to get there. With the numbers checked.</h1>
+          <p className="eyebrow">Nicaragua · airport, lake, islands, borders</p>
+          <h1>Getting around Nicaragua, with the numbers checked.</h1>
           <p className="hero-deck">
             Airport transfers, lake ferries, island flights and border crossings
             in Nicaragua, with real costs, timings and the caveat that could
@@ -61,7 +62,9 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
           </p>
         </div>
 
-        <div className="search-panel">
+        <div className="hero-side">
+          <HeroArt />
+          <div className="search-panel">
           <label htmlFor="route-search">Search by place, airport or transport mode</label>
           <div className="search-field">
             <Search aria-hidden="true" />
@@ -75,6 +78,7 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
             />
           </div>
           <p>{filtered.length} route{filtered.length === 1 ? "" : "s"} with sources</p>
+          </div>
         </div>
       </section>
 
@@ -88,7 +92,7 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
       <section className="directory-section" aria-labelledby="directory-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">THE REGISTER</p>
+            <p className="eyebrow">The routes</p>
             <h2 id="directory-title">Routes with their sources</h2>
           </div>
           <p>Each route lists every realistic option, what it costs, how long it takes and the caveat that could change the answer.</p>
@@ -140,9 +144,9 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
       </section>
 
       <section className="method-section">
-        <div className="method-stamp"><ShieldCheck aria-hidden="true" /><span>SOURCE<br />BEFORE<br />SCALE</span></div>
+        <div className="method-stamp"><ShieldCheck aria-hidden="true" /><span>Source<br />before<br />scale</span></div>
         <div>
-          <p className="eyebrow">EDITORIAL MIX</p>
+          <p className="eyebrow">How we choose</p>
           <h2>The trips people actually take.</h2>
           <p>
             Arrival logistics first (the airport to Granada, León, San Juan del

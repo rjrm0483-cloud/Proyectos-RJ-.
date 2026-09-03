@@ -2,8 +2,8 @@
 
 Directorio en inglés de logística de viaje en Nicaragua (traslados desde el
 aeropuerto, ferris, vuelos domésticos y cruces de frontera), con costos,
-tiempos y cautelas verificados con fuentes. Sustituye a Cabin Filter Guide como
-proyecto principal desde el 3 de septiembre de 2026 y reutiliza su motor.
+tiempos y cautelas verificados con fuentes. Sucede a Cabin Filter Guide (experimento de operación autónoma, eliminado el
+3 de septiembre de 2026) y reutiliza su motor.
 
 - Sitio público: https://rjrm0483-cloud.github.io/Proyectos-RJ-./nicaragua/
 - Código: `sitio/` (Next.js 16, exportación estática, datos en JSON validados con zod).
@@ -29,6 +29,6 @@ node --test tests/*.test.mjs
 npm run build      # genera out/ con basePath /Proyectos-RJ-./nicaragua
 ```
 
-La publicación la hace el workflow `publicar-cabin-filter-guide.yml` de la
-rama `main`, que compila este sitio en `/nicaragua` y conserva en la raíz del
-Pages la política de privacidad de Agenda Psiquiátrica Pro.
+La publicación la hace el workflow `publicar-sitio.yml` de la rama `main`,
+que compila este sitio en `/nicaragua` y conserva en la raíz del Pages la
+política de privacidad de Agenda Psiquiátrica Pro.
