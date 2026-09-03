@@ -253,5 +253,42 @@
         "supports": "Referencia consolidada y lista de números de parte que sustituye."
       }
     ]
+  },
+  {
+    "slug": "2017-2022-kia-sportage",
+    "year": "2017–2022",
+    "make": "Kia",
+    "model": "Sportage",
+    "focus": "Central America",
+    "market": "Sportage IV (QL); verifica el catálogo de tu país",
+    "partReference": "Kia 97133-D3200",
+    "filterCount": "1 filtro",
+    "replacementInterval": "Sigue el plan de mantenimiento de Kia; inspecciónalo más seguido en ambientes con polvo.",
+    "access": "Detrás de la guantera",
+    "airflow": "Copia la orientación de la flecha del filtro retirado.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-02",
+    "summary": "Los catálogos de repuestos genuinos Kia listan el filtro de cabina 97133-D3200 para el Sportage 2017–2022 (referencia que sucede a la 97133-D3000 de los primeros años de la generación QL); el catálogo europeo de MANN-FILTER cubre la misma generación con el equivalente CUK 24 024.",
+    "caution": "El Sportage IV (QL) cambió de referencia genuina durante su vida (97133-D3000 en 2016–2019, 97133-D3200 después) y comparte filtro con el Hyundai Tucson TL. Confirma en el catálogo del concesionario de tu país, con el VIN, cuál corresponde a tu año y motor antes de comprar.",
+    "sources": [
+      {
+        "label": "Catálogo OEM Kia — filtro de cabina 97133-D3200 (Sportage 2017–2022)",
+        "url": "https://kia.oempartsonline.com/oem-parts/kia-cabin-air-filter-97133d3200",
+        "type": "Catálogo OEM de concesionario",
+        "supports": "Aplicación de la referencia 97133-D3200 al Sportage 2017–2022."
+      },
+      {
+        "label": "Catálogo de repuestos genuinos Kia — 97133-D3000",
+        "url": "https://www.kiapartsnow.com/genuine/kia-filter-air~97133d3000.html",
+        "type": "Catálogo OEM de concesionario",
+        "supports": "Referencia anterior 97133-D3000 para Sportage 2016–2019."
+      },
+      {
+        "label": "Catálogo en línea MANN-FILTER — Sportage IV (QL, QLE) 2.0",
+        "url": "https://catalog.mann-filter.com/EU/spa/vehicle/MANN-FILTER%20Katalog%20Europa/Veh%C3%ADculos/Autom%C3%B3viles%20+%20Veh%C3%ADculos%20de%20transporte/KIA%20MOTORS/Sportage%20IV%20(QL,%20QLE)/2.0%20NU%20~%20G4NA%20(T00000000229617)",
+        "type": "Catálogo del fabricante del filtro",
+        "supports": "Aplicación de filtro de habitáculo para la generación Sportage IV (QL) en el catálogo europeo."
+      }
+    ]
   }
 ]

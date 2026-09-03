@@ -34,5 +34,14 @@
     "categoria": "International",
     "fuente": "https://www.hondapartsnow.com/oem-2019-honda-cr_v-cabin_air_filter.html",
     "totalFichas": 9
+  },
+  {
+    "fecha": "2026-09-02",
+    "accion": "ficha-agregada",
+    "detalle": "Primer ciclo con el nuevo motor (sesión supervisora). Categoría Centroamérica (la más rezagada, 55%). Verificación con catálogos OEM de concesionario Kia y catálogo europeo MANN-FILTER.",
+    "ficha": "2017-2022-kia-sportage",
+    "categoria": "Central America",
+    "fuente": "https://kia.oempartsonline.com/oem-parts/kia-cabin-air-filter-97133d3200",
+    "totalFichas": 10
   }
 ]
