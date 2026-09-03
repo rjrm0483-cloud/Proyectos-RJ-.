@@ -2,7 +2,7 @@
   "title": "Cabin Filter Guide nocturno",
   "version": 4,
   "operator": "Claude Code (rutina programada en claude.ai que trabaja sobre el repositorio GitHub rjrm0483-cloud/Proyectos-RJ-., carpeta cabin-filter-guide/). Sam7/GPT ya no debe ejecutar este ciclo; si su rutina sigue activa en ChatGPT, debe pausarse para evitar ediciones duplicadas.",
-  "enabled_at_backup": true,
+  "enabled_at_backup": false,
   "timezone": "America/Managua",
   "timing_mode": "flexible_schedule",
   "schedule_ical": "BEGIN:VEVENT\nDTSTART:20260830T190000\nRRULE:FREQ=DAILY\nEND:VEVENT",
@@ -37,5 +37,6 @@
     "estrategia": "Ver documentacion/plan-comercial.md. Prioridad: patrocinios locales (espacio '¿Dónde comprarlo en Nicaragua?' por tarifa mensual) y afiliados de repuestos (eBay, Amazon, Advance, AliExpress, AUTODOC) para el tráfico internacional. Anuncios display solo como complemento futuro.",
     "mecanismo": "La infraestructura ya está cableada en sitio/data/monetizacion.json + lib/monetizacion.ts: los enlaces de compra se generan automáticamente por ficha según su enfoque y quedan APAGADOS hasta que Rodrigo registre las cuentas y pegue sus identificadores reales (tag/campid/deeplink). Un programa activo sin identificador real falla la validación (tests/monetizacion.test.mjs).",
     "rol_comercial": "Después del 6 de septiembre de 2026, con 20+ fichas y tráfico medible: identificar programas y patrocinadores oficiales, preparar borradores de propuesta en el informe, y nada más. Rodrigo crea cuentas, envía propuestas y aprueba todo. Nunca inventar identificadores de afiliado ni activar programas por cuenta propia."
-  }
+  },
+  "estado": "PAUSADO desde el 3 de septiembre de 2026 por decisión de Rodrigo: el ciclo nocturno (rutina trig_01FJDk9q9nPhHgEWCwo6nTJA) quedó desactivado y el esfuerzo pasó a nicaragua-route-guide/. El sitio sigue publicado en /guia sin costo hasta que Rodrigo confirme si se elimina."
 }

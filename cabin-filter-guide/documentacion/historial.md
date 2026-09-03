@@ -111,3 +111,17 @@ referidos o patrocinios, sin sacrificar seguridad, transparencia o control human
   las fichas del Nissan Frontier y del Honda CR-V y el mantenimiento dominical.
 - Ficha 9 añadida: Honda CR-V 5.ª generación 2017–2022 (Honda 80292-SDA-407,
   catálogo OEM de concesionario). Mezcla: 5 CA / 3 INT / 1 EV.
+
+## 3 de septiembre de 2026 — pausa del proyecto
+
+- Rodrigo decidió detener Cabin Filter Guide: las comisiones de repuestos
+  (4–12% sobre tickets de US$10–30) no justifican el tiempo invertido.
+- La rutina nocturna ligada a la sesión supervisora quedó desactivada. Los
+  workflows de publicación y verificación siguen en `main` porque ahora
+  sirven también al nuevo sitio.
+- El sitio permanece publicado en `/guia` (10 fichas, sin costo) hasta que
+  Rodrigo confirme su eliminación; la raíz del Pages conserva la política de
+  privacidad de Agenda Psiquiátrica Pro.
+- El motor (datos JSON + zod, exportación estática, monetización cableada y
+  apagada, rutina nocturna) se reutilizó para **Nicaragua Route Guide**
+  (`nicaragua-route-guide/`), el nuevo proyecto principal.

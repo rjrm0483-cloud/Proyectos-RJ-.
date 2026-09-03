@@ -1,0 +1,80 @@
+{
+  "afiliadosActivos": false,
+  "programas": {
+    "discovercars": {
+      "activo": false,
+      "etiqueta": "Compare rental cars at Managua Airport",
+      "slot": "cars",
+      "plantillaUrl": "https://www.discovercars.com/nicaragua/managua/mga",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en discovercars.com/affiliate-program (paga 70% de la ganancia + 30% de la cobertura total, cookie 365 días, pago mensual por PayPal/transferencia). Al aprobar, poner sufijo '?a_aid=TU-ID' y activo:true."
+    },
+    "viator": {
+      "activo": false,
+      "etiqueta": "Book a transfer or tour on Viator",
+      "slot": "tours",
+      "plantillaUrl": "https://www.viator.com/searchResults/all?text={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en partnerresources.viator.com (8% por reserva, cookie 30 días). Al aprobar, poner sufijo '&pid=TU-PID&mcid=42383&medium=link' según el generador de enlaces y activo:true."
+    },
+    "getyourguide": {
+      "activo": false,
+      "etiqueta": "Book on GetYourGuide",
+      "slot": "tours",
+      "plantillaUrl": "https://www.getyourguide.com/s/?q={q}",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en partner.getyourguide.com (8% base). Al aprobar, poner sufijo '&partner_id=TU-ID' y activo:true."
+    },
+    "bookaway": {
+      "activo": false,
+      "etiqueta": "Book shuttles and buses on Bookaway",
+      "slot": "ground",
+      "plantillaUrl": "https://www.bookaway.com/",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Programa vía Travelpayouts (5–10% por reserva confirmada, cookie 30 días). Al aprobar, poner prefijoDeeplink del generador de Travelpayouts y activo:true."
+    },
+    "kiwi": {
+      "activo": false,
+      "etiqueta": "Search domestic flights",
+      "slot": "flights",
+      "plantillaUrl": "https://www.kiwi.com/en/search/results/managua-nicaragua/corn-island-nicaragua",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Opcional. Vía Travelpayouts (Kiwi.com ~3%). La Costeña no tiene programa de afiliados público; el enlace directo a la aerolínea se mantiene sin comisión. Al aprobar, poner prefijoDeeplink y activo:true."
+    },
+    "airalo": {
+      "activo": false,
+      "etiqueta": "Get a Nicaragua eSIM (Airalo)",
+      "slot": "esim",
+      "plantillaUrl": "https://www.airalo.com/nicaragua-esim",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en partners.airalo.com/solutions/affiliates (hasta 10%). Al aprobar, poner el enlace rastreado en prefijoDeeplink o el sufijo indicado y activo:true."
+    },
+    "safetywing": {
+      "activo": false,
+      "etiqueta": "Travel medical insurance (SafetyWing)",
+      "slot": "insurance",
+      "plantillaUrl": "https://safetywing.com/nomad-insurance/",
+      "sufijo": "",
+      "prefijoDeeplink": "",
+      "notaActivacion": "Registrarse en safetywing.com/ambassador (10% recurrente durante 12 meses, cookie 30 días). Al aprobar, poner sufijo '?referenceID=TU-ID' y activo:true."
+    }
+  },
+  "porSlot": {
+    "cars": ["discovercars"],
+    "tours": ["viator", "getyourguide"],
+    "ground": ["bookaway"],
+    "flights": ["kiwi"],
+    "esim": ["airalo"],
+    "insurance": ["safetywing"]
+  },
+  "patrocinadores": {
+    "porDefecto": null,
+    "porFicha": {}
+  }
+}

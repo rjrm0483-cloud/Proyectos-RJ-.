@@ -1,0 +1,432 @@
+[
+  {
+    "slug": "managua-airport-to-granada",
+    "title": "Managua Airport (MGA) to Granada",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Granada",
+    "destinationSlug": "granada",
+    "category": "Airport transfer",
+    "distance": "About 45–50 km by road",
+    "duration": "45–60 min by car outside rush hour",
+    "summary": "Granada is the most common first stop after landing in Managua. There is no direct public bus from the airport: you either pre-book a transfer, take an airport taxi, rent a car at the arrivals hall, or ride into Managua first and catch a bus from a city terminal.",
+    "options": [
+      {
+        "mode": "Pre-booked private transfer",
+        "cost": "Roughly US$50–90 per vehicle (2026 operator pricing)",
+        "duration": "About 45–60 min",
+        "detail": "Door to door, driver waits in arrivals with your name. The safest option for late-night landings and the one most travelers pick with luggage.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Airport taxi",
+        "cost": "Around US$40 per car, agreed before leaving",
+        "duration": "About 55 min",
+        "detail": "Licensed taxis wait outside arrivals. Agree the fare in US dollars or córdobas before getting in; meters are not used.",
+        "partner": null
+      },
+      {
+        "mode": "Rental car from the airport",
+        "cost": "From about US$24 per day plus deposit (comparison pricing at MGA)",
+        "duration": "About 45–60 min drive on the Masaya highway",
+        "detail": "Rental desks are in the arrivals hall. Minimum age 21 with a young-driver fee under 25; a credit card deposit is charged at pick-up. Makes sense if Granada is the first of several stops.",
+        "partner": "cars"
+      },
+      {
+        "mode": "Public bus via Managua",
+        "cost": "About US$2 in fares",
+        "duration": "Around 3 h door to door",
+        "detail": "Taxi to a Managua terminal (UCA or Huembes), then a Granada bus. Cheapest by far, but slow with luggage and not advisable after dark.",
+        "partner": null
+      }
+    ],
+    "recommended": "Pre-book a private transfer if you land after 6 p.m. or travel with more than one bag. Rent at the airport only if you will keep the car for the rest of the trip.",
+    "caution": "Transfer and taxi prices are set by operators and move with fuel costs and season; the figures here were checked in September 2026. Managua traffic can add 30 minutes on weekday evenings.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Welcome Pickups — Managua Airport to Granada",
+        "url": "https://www.welcomepickups.com/managua/airport-to-granada/",
+        "type": "Transfer operator guide",
+        "supports": "Distance, transfer duration and 2026 private-transfer price range."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to Granada",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Granada-Nicaragua",
+        "type": "Route aggregator",
+        "supports": "Taxi fare estimate, bus fare and travel time, absence of a direct bus."
+      },
+      {
+        "label": "Discover Cars — car rental at Managua Airport",
+        "url": "https://www.discovercars.com/nicaragua/managua/mga",
+        "type": "Rental comparison site",
+        "supports": "Desk location in arrivals, starting daily rate, minimum age and deposit rules."
+      },
+      {
+        "label": "EAAI — Technical information, Augusto C. Sandino airport",
+        "url": "https://www.eaai.com.ni/info-tec/",
+        "type": "Airport authority",
+        "supports": "Airport location east of Managua on the Carretera Norte."
+      }
+    ]
+  },
+  {
+    "slug": "managua-airport-to-leon",
+    "title": "Managua Airport (MGA) to León",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "León",
+    "destinationSlug": "leon",
+    "category": "Airport transfer",
+    "distance": "About 92 km by road",
+    "duration": "About 2 h by car",
+    "summary": "León sits north-west of Managua on the road to the Pacific volcanoes. A private transfer is the only option that goes straight from the terminal; shared shuttles run on fixed afternoon departures and public buses leave from Managua's terminals, not the airport.",
+    "options": [
+      {
+        "mode": "Private transfer",
+        "cost": "About US$80 for 1–3 people, US$140 for a van (operator pricing)",
+        "duration": "About 2 h",
+        "detail": "Booked through hostels, hotels or tour marketplaces. Door to door and the only choice that works for night arrivals.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Shared shuttle",
+        "cost": "About US$25 per person",
+        "duration": "About 3 h with stops",
+        "detail": "One published departure in the early afternoon (13:00, arriving around 16:00). Cheaper than a private car for solo travelers, but you wait for the fixed time.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Rental car",
+        "cost": "From about US$24 per day plus deposit",
+        "duration": "About 1 h 45 min driving",
+        "detail": "Pick up in arrivals and follow the Carretera Nueva a León. Good if León is your base for volcano and beach day trips.",
+        "partner": "cars"
+      },
+      {
+        "mode": "Public bus via Managua",
+        "cost": "About US$9–10 total including the taxi to the terminal",
+        "duration": "Close to 4 h door to door",
+        "detail": "Taxi to the UCA terminal, then a León-bound bus. Fine in daylight with light luggage.",
+        "partner": null
+      }
+    ],
+    "recommended": "Solo daytime arrivals: shared shuttle. Groups or evening flights: private transfer. Multi-stop trips: rental car.",
+    "caution": "Shuttle departure times and prices are published by individual operators and change by season. The 2 h estimate assumes light traffic leaving Managua.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Welcome Pickups — Managua Airport to León",
+        "url": "https://www.welcomepickups.com/managua/airport-to-leon/",
+        "type": "Transfer operator guide",
+        "supports": "Road distance and door-to-door duration by private transfer."
+      },
+      {
+        "label": "Tripadvisor listing — Private airport transfer from and to León",
+        "url": "https://www.tripadvisor.com/AttractionProductReview-g294478-d13335670-Private_airport_transfer_from_and_to_Leon-Managua_Managua_Department.html",
+        "type": "Tour marketplace listing",
+        "supports": "Private transfer prices for 1–3 travelers and for a van."
+      },
+      {
+        "label": "Roneey Shuttle — Managua Airport to León",
+        "url": "https://www.roneeyshuttle.com/p_page.php?idp=NIC&idc=19&idr=12&idcd=9&idlang=EN&p=p_page.php",
+        "type": "Shuttle operator",
+        "supports": "Shared shuttle departure time, duration and per-person fare."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to León",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Le%C3%B3n-Nicaragua",
+        "type": "Route aggregator",
+        "supports": "Driving time and public-bus duration and fare range."
+      }
+    ]
+  },
+  {
+    "slug": "managua-airport-to-san-juan-del-sur",
+    "title": "Managua Airport (MGA) to San Juan del Sur",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "San Juan del Sur",
+    "destinationSlug": "san-juan-del-sur",
+    "category": "Airport transfer",
+    "distance": "South along the Pan-American Highway through Rivas",
+    "duration": "About 2–3 h by road",
+    "summary": "San Juan del Sur is the beach town most international visitors head to, and the airport-to-beach run is the single most booked transfer in the country. Private shuttles are expensive per vehicle but cheap per seat when you fill them; public buses exist but leave from Managua, not the airport.",
+    "options": [
+      {
+        "mode": "Private shuttle (up to 7 people)",
+        "cost": "About US$140–170 per vehicle",
+        "duration": "About 2–3 h",
+        "detail": "Operators run daily roughly 07:30–19:30. Split among a group it is the fastest and simplest option; ask the driver to stop at a supermarket in Rivas if you are self-catering.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Shared shuttle",
+        "cost": "From about US$40 per person",
+        "duration": "About 2.5–3 h",
+        "detail": "Seat-by-seat vans that consolidate travelers on fixed departures. Book ahead; they fill on weekends and holidays.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Rental car",
+        "cost": "From about US$24 per day plus deposit",
+        "duration": "About 2.5 h driving",
+        "detail": "The road is paved and straightforward: Pan-American Highway south to Rivas, then the branch to San Juan del Sur. Useful for reaching the surf beaches north and south of town, which have no public transport.",
+        "partner": "cars"
+      },
+      {
+        "mode": "Public bus via Managua",
+        "cost": "About US$3 in bus fares plus the taxi to the terminal",
+        "duration": "3–4 h door to door",
+        "detail": "Taxi to the Huembes terminal, then a direct bus (a few departures a day) or any Rivas bus and a connection. Daylight only.",
+        "partner": null
+      }
+    ],
+    "recommended": "Groups: private shuttle. Solo or couples on a budget: shared shuttle. Surfers who want the outer beaches: rental car.",
+    "caution": "Per-vehicle prices vary widely between operators and by pick-up time; night surcharges are common. The figures were checked in September 2026 and are indicative, not a tariff.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Welcome Pickups — Managua Airport to San Juan del Sur",
+        "url": "https://www.welcomepickups.com/managua/airport-to-san-juan-del-sur/",
+        "type": "Transfer operator guide",
+        "supports": "Taxi and private transfer price range and travel time."
+      },
+      {
+        "label": "Viator listing — Managua Airport to/from San Juan del Sur private shuttle",
+        "url": "https://www.viator.com/tours/San-Juan-del-Sur/Nicaragua-Airport-to-San-Juan-del-Sur-private-shuttle/d23011-187013P3",
+        "type": "Tour marketplace listing",
+        "supports": "Private shuttle price for up to seven passengers and daily operating hours."
+      },
+      {
+        "label": "Mango Rosa — 5 ways to get to San Juan del Sur from Managua airport",
+        "url": "https://mangorosanicaragua.com/5-ways-to-get-to-san-juan-del-sur-from-managua-airport/",
+        "type": "Local hotel guide",
+        "supports": "Shared shuttle and public bus options and their trade-offs."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to San Juan del Sur",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/San-Juan-del-Sur",
+        "type": "Route aggregator",
+        "supports": "Shuttle price band, public bus fare, frequency and duration."
+      }
+    ]
+  },
+  {
+    "slug": "san-jorge-to-ometepe-ferry",
+    "title": "San Jorge (Rivas) to Ometepe Island by ferry",
+    "origin": "San Jorge port, Rivas",
+    "destination": "Ometepe Island (Moyogalpa)",
+    "destinationSlug": "ometepe",
+    "category": "Island & ferry",
+    "distance": "Lake crossing from San Jorge to Moyogalpa",
+    "duration": "About 60–70 min on the water",
+    "summary": "Every visitor to Ometepe crosses Lake Nicaragua from the San Jorge pier, a short taxi ride from Rivas. Car ferries and smaller lanchas alternate through the day; foot passengers just turn up, while vehicles must be reserved.",
+    "options": [
+      {
+        "mode": "Ferry or lancha, foot passenger",
+        "cost": "About C$50 (roughly US$1.50) per person each way; children under 5 free",
+        "duration": "About 70 min",
+        "detail": "Departures run from about 07:00 to 17:30 daily in both directions. Ferries are steadier than lanchas when the lake is choppy; if you get seasick, wait for a ferry.",
+        "partner": null
+      },
+      {
+        "mode": "Ferry with your rental car",
+        "cost": "Vehicle fare charged at the port on top of passenger tickets",
+        "duration": "About 70 min plus 1 h check-in",
+        "detail": "Anything larger than a motorcycle needs a reserved space. Arrive about an hour early for registration and port fees. Most rental contracts allow the crossing, but confirm in writing.",
+        "partner": "cars"
+      },
+      {
+        "mode": "Getting to the pier",
+        "cost": "Taxi from Rivas, San Juan del Sur or Granada",
+        "duration": "15 min from Rivas; about 45 min from San Juan del Sur",
+        "detail": "Buses from Managua and Granada stop in Rivas, not at the pier. Shared shuttles from San Juan del Sur or Granada usually include the pier drop-off.",
+        "partner": "ground"
+      }
+    ],
+    "recommended": "Take any morning departure and keep the last afternoon boat as a buffer, not a plan. Reserve vehicle space the day before.",
+    "caution": "Timetables are seasonal, weather-dependent and different on Sundays and national holidays; strong winds cancel lanchas first. Confirm the day's schedule at the pier or with the operator by phone.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Ometepe Island Info — Daily ferry and lancha schedule",
+        "url": "https://ometepeislandinfo.com/Ferry-Schedule",
+        "type": "Local island guide (schedule board)",
+        "supports": "Current departure windows, operator phone numbers and Sunday differences."
+      },
+      {
+        "label": "Ometepe Nicaragua — Boat and ferry schedules",
+        "url": "https://ometepenicaragua.com/ferryboat.php",
+        "type": "Local island guide",
+        "supports": "Crossing duration, vehicle reservation rule and one-hour early arrival for cars."
+      },
+      {
+        "label": "Hostal Casa Moreno — Ometepe ferry schedule",
+        "url": "https://hostalcasamoreno.com/en/horarios-ferrys-isla-de-ometepe.html",
+        "type": "Local accommodation guide",
+        "supports": "Foot passenger fare in córdobas and free travel for children under five."
+      },
+      {
+        "label": "Rome2Rio — San Jorge to Moyogalpa ferry",
+        "url": "https://www.rome2rio.com/Ferry/San-Jorge-Nicaragua/Moyogalpa",
+        "type": "Route aggregator",
+        "supports": "Average crossing time and daily operating window."
+      }
+    ]
+  },
+  {
+    "slug": "managua-to-san-jose-costa-rica-by-bus",
+    "title": "Managua to San José (Costa Rica) by bus via Peñas Blancas",
+    "origin": "Managua (Tica Bus terminal, Barrio Bolonia)",
+    "destination": "San José, Costa Rica",
+    "destinationSlug": "costa-rica",
+    "category": "Border crossing",
+    "distance": "Pan-American Highway south through Rivas to the Peñas Blancas border, then on to San José",
+    "duration": "About 9 h including the border",
+    "summary": "The international bus lines are the simplest way to cross into Costa Rica: the bus waits while you clear both immigration posts at Peñas Blancas, the busiest land border in the country. Budget the exit and entry fees in US dollars cash.",
+    "options": [
+      {
+        "mode": "International bus (Tica Bus and similar lines)",
+        "cost": "About US$30–35 per person depending on seat class",
+        "duration": "About 9 h",
+        "detail": "Daily departures from the Managua terminal two blocks above the old Cine Dorado in Barrio Bolonia; the same lines also pick up in Granada and Rivas. Book a day or two ahead in high season.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Costa Rica land exit tax (leaving Costa Rica northbound)",
+        "cost": "US$8 per person",
+        "duration": "Minutes at a Banco de Costa Rica kiosk or online beforehand",
+        "detail": "Only applies when you leave Costa Rica by land. Pay at the BCR kiosk at the border or online before travel and keep the receipt for immigration.",
+        "partner": null
+      },
+      {
+        "mode": "Nicaragua tourist card (entering Nicaragua)",
+        "cost": "US$10 per person, cash",
+        "duration": "Paid at the immigration window",
+        "detail": "Charged to every foreign visitor except citizens of the CA-4 countries (Guatemala, El Salvador, Honduras, Nicaragua). Travelers also report a small municipal or immigration fee of a few dollars at Peñas Blancas; carry small US bills.",
+        "partner": null
+      },
+      {
+        "mode": "Shuttle or private car to the border, then onward transport",
+        "cost": "Varies by operator; more expensive than the bus",
+        "duration": "Shorter waits than a full bus, but the same immigration steps",
+        "detail": "Popular from San Juan del Sur to Liberia or the Guanacaste beaches. Rental cars normally cannot be taken across the border; plan a car swap.",
+        "partner": "tours"
+      }
+    ],
+    "recommended": "Take the international bus from Managua or Granada and carry at least US$20 per person in small bills for the fees. Passports need six months' validity.",
+    "caution": "Bus fares come from booking aggregators and change with class and season. Fees are as published by each government in 2026; extra municipal charges reported by travelers are not on official tariffs, so treat them as possible, not certain.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Ticabus — Terminals and agencies",
+        "url": "https://ticabus.com/en/terminales-y-agencias",
+        "type": "Bus operator",
+        "supports": "Managua and San José terminal locations."
+      },
+      {
+        "label": "Ticabus — Routes, timetables and fares",
+        "url": "https://www.ticabus.com/en/rutas-horarios-y-tarifas",
+        "type": "Bus operator",
+        "supports": "Official route and timetable lookup for Managua–San José."
+      },
+      {
+        "label": "Buscobus — Bus from Costa Rica to Nicaragua, 2026 fares",
+        "url": "https://buscobus.co.cr/bus-a-nicaragua/",
+        "type": "Bus fare aggregator",
+        "supports": "Fare band by seat class and approximate journey time."
+      },
+      {
+        "label": "Banco de Costa Rica — Land exit tax payment",
+        "url": "https://www.bancobcr.com/wps/portal/bcr/bancobcr/personas/servicios_personas/punto_pais/pago_del_impuesto_de_salida/pago_impuesto_de_salida_terrestre",
+        "type": "Government collection bank",
+        "supports": "Amount of the Costa Rica land exit tax and where to pay it."
+      },
+      {
+        "label": "Visit Nicaragua (INTUR) — What you should know before traveling to Nicaragua",
+        "url": "https://www.visitanicaragua.com/que-debes-saber-para-viajar-a-nicaragua/",
+        "type": "National tourism board",
+        "supports": "US$10 tourist card, CA-4 exemption and passport validity requirement."
+      },
+      {
+        "label": "Ministerio del Interior — Entry of visitors of other nationalities",
+        "url": "https://www.migob.gob.ni/migracion/tramites/ingreso-de-personas-extranjeras/",
+        "type": "Immigration authority",
+        "supports": "Formal entry requirements and authorised border posts."
+      }
+    ]
+  },
+  {
+    "slug": "managua-to-corn-islands",
+    "title": "Managua to Big Corn and Little Corn Island",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Corn Islands",
+    "destinationSlug": "corn-islands",
+    "category": "Island & ferry",
+    "distance": "Domestic flight to Big Corn (RNI), then a 30-minute panga to Little Corn",
+    "duration": "About 1 h 15 min flying plus 20–30 min by boat",
+    "summary": "The Caribbean Corn Islands are reached by La Costeña's daily domestic flights from Managua; Little Corn has no airstrip, so you finish with a small open boat (panga) from Big Corn. Flights and pangas run on fixed times, so the whole day is a chain of connections.",
+    "options": [
+      {
+        "mode": "La Costeña flight, Managua to Big Corn Island",
+        "cost": "Around US$95 one way, about US$190 return (2026 reported fares)",
+        "duration": "About 1 h 15 min",
+        "detail": "Daily service, typically two departures a day (morning and early afternoon). Check in at the domestic terminal at least 1.5 h before departure; small aircraft with strict baggage weight limits.",
+        "partner": "flights"
+      },
+      {
+        "mode": "Panga, Big Corn to Little Corn",
+        "cost": "US$10 per person, cash",
+        "duration": "20–30 min",
+        "detail": "Published high-season departures are about 10:00 and 16:30 from Big Corn and 06:30 and 13:30 from Little Corn; in low season operators have run a single daily boat each way. Take a taxi from the airstrip to the municipal dock.",
+        "partner": null
+      },
+      {
+        "mode": "Taxi on Big Corn",
+        "cost": "A few dollars, flat island fare",
+        "duration": "About 10 min to the dock",
+        "detail": "Taxis meet every flight. If your panga time is tight, go straight to the dock and buy food later on Little Corn.",
+        "partner": null
+      }
+    ],
+    "recommended": "Book the morning flight so you make the mid-day panga and are not stranded on Big Corn overnight. Keep return flights at least a day before any international connection.",
+    "caution": "Bad weather suspends pangas and can delay flights; the schedule is a chain, so build in slack. Flight times and fares change by season and were checked in September 2026 against the airline's site and recent traveler reports.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "La Costeña — Flights to Corn Island",
+        "url": "https://www.lacostena.com.ni/destinations/corn-island-flights",
+        "type": "Airline",
+        "supports": "Daily service, flight time of just over an hour and 1.5 h check-in advice."
+      },
+      {
+        "label": "La Costeña — Flight schedule",
+        "url": "https://www.lacostena.com.ni/booking/flight-schedule",
+        "type": "Airline",
+        "supports": "Official current departure days and times."
+      },
+      {
+        "label": "Paraíso Beach Hotel — How to get to Corn Island (2026)",
+        "url": "https://paraisoclub.com/es/como-llegar-a-corn-island/",
+        "type": "Local hotel guide",
+        "supports": "Reported departure times and one-way / return fares, checked in 2026."
+      },
+      {
+        "label": "Little Corn Island — Getting here",
+        "url": "https://littlecornisland.net/getting-here/",
+        "type": "Local island guide",
+        "supports": "Panga price, departure times and weather suspensions."
+      },
+      {
+        "label": "Tripadvisor forum — Panga schedule to and from Little Corn Island",
+        "url": "https://www.tripadvisor.com/ShowTopic-g612406-i11128-k14716109-Panga_schedule_to_and_from_LCI-Little_Corn_Island_Corn_Islands_Southern_Atlantic_Autonomo.html",
+        "type": "Traveler reports",
+        "supports": "Low-season reduction to one panga a day (May 2026)."
+      }
+    ]
+  }
+]
