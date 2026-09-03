@@ -12,10 +12,14 @@ jobs:
   verificar:
     runs-on: ubuntu-latest
     steps:
-      - name: Obtener la rama de trabajo del directorio
+      - name: Obtener la rama de trabajo de los sitios
         uses: actions/checkout@v4
         with:
           ref: claude/autonomous-webpage-review-gn511e
 
-      - name: Comprobar URLs de las fuentes
+      - name: Nicaragua Route Guide — comprobar URLs de las fuentes
+        run: node nicaragua-route-guide/sitio/scripts/verificar-enlaces.mjs nicaragua-route-guide/sitio/data/routes.json
+
+      - name: Cabin Filter Guide (pausado) — comprobar URLs de las fuentes
+        if: always()
         run: node cabin-filter-guide/sitio/scripts/verificar-enlaces.mjs cabin-filter-guide/sitio/data/filters.json
