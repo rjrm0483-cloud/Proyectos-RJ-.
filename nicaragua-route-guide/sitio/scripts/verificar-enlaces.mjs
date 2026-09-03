@@ -28,17 +28,27 @@ for (const [url, slugs] of urls) {
     });
     status = String(res.status);
   } catch (error) {
-    status = `ERROR:${error.name}`;
+    // fetch envuelve el fallo real en error.cause (ENOTFOUND, CERT_HAS_EXPIRED,
+    // ECONNRESET, UND_ERR_CONNECT_TIMEOUT...). Solo un dominio inexistente o
+    // una conexión rechazada cuentan como enlace roto; el resto se revisa.
+    const cause = error?.cause?.code ?? error?.cause?.name ?? error.name;
+    status = `ERROR:${cause}`;
   }
   const codigo = Number(status);
   let veredicto;
   if (codigo >= 200 && codigo < 400) {
     veredicto = "OK";
-  } else if (codigo === 404 || codigo === 410 || status.startsWith("ERROR")) {
+  } else if (
+    codigo === 404 ||
+    codigo === 410 ||
+    status === "ERROR:ENOTFOUND" ||
+    status === "ERROR:ECONNREFUSED"
+  ) {
     veredicto = "ROTA";
     rotas++;
   } else {
-    // 403/429/999 suelen ser bloqueo anti-bot del sitio, no enlace roto.
+    // 403/429/999 suelen ser bloqueo anti-bot del sitio, y los errores TLS o
+    // de tiempo de espera suelen ser del servidor, no del enlace: se revisan.
     veredicto = "REVISAR";
     porRevisar++;
   }
