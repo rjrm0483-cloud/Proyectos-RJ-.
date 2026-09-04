@@ -1,15 +1,4 @@
 {
-  "granada": {
-    "src": "/images/granada.jpg",
-    "alt": "The yellow cathedral of Granada, Nicaragua, seen across the Parque Central",
-    "author": "Superchilum",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pageUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Granada_02.JPG",
-    "width": 1400,
-    "height": 1867,
-    "file": "File:Catedral Granada 02.JPG"
-  },
   "leon": {
     "src": "/images/leon.jpg",
     "alt": "The white domes and roof of León Cathedral, Nicaragua, under a blue sky",
@@ -31,17 +20,6 @@
     "width": 1400,
     "height": 1050,
     "file": "File:Bahía, San Juan Del Sur.jpg"
-  },
-  "ometepe": {
-    "src": "/images/ometepe.jpg",
-    "alt": "Concepción volcano rising over Lake Nicaragua on Ometepe Island",
-    "author": "Ridiculopathy",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "pageUrl": "https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_(volcano)._Conceptcion._Ometepe_Island,_Nicaragua_06.jpg",
-    "width": 1400,
-    "height": 1050,
-    "file": "File:Concepción (volcano). Conceptcion. Ometepe Island, Nicaragua 06.jpg"
   },
   "corn-islands": {
     "src": "/images/corn-islands.jpg",

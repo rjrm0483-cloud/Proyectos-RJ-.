@@ -1,11 +1,13 @@
 {
   "granada": {
     "files": [
-      "Catedral Granada 02.JPG",
-      "Calles de Granada en Nicaragua.JPG"
+      "Calles de Granada en Nicaragua.JPG",
+      "Catedral de Granada, Nicaragua.jpg",
+      "Cathedral of Granada, Nicaragua.jpg",
+      "Granada Nicaragua Cathedral.jpg"
     ],
-    "search": "Granada Nicaragua cathedral",
-    "alt": "The yellow cathedral of Granada, Nicaragua, seen across the Parque Central"
+    "search": "Catedral Granada Nicaragua Parque Central",
+    "alt": "Colonial streets and the yellow cathedral of Granada, Nicaragua"
   },
   "leon": {
     "files": [
@@ -28,11 +30,12 @@
   },
   "ometepe": {
     "files": [
-      "Concepción (volcano). Conceptcion. Ometepe Island, Nicaragua 06.jpg",
-      "Altagracia Finca Magdalena y Volcan Concepcion.jpg"
+      "Altagracia Finca Magdalena y Volcan Concepcion.jpg",
+      "Nicaragua Ometepe Concepción 15.jpg",
+      "Concepcion Volcano Ometepe.jpg"
     ],
-    "search": "Concepción volcano Ometepe San Jorge",
-    "alt": "Concepción volcano rising over Lake Nicaragua on Ometepe Island"
+    "search": "Volcán Concepción Ometepe lago",
+    "alt": "Concepción volcano rising over Ometepe Island and Lake Nicaragua"
   },
   "corn-islands": {
     "files": [
