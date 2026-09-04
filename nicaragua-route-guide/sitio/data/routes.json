@@ -428,5 +428,100 @@
         "supports": "Low-season reduction to one panga a day (May 2026)."
       }
     ]
+  },
+  {
+    "slug": "liberia-airport-costa-rica-to-san-juan-del-sur",
+    "title": "Liberia Airport (LIR), Costa Rica to San Juan del Sur",
+    "origin": "Liberia Guanacaste Airport (LIR), Costa Rica",
+    "destination": "San Juan del Sur",
+    "destinationSlug": "san-juan-del-sur",
+    "category": "Border crossing",
+    "distance": "North on the Pan-American Highway to the Peñas Blancas border, then on to Rivas and San Juan del Sur",
+    "duration": "About 3 h by shuttle plus 1–3 h at the border",
+    "summary": "Many visitors fly into Liberia, Costa Rica, because flights are cheaper and more frequent than to Managua, then cross into Nicaragua by road. The Peñas Blancas border is the one fixed cost of the trip: every option below stops there, and the wait, not the driving, decides your arrival time.",
+    "options": [
+      {
+        "mode": "Shared shuttle (Caribe Shuttle and similar)",
+        "cost": "About US$50–62 per person; border fees not included",
+        "duration": "About 3 h plus the border wait",
+        "detail": "One daily departure picking up at the airport around 09:15 and in downtown Liberia (Plaza Santa Rosa) around 09:30. The driver walks the group through both immigration posts. Book ahead; it fills on weekends.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Private transfer (1–7 people)",
+        "cost": "From about US$199 per vehicle; border fees not included",
+        "duration": "About 3 h plus the border wait",
+        "detail": "Meets any flight time, which the shared shuttle cannot. Most operators swap vehicles at the border with a Nicaraguan partner, so expect to walk across with your bags.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Public buses and the border on foot",
+        "cost": "The cheapest option, paid per bus leg in cash, plus the same border fees",
+        "duration": "Up to 7 h door to door",
+        "detail": "Taxi or bus to the Liberia terminal, bus to Peñas Blancas, cross on foot, then a bus or taxi to Rivas and on to San Juan del Sur. Daylight only and only with light luggage.",
+        "partner": null
+      },
+      {
+        "mode": "Border fees and hours at Peñas Blancas",
+        "cost": "US$8 Costa Rica land exit tax plus US$10 Nicaragua tourist card, cash",
+        "duration": "Typically 1–3 h; up to 7 h around Christmas and Easter",
+        "detail": "The border is open daily from about 06:00 to 22:00 (to 20:00 on Sundays). Pay the Costa Rica exit tax at the Banco de Costa Rica kiosk or online in advance and keep the receipt; carry small US bills for the Nicaraguan side. Rental cars cannot be taken across.",
+        "partner": null
+      }
+    ],
+    "recommended": "Land before noon and take the shared shuttle; for afternoon or evening flights, book a private transfer or overnight in Liberia rather than crossing after dark.",
+    "caution": "Shuttle prices and pick-up times come from the operators' 2026 listings and change by season. Border waits swing from an hour to most of a day at Nicaraguan holiday peaks; fees are as published by each government in 2026.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-03",
+    "sources": [
+      {
+        "label": "Caribe Shuttle — Liberia to San Juan del Sur",
+        "url": "https://www.caribeshuttle.com/liberia-to-san-juan-del-sur",
+        "type": "Shuttle operator",
+        "supports": "Daily shared shuttle, airport and downtown pick-up times and per-person fare."
+      },
+      {
+        "label": "Bookaway — Liberia to San Juan del Sur",
+        "url": "https://www.bookaway.com/routes/nicaragua/liberia-to-san-juan-del-sur",
+        "type": "Ground transport marketplace",
+        "supports": "Fare band from US$50, earliest departure and journey durations by option."
+      },
+      {
+        "label": "LIR Transfers — Liberia Airport to San Juan del Sur",
+        "url": "https://www.lirtransfers.com/liberia-airport-to-san-juan-del-sur-nicaragua/",
+        "type": "Transfer operator",
+        "supports": "Private transfer starting price for 1–7 passengers, border fees excluded."
+      },
+      {
+        "label": "Rome2Rio — Liberia Airport (LIR) to San Juan del Sur",
+        "url": "https://www.rome2rio.com/s/Liberia-Airport-LIR/San-Juan-del-Sur",
+        "type": "Route aggregator",
+        "supports": "Bus-plus-shuttle duration and overall price range."
+      },
+      {
+        "label": "The Tico Times — Long lines at the Costa Rica–Nicaragua Peñas Blancas border (Dec 2025)",
+        "url": "https://ticotimes.net/2025/12/22/long-lines-at-costa-rica-nicaragua-penas-blanca-border",
+        "type": "Regional newspaper",
+        "supports": "Holiday-peak border waits and typical crossing times."
+      },
+      {
+        "label": "Fodor's — Crossing into Nicaragua at Peñas Blancas",
+        "url": "https://www.fodors.com/world/mexico-and-central-america/costa-rica/guanacaste-and-the-nicoya-peninsula/places/crossing-into-nicaragua-at-penas-blancas",
+        "type": "Travel guide",
+        "supports": "Border opening hours including the Sunday closing time."
+      },
+      {
+        "label": "Banco de Costa Rica — Land exit tax payment",
+        "url": "https://www.bancobcr.com/wps/portal/bcr/bancobcr/personas/servicios_personas/punto_pais/pago_del_impuesto_de_salida/pago_impuesto_de_salida_terrestre",
+        "type": "Government collection bank",
+        "supports": "Amount of the Costa Rica land exit tax and where to pay it."
+      },
+      {
+        "label": "Visit Nicaragua (INTUR) — What you should know before traveling to Nicaragua",
+        "url": "https://www.visitanicaragua.com/que-debes-saber-para-viajar-a-nicaragua/",
+        "type": "National tourism board",
+        "supports": "US$10 tourist card on entry."
+      }
+    ]
   }
 ]

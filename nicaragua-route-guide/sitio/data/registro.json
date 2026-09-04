@@ -7,5 +7,14 @@
     "categoria": null,
     "fuente": null,
     "totalFichas": 6
+  },
+  {
+    "fecha": "2026-09-03",
+    "accion": "ficha-agregada",
+    "detalle": "Primer ciclo nocturno del sitio nuevo (jueves 7 p.m. Managua). Categoría más rezagada: fronteras (1 de 6). Ruta de llegada por Liberia (Costa Rica) hasta San Juan del Sur cruzando Peñas Blancas: shuttle compartido, traslado privado, buses públicos y tasas/horario de la frontera, verificados con operadores, marketplace, prensa regional, banco recaudador y turismo oficial. Publicación disparada tras el push.",
+    "ficha": "liberia-airport-costa-rica-to-san-juan-del-sur",
+    "categoria": "Border crossing",
+    "fuente": "https://www.caribeshuttle.com/liberia-to-san-juan-del-sur",
+    "totalFichas": 7
   }
 ]
