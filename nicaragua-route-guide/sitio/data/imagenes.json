@@ -1,32 +1,54 @@
 {
   "granada": {
-    "files": ["Catedral Granada 02.JPG", "Calles de Granada en Nicaragua.JPG"],
+    "files": [
+      "Catedral Granada 02.JPG",
+      "Calles de Granada en Nicaragua.JPG"
+    ],
     "search": "Granada Nicaragua cathedral",
     "alt": "The yellow cathedral of Granada, Nicaragua, seen across the Parque Central"
   },
   "leon": {
-    "files": ["View of Cathedral from Roof - Leon - Nicaragua (31548746806).jpg", "Catedral Leon Nicaragua.jpg", "Catedral de León Nicaragua.JPG"],
+    "files": [
+      "View of Cathedral from Roof - Leon - Nicaragua (31548746806).jpg",
+      "Catedral Leon Nicaragua.jpg",
+      "Catedral de León Nicaragua.JPG"
+    ],
     "search": "León Nicaragua cathedral",
     "alt": "The white domes and roof of León Cathedral, Nicaragua, under a blue sky"
   },
   "san-juan-del-sur": {
-    "files": ["San Juan del Sur.jpg", "San Juan del Sur Nicaragua.jpg", "Bahía de San Juan del Sur.jpg", "San Juan del Sur beach.jpg"],
+    "files": [
+      "San Juan del Sur.jpg",
+      "San Juan del Sur Nicaragua.jpg",
+      "Bahía de San Juan del Sur.jpg",
+      "San Juan del Sur beach.jpg"
+    ],
     "search": "San Juan del Sur bay Nicaragua",
     "alt": "The curved bay and beach of San Juan del Sur, Nicaragua"
   },
   "ometepe": {
-    "files": ["Concepción (volcano). Conceptcion. Ometepe Island, Nicaragua 06.jpg", "Altagracia Finca Magdalena y Volcan Concepcion.jpg"],
+    "files": [
+      "Concepción (volcano). Conceptcion. Ometepe Island, Nicaragua 06.jpg",
+      "Altagracia Finca Magdalena y Volcan Concepcion.jpg"
+    ],
     "search": "Concepción volcano Ometepe San Jorge",
     "alt": "Concepción volcano rising over Lake Nicaragua on Ometepe Island"
   },
   "corn-islands": {
-    "files": ["Little Corn Island.JPG"],
+    "files": [
+      "Little Corn Island.JPG"
+    ],
     "search": "Little Corn Island Nicaragua beach",
     "alt": "Palm-lined beach and turquoise water on Little Corn Island, Nicaragua"
   },
   "costa-rica": {
-    "files": ["Frontera Peñas Blancas.jpg"],
-    "search": "Peñas Blancas border Costa Rica Nicaragua",
-    "alt": "The Peñas Blancas border post between Nicaragua and Costa Rica"
+    "files": [
+      "Teatro Nacional de Costa Rica.jpg",
+      "Teatro Nacional de Costa Rica 2.jpg",
+      "Teatro Nacional, San José, Costa Rica.jpg",
+      "Teatro Nacional Costa Rica.jpg"
+    ],
+    "search": "Teatro Nacional Costa Rica San José",
+    "alt": "The National Theatre of Costa Rica in downtown San José, the end point of the international bus from Managua"
   }
 }

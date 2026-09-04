@@ -75,9 +75,9 @@ async function elegirArchivo(entrada) {
   if (entrada.search) {
     const json = await consultarCommons({
       list: "search",
-      srsearch: `${entrada.search} filemime:image/jpeg`,
+      srsearch: entrada.search,
       srnamespace: "6",
-      srlimit: "12",
+      srlimit: "25",
     });
     for (const hit of json.query?.search ?? []) {
       const r = await infoArchivo(hit.title);
