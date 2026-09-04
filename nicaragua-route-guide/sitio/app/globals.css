@@ -355,3 +355,22 @@ footer p { margin: 0; max-width: 520px; }
 
 main, section, article, .record-card, .source-card, .hero-copy, .commerce-status { min-width: 0; max-width: 100%; }
 .record-card h3, .source-card h3, .detail-hero h1, .spec-grid h2 { overflow-wrap: anywhere; }
+
+/* Fotos reales de los destinos (Wikimedia Commons, con crédito visible) */
+.destination-photo { margin: 0; padding: 0 clamp(20px, 5vw, 72px) 40px; }
+.destination-photo img {
+  display: block; width: 100%; height: clamp(220px, 42vw, 520px); object-fit: cover;
+  border-radius: var(--radius-lg); box-shadow: var(--shadow);
+}
+.destination-photo figcaption { margin: 10px 4px 0; color: var(--muted); font-size: 12px; }
+.destination-photo figcaption a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); }
+.destination-photo figcaption a:hover { color: var(--ink); }
+.record-card { position: relative; }
+.card-photo { margin: -28px -28px 20px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden; }
+.card-photo img { display: block; width: 100%; height: 170px; object-fit: cover; transition: transform .4s ease; }
+.record-card:hover .card-photo img { transform: scale(1.04); }
+.record-card:has(.card-photo)::before { display: none; }
+@media (max-width: 560px) {
+  .card-photo { margin: -22px -22px 16px; }
+  .card-photo img { height: 150px; }
+}

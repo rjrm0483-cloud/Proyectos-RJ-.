@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RouteDirectory } from "@/components/route-directory";
+import { getDestinationImage } from "@/data/images";
 import { routeRecords } from "@/data/routes";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -30,7 +31,12 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <RouteDirectory records={routeRecords} />
+      <RouteDirectory
+        records={routeRecords}
+        images={Object.fromEntries(
+          routeRecords.map((record) => [record.destinationSlug, getDestinationImage(record.destinationSlug)]),
+        )}
+      />
     </>
   );
 }

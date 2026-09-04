@@ -9,6 +9,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { HeroArt } from "@/components/hero-art";
 import { categoryLabels, confidenceLabels } from "@/lib/labels";
+import { DestinationPhoto } from "@/components/destination-photo";
+import type { DestinationImage } from "@/data/images";
 import { categoryValues, type Category, type RouteRecord } from "@/data/routes";
 
 const categoryOptions: Array<{ value: "All" | Category; label: string }> = [
@@ -24,7 +26,13 @@ function fold(value: string) {
     .replace(/[̀-ͯ]/g, "");
 }
 
-export function RouteDirectory({ records }: { records: RouteRecord[] }) {
+export function RouteDirectory({
+  records,
+  images,
+}: {
+  records: RouteRecord[];
+  images: Record<string, DestinationImage | null>;
+}) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<"All" | Category>("All");
 
@@ -115,6 +123,9 @@ export function RouteDirectory({ records }: { records: RouteRecord[] }) {
         <div className="record-grid" aria-live="polite">
           {filtered.map((record) => (
             <article className="record-card" key={record.slug}>
+              {images[record.destinationSlug] && (
+                <DestinationPhoto image={images[record.destinationSlug]!} variant="card" />
+              )}
               <div className="record-topline">
                 <Badge className={record.confidence === "Verified" ? "status-badge" : "status-badge conditional"}>
                   <CheckCircle2 aria-hidden="true" /> {confidenceLabels[record.confidence]}

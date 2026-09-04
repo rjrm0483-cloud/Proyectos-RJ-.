@@ -17,6 +17,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categoryLabels, confidenceHelp, confidenceLabels } from "@/lib/labels";
 import { getOptionLinks, getPatrocinador, getTripLinks } from "@/lib/monetizacion";
+import { DestinationPhoto } from "@/components/destination-photo";
+import { getDestinationImage } from "@/data/images";
 import { getRelatedByDestination, getRouteRecord, routeRecords } from "@/data/routes";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -60,6 +62,7 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
   const related = getRelatedByDestination(record);
   const tripLinks = getTripLinks();
   const patrocinador = getPatrocinador(record.slug);
+  const photo = getDestinationImage(record.destinationSlug);
   const optionLinks = record.options.map((option) => getOptionLinks(record, option.partner));
   const anyAffiliate = tripLinks.length > 0 || optionLinks.some((links) => links.length > 0);
 
@@ -73,6 +76,7 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
     mainEntityOfPage: `${SITE_URL}/routes/${record.slug}`,
     author: { "@type": "Organization", name: SITE_NAME },
     citation: record.sources.map((source) => source.url),
+    ...(photo ? { image: `${SITE_URL}${photo.src}` } : {}),
   };
 
   const breadcrumbLd = {
@@ -139,6 +143,8 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
           </Link>
         </aside>
       </section>
+
+      {photo && <DestinationPhoto image={photo} />}
 
       <section className="spec-grid" aria-label="Route facts">
         <article>

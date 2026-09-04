@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categoryLabels, confidenceLabels } from "@/lib/labels";
+import { DestinationPhoto } from "@/components/destination-photo";
+import { getDestinationImage } from "@/data/images";
 import { getRoutesByDestination, getUniqueDestinationSlugs } from "@/data/routes";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -50,6 +52,7 @@ export default async function PlacePage({ params }: PlacePageProps) {
   if (records.length === 0) notFound();
 
   const destination = records[0].destination;
+  const photo = getDestinationImage(place);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -91,6 +94,8 @@ export default async function PlacePage({ params }: PlacePageProps) {
           the caveat that could change the plan.
         </p>
       </section>
+
+      {photo && <DestinationPhoto image={photo} />}
 
       <section className="directory-section" aria-label={`Routes to ${destination}`}>
         <div className="record-grid">
