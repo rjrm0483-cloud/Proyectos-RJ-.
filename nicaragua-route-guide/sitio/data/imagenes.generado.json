@@ -1,35 +1,74 @@
 {
+  "granada": {
+    "src": "/images/granada.jpg",
+    "srcSmall": "/images/granada-sm.jpg",
+    "alt": "Colonial streets and the yellow cathedral of Granada, Nicaragua",
+    "author": "ElmerGuevara",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Calles_de_Granada_en_Nicaragua.JPG",
+    "width": 1200,
+    "height": 800,
+    "file": "File:Calles de Granada en Nicaragua.JPG"
+  },
   "leon": {
     "src": "/images/leon.jpg",
+    "srcSmall": "/images/leon-sm.jpg",
     "alt": "The white domes and roof of León Cathedral, Nicaragua, under a blue sky",
     "author": "Adam Jones from Kelowna, BC, Canada",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:View_of_Cathedral_from_Roof_-_Leon_-_Nicaragua_(31548746806).jpg",
-    "width": 1400,
-    "height": 1050,
+    "width": 1200,
+    "height": 900,
     "file": "File:View of Cathedral from Roof - Leon - Nicaragua (31548746806).jpg"
   },
   "san-juan-del-sur": {
     "src": "/images/san-juan-del-sur.jpg",
+    "srcSmall": "/images/san-juan-del-sur-sm.jpg",
     "alt": "The curved bay and beach of San Juan del Sur, Nicaragua",
     "author": "Lubi nuñez",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Bah%C3%ADa,_San_Juan_Del_Sur.jpg",
-    "width": 1400,
-    "height": 1050,
+    "width": 1200,
+    "height": 900,
     "file": "File:Bahía, San Juan Del Sur.jpg"
+  },
+  "ometepe": {
+    "src": "/images/ometepe.jpg",
+    "srcSmall": "/images/ometepe-sm.jpg",
+    "alt": "Concepción volcano rising over Ometepe Island and Lake Nicaragua",
+    "author": "Martin Kulldorff",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Altagracia_Finca_Magdalena_y_Volcan_Concepcion.jpg",
+    "width": 1200,
+    "height": 900,
+    "file": "File:Altagracia Finca Magdalena y Volcan Concepcion.jpg"
   },
   "corn-islands": {
     "src": "/images/corn-islands.jpg",
+    "srcSmall": "/images/corn-islands-sm.jpg",
     "alt": "Palm-lined beach and turquoise water on Little Corn Island, Nicaragua",
     "author": "Jagal",
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Little_Corn_Island.JPG",
-    "width": 1400,
-    "height": 1050,
+    "width": 1200,
+    "height": 900,
     "file": "File:Little Corn Island.JPG"
+  },
+  "costa-rica": {
+    "src": "/images/costa-rica.jpg",
+    "srcSmall": "/images/costa-rica-sm.jpg",
+    "alt": "The National Theatre of Costa Rica in downtown San José, the end point of the international bus from Managua",
+    "author": "MadriCR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Nacional_de_Costa_Rica.jpg",
+    "width": 1200,
+    "height": 867,
+    "file": "File:Teatro Nacional de Costa Rica.jpg"
   }
 }
