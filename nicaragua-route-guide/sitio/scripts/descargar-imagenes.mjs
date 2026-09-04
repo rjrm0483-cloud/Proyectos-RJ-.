@@ -16,7 +16,8 @@ const carpeta = join(raiz, "public/images");
 mkdirSync(carpeta, { recursive: true });
 
 const LICENCIAS_PERMITIDAS = /^(CC0|Public domain|CC BY(-SA)? \d(\.\d)?)/i;
-const ANCHO = 1400;
+const ANCHO = 1200;
+const ANCHO_PEQUENO = 640;
 const cabeceras = {
   "user-agent": "NicaraguaRouteGuide-Imagenes/1.0 (https://rjrm0483-cloud.github.io/Proyectos-RJ-./nicaragua/)",
 };
@@ -62,6 +63,12 @@ async function infoArchivo(titulo) {
   return { info, meta, licencia, titulo: pagina.title };
 }
 
+async function descargar(url) {
+  const img = await fetch(url, { headers: cabeceras, signal: AbortSignal.timeout(60000) });
+  if (!img.ok) throw new Error(`descarga ${img.status} para ${url}`);
+  return Buffer.from(await img.arrayBuffer());
+}
+
 // Candidatos explícitos primero; si ninguno sirve, búsqueda en Commons.
 async function elegirArchivo(entrada) {
   const candidatos = [...(entrada.files ?? []), ...(entrada.file ? [entrada.file] : [])];
@@ -97,13 +104,20 @@ for (const [slug, entrada] of Object.entries(manifiesto)) {
     const { info, meta, licencia, titulo } = eleccion;
     const autor = limpiarHtml(meta.Artist?.value) || "Autor no indicado";
     const url = info.thumburl ?? info.url;
-    const img = await fetch(url, { headers: cabeceras, signal: AbortSignal.timeout(60000) });
-    if (!img.ok) throw new Error(`descarga ${img.status} para ${url}`);
-    const bytes = Buffer.from(await img.arrayBuffer());
-    const destino = join(carpeta, `${slug}.jpg`);
-    writeFileSync(destino, bytes);
+    const bytes = await descargar(url);
+    writeFileSync(join(carpeta, `${slug}.jpg`), bytes);
+    // Miniatura para las tarjetas de la portada (misma imagen, 640 px).
+    const pequena = await consultarCommons({
+      titles: titulo,
+      prop: "imageinfo",
+      iiprop: "url",
+      iiurlwidth: String(ANCHO_PEQUENO),
+    });
+    const urlPequena = Object.values(pequena.query?.pages ?? {})[0]?.imageinfo?.[0]?.thumburl ?? url;
+    writeFileSync(join(carpeta, `${slug}-sm.jpg`), await descargar(urlPequena));
     resultado[slug] = {
       src: `/images/${slug}.jpg`,
+      srcSmall: `/images/${slug}-sm.jpg`,
       alt: entrada.alt,
       author: autor,
       license: licencia,

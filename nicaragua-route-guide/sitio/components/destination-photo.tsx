@@ -17,7 +17,7 @@ export function DestinationPhoto({
     return (
       <div className="card-photo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={image.alt} width={image.width} height={image.height} loading="lazy" />
+        <img src={`${BASE_PATH}${image.srcSmall ?? image.src}`} alt={image.alt} width={image.width} height={image.height} loading="lazy" />
       </div>
     );
   }

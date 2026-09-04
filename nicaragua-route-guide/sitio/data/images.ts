@@ -22,6 +22,7 @@ const generatedSchema = z.record(
   z.string(),
   z.object({
     src: z.string().startsWith("/images/"),
+    srcSmall: z.string().startsWith("/images/").optional(),
     alt: z.string().min(1),
     author: z.string().min(1),
     license: z.string().min(1),
