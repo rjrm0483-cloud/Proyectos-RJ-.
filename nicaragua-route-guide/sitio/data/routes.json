@@ -523,5 +523,82 @@
         "supports": "US$10 tourist card on entry."
       }
     ]
+  },
+  {
+    "slug": "granada-to-san-juan-del-sur",
+    "title": "Granada to San Juan del Sur",
+    "origin": "Granada",
+    "destination": "San Juan del Sur",
+    "destinationSlug": "san-juan-del-sur",
+    "category": "City to city",
+    "distance": "South via Nandaime and Rivas on the Pan-American Highway",
+    "duration": "About 2.5–3 h by shuttle; 3–4 h by public bus",
+    "summary": "Granada to the beach is the most travelled leg on the backpacker circuit. Shared shuttles pick up at hotels and hostels and run daily; the public bus route is a fraction of the price but means a change in Rivas. The San Jorge pier for Ometepe is on the same road, so many travelers split the trip there.",
+    "options": [
+      {
+        "mode": "Shared shuttle (hotel pick-up)",
+        "cost": "About US$30 per person (2026 operator listings)",
+        "duration": "About 2.5–3 h",
+        "detail": "Air-conditioned minivans leave daily with pick-up at downtown hotels and hostels in Granada and drop-off at your accommodation in San Juan del Sur. Book a day ahead; several operators sell the same seats.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Private minivan (up to 8 people)",
+        "cost": "Quoted per vehicle by the operator; splits well for groups",
+        "duration": "About 2–2.5 h",
+        "detail": "Leaves when you want and can stop at the San Jorge pier or a Rivas supermarket on the way. Ask for the price in writing before booking.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Public bus via Rivas",
+        "cost": "About C$65 (roughly US$2) in total",
+        "duration": "About 3–4 h including the change",
+        "detail": "Take any Rivas-bound bus from Granada (they leave from the highway stop by the Shell Palmira station), then a San Juan del Sur bus from the Rivas terminal. Frequent departures in daylight; the buses are crowded but safe.",
+        "partner": null
+      },
+      {
+        "mode": "Taxi or private car",
+        "cost": "Negotiated per car; ask your hotel for the going rate before you agree",
+        "duration": "About 2 h",
+        "detail": "Door to door with no fixed departure time. Agree the fare and whether it is in córdobas or dollars before getting in.",
+        "partner": null
+      }
+    ],
+    "recommended": "Shared shuttle for most travelers; public bus if you are on a tight budget and travelling light in daylight.",
+    "caution": "Shuttle prices and pick-up times are set by operators and change with season; the bus fare and Rivas timetable were reported by travelers in 2025–2026 and may move with fuel costs. There is no direct public bus: the change in Rivas is unavoidable.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-04",
+    "sources": [
+      {
+        "label": "Marvelus Travel — Shuttle Granada to San Juan del Sur",
+        "url": "https://www.marvelustravel.com/routes/nicaragua/granada-to-san-juan-del-sur/",
+        "type": "Shuttle operator",
+        "supports": "Shared minivan fare, private minivan capacity and journey time."
+      },
+      {
+        "label": "Bigfoot Hostel — Granada to San Juan del Sur shared shuttle",
+        "url": "https://www.bigfoothostelleon.com/service-page/from-granada-to-san-juan-del-sur-shared-shuttle",
+        "type": "Shuttle operator",
+        "supports": "Daily shared shuttle with hotel and hostel pick-up, about three hours."
+      },
+      {
+        "label": "Along Dusty Roads — How to get from Granada to San Juan del Sur",
+        "url": "https://www.alongdustyroads.com/posts/granada-to-san-juan-del-nicaragua",
+        "type": "Travel guide",
+        "supports": "Bus route via Rivas, the Shell Palmira stop in Granada and the trade-offs of each option."
+      },
+      {
+        "label": "Couple Travel The World — San Juan del Sur to Granada by bus",
+        "url": "https://coupletraveltheworld.com/san-juan-del-sur-to-granada/",
+        "type": "Traveler report",
+        "supports": "Public bus fare in córdobas and Rivas departure times."
+      },
+      {
+        "label": "Rome2Rio — Granada to San Juan del Sur",
+        "url": "https://www.rome2rio.com/s/Granada-Nicaragua/San-Juan-del-Sur",
+        "type": "Route aggregator",
+        "supports": "Bus duration and fare estimate."
+      }
+    ]
   }
 ]

@@ -16,5 +16,14 @@
     "categoria": "Border crossing",
     "fuente": "https://www.caribeshuttle.com/liberia-to-san-juan-del-sur",
     "totalFichas": 7
+  },
+  {
+    "fecha": "2026-09-04",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del viernes. Categoría más rezagada: ciudad a ciudad (estaba en cero). Granada → San Juan del Sur: shuttle compartido con recogida en hotel, minivan privada, bus público vía Rivas y taxi, verificados con dos operadores de shuttle, una guía de viaje, un reporte de viajero y un agregador. El destino ya tenía foto (bahía de San Juan del Sur). Publicación disparada tras el push.",
+    "ficha": "granada-to-san-juan-del-sur",
+    "categoria": "City to city",
+    "fuente": "https://www.marvelustravel.com/routes/nicaragua/granada-to-san-juan-del-sur/",
+    "totalFichas": 8
   }
 ]
