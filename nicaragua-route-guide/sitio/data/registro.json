@@ -25,5 +25,14 @@
     "categoria": "City to city",
     "fuente": "https://www.marvelustravel.com/routes/nicaragua/granada-to-san-juan-del-sur/",
     "totalFichas": 8
+  },
+  {
+    "fecha": "2026-09-05",
+    "accion": "mantenimiento",
+    "detalle": "Ciclo de mantenimiento semanal (sábado 7 p.m. Managua, ejecutado el domingo por la mañana). Workflow 'Verificar enlaces de fuentes' con red completa sobre las 38 URLs de las 8 rutas: 0 rotas, 23 OK, 15 por revisar. Las 15 son bloqueos anti-bot 403 (Rome2Rio ×6, Tripadvisor ×2, Viator, Welcome Pickups Granada, ometepenicaragua.com, migob.gob.ni, Fodor's, Couple Travel The World) y un certificado incompleto en visitanicaragua.com; todas abren en navegador. Sin cambios en tarifas ni horarios. Sin publicación adicional: los datos públicos no cambiaron. Umbral de afiliados: la fecha del 6 de septiembre llegó, pero no se cumplen 20+ rutas ni hay tráfico medible, así que no se inicia nada.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": null,
+    "totalFichas": 8
   }
 ]
