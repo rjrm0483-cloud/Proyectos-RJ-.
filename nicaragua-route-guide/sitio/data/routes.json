@@ -600,5 +600,82 @@
         "supports": "Bus duration and fare estimate."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-ometepe",
+    "title": "Managua Airport (MGA) to Ometepe Island via San Jorge",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Ometepe Island (Moyogalpa)",
+    "destinationSlug": "ometepe",
+    "category": "Airport transfer",
+    "distance": "Road to the San Jorge pier near Rivas, then the lake ferry to Moyogalpa",
+    "duration": "About 2–2.5 h to the pier plus about 70 min on the ferry",
+    "summary": "Reaching Ometepe straight from the airport is a two-part trip: a road transfer to the San Jorge pier and the ferry across Lake Nicaragua. The ferries stop running in the late afternoon, so your flight time decides whether you sleep on the island tonight or in Rivas, Granada or Managua.",
+    "options": [
+      {
+        "mode": "Private transfer to the San Jorge pier",
+        "cost": "Roughly US$75–120 per vehicle depending on group size (operator quotes)",
+        "duration": "About 2–2.5 h to the pier",
+        "detail": "Airport-to-pier transfers are sold by island tour operators and Managua transfer companies, with a driver waiting in arrivals. Ask them to time the pick-up to a specific ferry departure.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Shared shuttle or marketplace transfer",
+        "cost": "From about US$21 per person on marketplace listings; San Jorge drop-offs cost more than city hotels",
+        "duration": "About 2.5–3 h to the pier",
+        "detail": "Seat-by-seat vans consolidate travelers heading south; confirm the drop-off is the pier itself and not Rivas town.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Public transport",
+        "cost": "A few dollars in bus fares plus two short taxi rides",
+        "duration": "About 4–5 h to the pier",
+        "detail": "Taxi to the Huembes terminal, bus to Rivas, then a taxi the last 5 km to San Jorge. Only realistic on a morning arrival with light luggage.",
+        "partner": null
+      },
+      {
+        "mode": "Ferry from San Jorge to Moyogalpa",
+        "cost": "About C$50 (roughly US$1.50) per person; vehicles extra and by reservation",
+        "duration": "About 70 min; departures roughly 07:00–17:30",
+        "detail": "See the separate San Jorge to Ometepe route for the boat-by-boat detail. The last sailing is mid-afternoon to early evening depending on season and weather.",
+        "partner": null
+      }
+    ],
+    "recommended": "Land before about 1 p.m. and book a private transfer timed to a ferry; on later flights, overnight in Granada or Rivas and cross in the morning rather than racing the last boat.",
+    "caution": "Transfer prices are operator quotes that vary with vehicle size and season; the private figures here come from 2026 listings for the neighbouring San Juan del Sur run and an older Ometepe quote, so treat them as a range. Ferry times change with weather and holidays.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-06",
+    "sources": [
+      {
+        "label": "Ometepe Tours — Private transports and airport shuttle to and from San Jorge",
+        "url": "https://www.ometepe-tours.com/en/Transportation.html",
+        "type": "Island tour operator",
+        "supports": "Existence of airport-to-pier private transfers timed to the ferry."
+      },
+      {
+        "label": "Iskra Travel — Managua Airport and San Juan del Sur transportation",
+        "url": "https://iskratravel.com/",
+        "type": "Transfer operator",
+        "supports": "2026 private transfer prices by vehicle size for the neighbouring airport-to-Rivas-area run."
+      },
+      {
+        "label": "Tripadvisor Nicaragua forum — Transport from airport to Ometepe",
+        "url": "https://www.tripadvisor.com/ShowTopic-g294477-i2982-k11090001-Transport_from_airport_to_Ometepe-Nicaragua.html",
+        "type": "Traveler reports",
+        "supports": "Private transfer quote for two people and the public-transport chain via Rivas."
+      },
+      {
+        "label": "Viator — Managua airport and hotel transfers",
+        "url": "https://www.viator.com/Managua-tours/Airport-and-Ground-Transfers/d4500-g15-c52",
+        "type": "Tour marketplace",
+        "supports": "Starting price of marketplace airport transfers from Managua."
+      },
+      {
+        "label": "Ometepe Island Info — Daily ferry and lancha schedule",
+        "url": "https://ometepeislandinfo.com/Ferry-Schedule",
+        "type": "Local island guide (schedule board)",
+        "supports": "Ferry operating window and last departures from San Jorge."
+      }
+    ]
   }
 ]

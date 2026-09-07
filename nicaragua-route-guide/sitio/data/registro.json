@@ -34,5 +34,14 @@
     "categoria": null,
     "fuente": null,
     "totalFichas": 8
+  },
+  {
+    "fecha": "2026-09-06",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del domingo. Categoría más rezagada: traslados desde aeropuerto (3 de 8, objetivo 50%). Aeropuerto de Managua → Ometepe vía el muelle de San Jorge: traslado privado, shuttle compartido, transporte público y el ferry, con fuentes de un operador de la isla, un operador de traslados, foro de viajeros, marketplace y el tablero de horarios del ferry. El destino ya tenía foto (volcán Concepción). Publicación disparada tras el push.",
+    "ficha": "managua-airport-to-ometepe",
+    "categoria": "Airport transfer",
+    "fuente": "https://www.ometepe-tours.com/en/Transportation.html",
+    "totalFichas": 9
   }
 ]
