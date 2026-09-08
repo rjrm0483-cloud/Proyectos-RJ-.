@@ -70,5 +70,17 @@
     "width": 1200,
     "height": 867,
     "file": "File:Teatro Nacional de Costa Rica.jpg"
+  },
+  "managua": {
+    "src": "/images/managua.jpg",
+    "srcSmall": "/images/managua-sm.jpg",
+    "alt": "The old cathedral on Managua's Plaza de la Revolución, Nicaragua",
+    "author": "eric molina",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Antigua_Catedral_de_Managua.jpg",
+    "width": 1200,
+    "height": 797,
+    "file": "File:Antigua Catedral de Managua.jpg"
   }
 }
