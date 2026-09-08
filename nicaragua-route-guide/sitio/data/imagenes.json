@@ -53,5 +53,16 @@
     ],
     "search": "Teatro Nacional Costa Rica San José",
     "alt": "The National Theatre of Costa Rica in downtown San José, the end point of the international bus from Managua"
+  },
+  "managua": {
+    "files": [
+      "Antigua Catedral de Managua.jpg",
+      "Catedral de Managua.jpg",
+      "Old Cathedral of Managua.jpg",
+      "Managua Cathedral.jpg",
+      "Catedral Metropolitana de Managua.jpg"
+    ],
+    "search": "Antigua Catedral Managua Nicaragua",
+    "alt": "The old cathedral on Managua's Plaza de la Revolución, Nicaragua"
   }
 }

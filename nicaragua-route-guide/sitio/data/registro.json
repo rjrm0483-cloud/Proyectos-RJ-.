@@ -43,5 +43,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://www.ometepe-tours.com/en/Transportation.html",
     "totalFichas": 9
+  },
+  {
+    "fecha": "2026-09-07",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del lunes. Categoría más rezagada: traslados desde aeropuerto (4 de 9). Aeropuerto de Managua → hoteles de Managua: taxi oficial de tarifa fija, traslado privado reservado, shuttle del hotel, y por qué no hay apps ni conviene el bus, con fuentes de guías de traslados, agregador, marketplace, autoridad aeroportuaria y foro. Destino nuevo 'managua': foto solicitada a Wikimedia Commons (catedral antigua) y revisada antes de publicar.",
+    "ficha": "managua-airport-to-managua-hotels",
+    "categoria": "Airport transfer",
+    "fuente": "https://www.welcomepickups.com/managua/airport-taxi/",
+    "totalFichas": 10
   }
 ]

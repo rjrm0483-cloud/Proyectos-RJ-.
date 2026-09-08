@@ -677,5 +677,88 @@
         "supports": "Ferry operating window and last departures from San Jorge."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-managua-hotels",
+    "title": "Managua Airport (MGA) to Managua hotels",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Managua",
+    "destinationSlug": "managua",
+    "category": "Airport transfer",
+    "distance": "About 11 km along the Carretera Norte to the city centre; hotel zones spread further south and west",
+    "duration": "About 20–40 min depending on traffic and hotel zone",
+    "summary": "If you land late or connect onward the next morning, you will sleep in Managua. The airport sits on the eastern edge of the city and the ride to the hotel districts is short, but there is no ride-hailing app and no rail link, so the choice is between the fixed-fare airport taxi and a pre-booked pick-up.",
+    "options": [
+      {
+        "mode": "Official airport taxi (fixed fare paid at the desk)",
+        "cost": "About US$20–35 depending on the hotel zone (2026 listings)",
+        "duration": "About 20–40 min",
+        "detail": "Buy the ride at the licensed taxi desk inside the terminal, get a receipt and walk out to the assigned car. The fare is set by zone, so ask for the price to your hotel's neighbourhood before paying.",
+        "partner": null
+      },
+      {
+        "mode": "Pre-booked private transfer",
+        "cost": "From about US$21 on marketplaces; US$60–90 for door-to-door services with flight tracking",
+        "duration": "About 20–40 min",
+        "detail": "A driver waits in arrivals with your name. Worth it for late-night arrivals, families and anyone who wants the price settled before landing.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Hotel pick-up",
+        "cost": "Free or a fixed fee set by the hotel",
+        "duration": "About 20–40 min",
+        "detail": "Many Managua hotels and hostels run their own airport shuttle. Ask when you book and confirm the pick-up point in arrivals.",
+        "partner": null
+      },
+      {
+        "mode": "Ride-hailing apps and city buses",
+        "cost": "Not a practical option",
+        "duration": "Not recommended",
+        "detail": "Uber does not operate in Nicaragua. City buses pass on the Carretera Norte outside the terminal but are crowded and unsuitable with luggage, especially after dark.",
+        "partner": null
+      }
+    ],
+    "recommended": "Daytime arrivals: the official airport taxi desk. Night arrivals or first time in the country: a pre-booked transfer or your hotel's shuttle.",
+    "caution": "Airport taxi fares are fixed by zone and revised by the operators; the range here reflects 2026 listings for central hotels. Managua has no numbered street addresses, so give the driver the hotel name and a nearby landmark.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-07",
+    "sources": [
+      {
+        "label": "Welcome Pickups — Managua airport taxi guide",
+        "url": "https://www.welcomepickups.com/managua/airport-taxi/",
+        "type": "Transfer operator guide",
+        "supports": "Official airport taxi fare band to central Managua and the desk-inside-terminal procedure."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to Holiday Inn Express Managua",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Holiday-Inn-Express-Managua-an-IHG-Hotel",
+        "type": "Route aggregator",
+        "supports": "Taxi fare and journey time to a central hotel."
+      },
+      {
+        "label": "Airport Transfer Portal — Managua Airport transfer guide 2026",
+        "url": "https://www.airporttransferportal.com/airport-guides/mga",
+        "type": "Transfer guide",
+        "supports": "Absence of Uber, hotel pick-up availability and pre-booked private transfer price band."
+      },
+      {
+        "label": "Viator — Managua airport and hotel transfers",
+        "url": "https://www.viator.com/Managua-tours/Airport-and-Ground-Transfers/d4500-g15-c52",
+        "type": "Tour marketplace",
+        "supports": "Starting price of marketplace airport transfers."
+      },
+      {
+        "label": "EAAI — Technical information, Augusto C. Sandino airport",
+        "url": "https://www.eaai.com.ni/info-tec/",
+        "type": "Airport authority",
+        "supports": "Airport location on the Carretera Norte east of the city."
+      },
+      {
+        "label": "Tripadvisor Managua forum — Taxi from MGA airport",
+        "url": "https://www.tripadvisor.com/ShowTopic-g294478-i3764-k14636296-Taxi_from_MGA_airport-Managua_Managua_Department.html",
+        "type": "Traveler reports",
+        "supports": "Recent traveler experience with the licensed taxi desk."
+      }
+    ]
   }
 ]
