@@ -760,5 +760,82 @@
         "supports": "Recent traveler experience with the licensed taxi desk."
       }
     ]
+  },
+  {
+    "slug": "granada-to-leon",
+    "title": "Granada to León",
+    "origin": "Granada",
+    "destination": "León",
+    "destinationSlug": "leon",
+    "category": "City to city",
+    "distance": "North-west through Managua; the two colonial cities sit on opposite sides of the capital",
+    "duration": "About 3 h by shuttle; 4–5 h by public bus with a change in Managua",
+    "summary": "Granada and León are the two colonial cities every itinerary joins, and the road between them passes through Managua. Shared shuttles do it in one hop with hotel pick-up; the public buses are cheap but mean crossing the capital between two terminals.",
+    "options": [
+      {
+        "mode": "Shared shuttle (hotel pick-up)",
+        "cost": "About US$18–36 per person depending on operator and vehicle (2026 listings)",
+        "duration": "About 3 h",
+        "detail": "Usually one departure a day, so book a day or two ahead. Hostels in both cities sell the same seats; the price gap reflects standard versus larger air-conditioned vans.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Private transfer",
+        "cost": "Quoted per vehicle by the operator",
+        "duration": "About 2.5–3 h",
+        "detail": "Leaves when you want and can stop at the Masaya volcano or a Managua supermarket on the way. Get the price in writing before you confirm.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Public bus via Managua (UCA terminal)",
+        "cost": "A few US dollars in total, paid in córdobas on board",
+        "duration": "About 4–5 h including the change",
+        "detail": "Minibus from Granada to Managua's UCA terminal (just over an hour), then a León-bound minibus from the same terminal. Daylight only; the terminals are busy and a taxi between them is not needed.",
+        "partner": null
+      },
+      {
+        "mode": "Taxi",
+        "cost": "Negotiated per car; ask your hotel for the going rate",
+        "duration": "About 2.5 h",
+        "detail": "Door to door with no fixed departure. Agree the fare and currency before getting in.",
+        "partner": null
+      }
+    ],
+    "recommended": "Shared shuttle for almost everyone; the public bus only if you are on a tight budget, travelling light and leaving in the morning.",
+    "caution": "Shuttle prices are operator listings that change with season and vehicle size; bus fares were reported by travelers in 2025–2026. Managua traffic on weekday evenings can add half an hour to any option.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-08",
+    "sources": [
+      {
+        "label": "Bigfoot Hostel — Shuttles from Granada",
+        "url": "https://www.bigfoothostelleon.com/shuttle-from-granada-nicaragua-to",
+        "type": "Shuttle operator",
+        "supports": "Shared shuttle service, hotel pick-up and fare."
+      },
+      {
+        "label": "Gekko Trails Explorer — Shuttle Granada to León",
+        "url": "https://gekkotrailsexplorer.com/shuttle-granada-to-leon/",
+        "type": "Shuttle operator",
+        "supports": "Shared and private shuttle options and journey time."
+      },
+      {
+        "label": "A Social Nomad — How to get from Granada to León",
+        "url": "https://asocialnomad.com/nicaragua/granada-to-leon/",
+        "type": "Travel guide",
+        "supports": "Shuttle price band, once-daily departures and the bus route through the UCA terminal."
+      },
+      {
+        "label": "Dan Round the World — Granada to León",
+        "url": "https://danroundtheworld.com/how-to-get-from-granada-to-leon-nicaragua/",
+        "type": "Traveler report",
+        "supports": "Public bus timings between Granada, UCA and León."
+      },
+      {
+        "label": "Rome2Rio — Granada to León",
+        "url": "https://www.rome2rio.com/s/Granada-Nicaragua/Le%C3%B3n-Nicaragua",
+        "type": "Route aggregator",
+        "supports": "Duration by option and fare estimates."
+      }
+    ]
   }
 ]

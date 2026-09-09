@@ -52,5 +52,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://www.welcomepickups.com/managua/airport-taxi/",
     "totalFichas": 10
+  },
+  {
+    "fecha": "2026-09-08",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del martes. Mezcla en objetivo (50/30/20); se refuerza ciudad a ciudad, la subcategoría con menos rutas. Granada → León: shuttle compartido, traslado privado, bus público con cambio en la terminal UCA y taxi, con fuentes de dos operadores, una guía, un reporte de viajero y un agregador. El destino ya tenía foto (catedral de León).",
+    "ficha": "granada-to-leon",
+    "categoria": "City to city",
+    "fuente": "https://www.bigfoothostelleon.com/shuttle-from-granada-nicaragua-to",
+    "totalFichas": 11
   }
 ]
