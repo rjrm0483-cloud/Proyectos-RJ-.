@@ -64,5 +64,15 @@
     ],
     "search": "Antigua Catedral Managua Nicaragua",
     "alt": "The old cathedral on Managua's Plaza de la Revolución, Nicaragua"
+  },
+  "matagalpa": {
+    "files": [
+      "Catedral de matagalpa nicaragua .jpg",
+      "Catedral de Matagalpa.jpg",
+      "Catedral San Pedro Matagalpa.jpg",
+      "Catedral de San Pedro, Matagalpa.jpg"
+    ],
+    "search": "Catedral de Matagalpa Nicaragua",
+    "alt": "The white cathedral of San Pedro in Matagalpa, Nicaragua, with the green hills of the coffee highlands behind"
   }
 }

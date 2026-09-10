@@ -837,5 +837,69 @@
         "supports": "Duration by option and fare estimates."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-matagalpa",
+    "title": "Managua Airport (MGA) to Matagalpa",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Matagalpa",
+    "destinationSlug": "matagalpa",
+    "category": "Airport transfer",
+    "distance": "North on the Pan-American Highway via Tipitapa and Sébaco into the coffee highlands",
+    "duration": "About 2 h by private transfer; about 2–2.5 h by bus including the ride to the terminal",
+    "summary": "Matagalpa is the gateway to Nicaragua's coffee country and cloud-forest lodges. The airport sits on the same side of Managua as the northern bus terminal, so the public option is unusually practical here, while private transfers run straight up the highway in about two hours.",
+    "options": [
+      {
+        "mode": "Private transfer",
+        "cost": "Quoted per vehicle; regional airport transfers of similar length list at roughly US$100–140 in 2026",
+        "duration": "About 2 h",
+        "detail": "Door to door with a driver waiting in arrivals, and the only option that works for evening flights. Highland lodges often arrange it for you; ask when you book.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Public bus from the Mayoreo terminal",
+        "cost": "About US$2–5 in bus fare plus a short taxi to the terminal",
+        "duration": "About 2–2.5 h door to door",
+        "detail": "A ten-minute taxi takes you from the airport to the Mercado Mayoreo terminal, where COTRAN buses to Matagalpa leave roughly every 20 minutes through the day. Daylight only; keep luggage with you.",
+        "partner": null
+      },
+      {
+        "mode": "Marketplace transfer",
+        "cost": "Listed from about US$21 for Managua rides; Matagalpa quotes are higher",
+        "duration": "About 2 h",
+        "detail": "Tour marketplaces sell fixed-price rides to the highlands with free cancellation. Compare the quote against a lodge-arranged driver.",
+        "partner": "ground"
+      }
+    ],
+    "recommended": "Morning arrivals with light luggage: taxi to Mayoreo and the bus. Evening arrivals or lodge stays outside town: a private transfer booked ahead.",
+    "caution": "Private transfer prices are operator quotes and the range here comes from similar-length airport runs, not a Matagalpa tariff; bus fares come from an aggregator and may change. The highland road is winding after Sébaco, so allow extra time in the rainy season.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-09",
+    "sources": [
+      {
+        "label": "Daytrip — Managua Airport to Matagalpa transfer",
+        "url": "https://daytrip.com/landing/managua-airport-to-matagalpa",
+        "type": "Transfer operator",
+        "supports": "Private transfer duration of about two hours."
+      },
+      {
+        "label": "Rome2Rio — Matagalpa to Managua Airport",
+        "url": "https://www.rome2rio.com/s/Matagalpa/Managua-Airport-MGA",
+        "type": "Route aggregator",
+        "supports": "COTRAN bus frequency, fare band and duration via the Mayoreo terminal."
+      },
+      {
+        "label": "Airport Transfer Portal — Managua Airport transfer guide 2026",
+        "url": "https://www.airporttransferportal.com/airport-guides/mga",
+        "type": "Transfer guide",
+        "supports": "Price band for regional private transfers of similar length."
+      },
+      {
+        "label": "Viator — Managua airport and hotel transfers",
+        "url": "https://www.viator.com/Managua-tours/Airport-and-Ground-Transfers/d4500-g15-c52",
+        "type": "Tour marketplace",
+        "supports": "Starting price of marketplace transfers from the airport."
+      }
+    ]
   }
 ]
