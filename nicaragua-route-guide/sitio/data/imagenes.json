@@ -67,12 +67,17 @@
   },
   "matagalpa": {
     "files": [
-      "Catedral de matagalpa nicaragua .jpg",
-      "Catedral de Matagalpa.jpg",
-      "Catedral San Pedro Matagalpa.jpg",
-      "Catedral de San Pedro, Matagalpa.jpg"
+      "Matagalpa, Nicaragua.jpg",
+      "Vista de Matagalpa.jpg",
+      "Matagalpa city.jpg",
+      "Matagalpa Nicaragua.jpg",
+      "Panorámica de Matagalpa.jpg"
     ],
-    "search": "Catedral de Matagalpa Nicaragua",
-    "alt": "The white cathedral of San Pedro in Matagalpa, Nicaragua, with the green hills of the coffee highlands behind"
+    "search": "Matagalpa Nicaragua city view hills",
+    "exclude": [
+      "File:Catedral de matagalpa nicaragua .jpg",
+      "File:Vista al Altar - Catedral San Pedro.jpg"
+    ],
+    "alt": "The city of Matagalpa, Nicaragua, set among the green hills of the coffee highlands"
   }
 }

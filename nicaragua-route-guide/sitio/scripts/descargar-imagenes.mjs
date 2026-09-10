@@ -72,6 +72,8 @@ async function descargar(url) {
 // Candidatos explícitos primero; si ninguno sirve, búsqueda en Commons.
 async function elegirArchivo(entrada) {
   const candidatos = [...(entrada.files ?? []), ...(entrada.file ? [entrada.file] : [])];
+  // Archivos ya revisados y rechazados (interiores, marcas de agua, otro lugar).
+  const excluidos = new Set((entrada.exclude ?? []).map((t) => (t.startsWith("File:") ? t : `File:${t}`)));
   const motivos = [];
   for (const c of candidatos) {
     const titulo = c.startsWith("File:") ? c : `File:${c}`;
@@ -87,6 +89,7 @@ async function elegirArchivo(entrada) {
       srlimit: "25",
     });
     for (const hit of json.query?.search ?? []) {
+      if (excluidos.has(hit.title)) continue;
       const r = await infoArchivo(hit.title);
       if (r.info) return r;
       motivos.push(r.error);

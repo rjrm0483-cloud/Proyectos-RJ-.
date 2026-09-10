@@ -14,6 +14,7 @@ const manifestSchema = z.record(
     file: z.string().min(1).optional(),
     files: z.array(z.string().min(1)).optional(),
     search: z.string().min(1).optional(),
+    exclude: z.array(z.string().min(1)).optional(),
     alt: z.string().min(1),
   }),
 );
