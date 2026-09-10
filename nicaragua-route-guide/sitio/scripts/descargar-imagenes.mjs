@@ -84,12 +84,16 @@ async function elegirArchivo(entrada) {
   if (entrada.search) {
     const json = await consultarCommons({
       list: "search",
-      srsearch: entrada.search,
+      srsearch: `${entrada.search} filetype:bitmap`,
       srnamespace: "6",
-      srlimit: "25",
+      srlimit: "40",
     });
+    // Solo títulos que mencionen la palabra clave (por defecto, el nombre del
+    // destino) para no aceptar documentos escaneados u otros lugares.
+    const clave = (entrada.keyword ?? entrada.search.split(" ")[0]).toLowerCase();
     for (const hit of json.query?.search ?? []) {
       if (excluidos.has(hit.title)) continue;
+      if (!hit.title.toLowerCase().includes(clave)) continue;
       const r = await infoArchivo(hit.title);
       if (r.info) return r;
       motivos.push(r.error);

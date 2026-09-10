@@ -73,11 +73,12 @@
       "Matagalpa Nicaragua.jpg",
       "Panorámica de Matagalpa.jpg"
     ],
-    "search": "Matagalpa Nicaragua city view hills",
+    "search": "Matagalpa Nicaragua",
     "exclude": [
       "File:Catedral de matagalpa nicaragua .jpg",
       "File:Vista al Altar - Catedral San Pedro.jpg"
     ],
-    "alt": "The city of Matagalpa, Nicaragua, set among the green hills of the coffee highlands"
+    "alt": "The city of Matagalpa, Nicaragua, set among the green hills of the coffee highlands",
+    "keyword": "Matagalpa"
   }
 }
