@@ -82,5 +82,17 @@
     "width": 1200,
     "height": 797,
     "file": "File:Antigua Catedral de Managua.jpg"
+  },
+  "matagalpa": {
+    "src": "/images/matagalpa.jpg",
+    "srcSmall": "/images/matagalpa-sm.jpg",
+    "alt": "The city of Matagalpa, Nicaragua, set among the green hills of the coffee highlands",
+    "author": "Sasha India",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Matagalpa,_Nicaragua_(29095488566).jpg",
+    "width": 1200,
+    "height": 760,
+    "file": "File:Matagalpa, Nicaragua (29095488566).jpg"
   }
 }
