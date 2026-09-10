@@ -82,5 +82,17 @@
     "width": 1200,
     "height": 797,
     "file": "File:Antigua Catedral de Managua.jpg"
+  },
+  "matagalpa": {
+    "src": "/images/matagalpa.jpg",
+    "srcSmall": "/images/matagalpa-sm.jpg",
+    "alt": "The white cathedral of San Pedro in Matagalpa, Nicaragua, with the green hills of the coffee highlands behind",
+    "author": "Mimatagalpa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_matagalpa_nicaragua_.jpg",
+    "width": 1200,
+    "height": 1800,
+    "file": "File:Catedral de matagalpa nicaragua .jpg"
   }
 }
