@@ -78,5 +78,19 @@
     ],
     "alt": "The city of Matagalpa, Nicaragua, set among the green hills of the coffee highlands",
     "keyword": "Matagalpa"
+  },
+  "honduras": {
+    "files": [
+      "Tegucigalpa view5 in 2021.jpg",
+      "Tegucigalpa view1 in 2021.jpg",
+      "Tegucigalpa view2 in 2021.jpg"
+    ],
+    "search": "Tegucigalpa Honduras",
+    "keyword": "Tegucigalpa",
+    "exclude": [
+      "File:Tegucigalpa, Honduras.JPG",
+      "File:Panorama of Tegucigalpa, Honduras (1889).jpg"
+    ],
+    "alt": "The hills and rooftops of Tegucigalpa, Honduras, the end point of the international bus from Managua"
   }
 }

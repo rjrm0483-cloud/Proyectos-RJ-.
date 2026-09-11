@@ -70,5 +70,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://daytrip.com/landing/managua-airport-to-matagalpa",
     "totalFichas": 12
+  },
+  {
+    "fecha": "2026-09-10",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del jueves. Categoría más rezagada: fronteras (2 de 12). Managua → Tegucigalpa en bus internacional por El Guasaule o Las Manos: líneas, tarifas, tasas reportadas y la opción en buses públicos, con fuentes de agregador, marketplace de boletos, reseñas de viajeros y el operador. Destino nuevo 'honduras': foto solicitada a Wikimedia Commons (vista de Tegucigalpa 2021) y revisada antes de publicar.",
+    "ficha": "managua-to-tegucigalpa-honduras-by-bus",
+    "categoria": "Border crossing",
+    "fuente": "https://spring-bus.com/buses/honduras/tegucigalpa-to-managua/",
+    "totalFichas": 13
   }
 ]

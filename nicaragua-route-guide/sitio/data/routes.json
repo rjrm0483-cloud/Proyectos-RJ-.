@@ -901,5 +901,69 @@
         "supports": "Starting price of marketplace transfers from the airport."
       }
     ]
+  },
+  {
+    "slug": "managua-to-tegucigalpa-honduras-by-bus",
+    "title": "Managua to Tegucigalpa (Honduras) by bus",
+    "origin": "Managua (international bus terminals)",
+    "destination": "Tegucigalpa, Honduras",
+    "destinationSlug": "honduras",
+    "category": "Border crossing",
+    "distance": "North on the Pan-American Highway to the Honduran border at El Guasaule (via Chinandega) or Las Manos (via Estelí and Ocotal), then on to Tegucigalpa",
+    "duration": "About 7–11 h depending on the line and the border used",
+    "summary": "The land route north to Honduras is served by the same international Pullman lines that run south to Costa Rica. The bus waits while you clear both immigration posts, but departures are less frequent than on the Costa Rica run, so check the day of the week before you plan around it.",
+    "options": [
+      {
+        "mode": "International bus (Tica Bus, Transnica, King Quality)",
+        "cost": "About US$25–55 per person depending on line and seat class",
+        "duration": "About 7–8 h via Las Manos; up to 11 h via El Guasaule",
+        "detail": "Direct Pullman service that handles the border stops for the whole bus. Tica Bus lists only a couple of departures a week on this route, so book ahead; other lines run different days.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Border fees at El Guasaule or Las Manos",
+        "cost": "A few US dollars in cash on each side, reported at roughly US$3 per post",
+        "duration": "About 1–2 h of formalities",
+        "detail": "Travelers report small exit and entry fees at both immigration windows, paid in US dollars. Nicaraguan, Honduran, Salvadoran and Guatemalan citizens move under the CA-4 agreement and pay less. Carry small bills and your passport with six months' validity.",
+        "partner": null
+      },
+      {
+        "mode": "Public buses and the border on foot",
+        "cost": "The cheapest option, paid per bus leg in córdobas and lempiras",
+        "duration": "A full day with several changes",
+        "detail": "Managua to Estelí or Chinandega, a minibus to the border, cross on foot, then Honduran buses onward. Only for experienced travelers with light luggage and an early start.",
+        "partner": null
+      }
+    ],
+    "recommended": "Take an international Pullman and choose the line by departure day rather than price; the Las Manos crossing is the quicker one.",
+    "caution": "Fares and departure days come from booking aggregators and 2025–2026 traveler reports, and international lines change schedules by season. Border fees are as reported by travelers, not from an official tariff, so treat them as an estimate and carry extra cash.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-10",
+    "sources": [
+      {
+        "label": "Rome2Rio — Tegucigalpa to Managua by Tica Bus",
+        "url": "https://www.rome2rio.com/es/s/Tegucigalpa/Managua-Tica-Bus",
+        "type": "Route aggregator",
+        "supports": "Tica Bus departure days, fare and duration via El Guasaule."
+      },
+      {
+        "label": "Spring Bus — Bus from Tegucigalpa to Managua",
+        "url": "https://spring-bus.com/buses/honduras/tegucigalpa-to-managua/",
+        "type": "Bus ticket marketplace",
+        "supports": "Lines operating the route, fare band, duration via Las Manos and reported border fees."
+      },
+      {
+        "label": "Tripadvisor — Tica Bus Managua reviews (2026)",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g294478-d12730197-Reviews-Tica_Bus-Managua_Managua_Department.html",
+        "type": "Traveler reports",
+        "supports": "Recent traveler experience with border handling on international Pullmans."
+      },
+      {
+        "label": "Ticabus — Terminals and agencies",
+        "url": "https://ticabus.com/en/terminales-y-agencias",
+        "type": "Bus operator",
+        "supports": "Managua terminal location."
+      }
+    ]
   }
 ]
