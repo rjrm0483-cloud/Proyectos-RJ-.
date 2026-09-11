@@ -94,5 +94,17 @@
     "width": 1200,
     "height": 795,
     "file": "File:Ciudad Matagalpa.jpg"
+  },
+  "honduras": {
+    "src": "/images/honduras.jpg",
+    "srcSmall": "/images/honduras-sm.jpg",
+    "alt": "The hills and rooftops of Tegucigalpa, Honduras, the end point of the international bus from Managua",
+    "author": "Vouasim",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Tegucigalpa_view5_in_2021.jpg",
+    "width": 1200,
+    "height": 568,
+    "file": "File:Tegucigalpa view5 in 2021.jpg"
   }
 }
