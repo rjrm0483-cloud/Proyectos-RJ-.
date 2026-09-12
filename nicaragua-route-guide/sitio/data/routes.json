@@ -965,5 +965,76 @@
         "supports": "Managua terminal location."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-laguna-de-apoyo",
+    "title": "Managua Airport (MGA) to Laguna de Apoyo",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Laguna de Apoyo",
+    "destinationSlug": "laguna-de-apoyo",
+    "category": "Airport transfer",
+    "distance": "South-east past Masaya to the crater rim, then a steep road down to the lakeshore lodges",
+    "duration": "About 50–60 min by car; about 2 h by public transport",
+    "summary": "The crater lake between Masaya and Granada is where many visitors spend their first nights, and its lodges sit at the bottom of a steep crater road with no bus service. A private transfer or a lodge shuttle takes you to the door; public buses only reach the rim.",
+    "options": [
+      {
+        "mode": "Private transfer or airport taxi",
+        "cost": "Roughly US$25–35 per car for the Masaya–Granada zone; lodges inside the crater may cost a little more",
+        "duration": "About 50–60 min",
+        "detail": "Give the driver the lodge name: the crater road has several entrances and the lakeshore lodges are spread along it. Agree the fare before leaving the terminal.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Lodge shuttle",
+        "cost": "Set by each lodge; some include it, most charge a fixed fee",
+        "duration": "About 1 h",
+        "detail": "Most crater lodges run their own airport pick-up or can book a trusted taxi. Ask when you reserve and confirm the meeting point in arrivals.",
+        "partner": null
+      },
+      {
+        "mode": "Shared shuttle via Granada",
+        "cost": "Shuttle operators quote the lake as a stop on the Granada run; the Granada airport shuttle lists at about US$79 on demand",
+        "duration": "About 1 h plus any Granada drop-offs",
+        "detail": "Worth it only if a shuttle is already running for your flight; for one or two people a taxi is usually cheaper.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Public bus to the rim, then taxi",
+        "cost": "Bus fares in córdobas plus a negotiated taxi for the last leg into the crater",
+        "duration": "About 2 h",
+        "detail": "Bus from Managua toward Masaya or Granada, get off at the Apoyo turn-off, then a taxi down the crater road. Daylight only; the last leg is the expensive and least predictable part.",
+        "partner": null
+      }
+    ],
+    "recommended": "Book the lodge shuttle or a private transfer timed to your flight; the crater road after dark is not the place to be negotiating a taxi.",
+    "caution": "Transfer and taxi figures are 2026 operator listings for the Masaya–Granada zone rather than a lake-specific tariff; lodge shuttle prices vary by lodge. The crater road is steep and unlit, so confirm the driver knows the lodge entrance.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-11",
+    "sources": [
+      {
+        "label": "Rome2Rio — Managua Airport to Apoyo Lagoon Natural Reserve",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Apoyo-Lagoon-Natural-Reserve",
+        "type": "Route aggregator",
+        "supports": "Driving time, on-demand shuttle listings and public-transport duration."
+      },
+      {
+        "label": "Airports Taxi Transfers — Managua airport transfers",
+        "url": "https://airportstaxitransfers.com/transportation/taxi/Managua-Transfers",
+        "type": "Transfer operator guide",
+        "supports": "Transfer price band for the Masaya and Granada zone."
+      },
+      {
+        "label": "Tripadvisor Nicaragua forum — Managua to Laguna de Apoyo",
+        "url": "https://www.tripadvisor.com/ShowTopic-g294477-i2982-k9186410-Managua_to_La_Laguna_de_Apoyo_to_Pochomil-Nicaragua.html",
+        "type": "Traveler reports",
+        "supports": "Lodge shuttle advice and the public-transport chain to the crater."
+      },
+      {
+        "label": "Viator — Managua airport and hotel transfers",
+        "url": "https://www.viator.com/Managua-tours/Airport-and-Ground-Transfers/d4500-g15-c52",
+        "type": "Tour marketplace",
+        "supports": "Starting price of marketplace airport transfers."
+      }
+    ]
   }
 ]

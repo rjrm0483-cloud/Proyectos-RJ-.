@@ -79,5 +79,14 @@
     "categoria": "Border crossing",
     "fuente": "https://spring-bus.com/buses/honduras/tegucigalpa-to-managua/",
     "totalFichas": 13
+  },
+  {
+    "fecha": "2026-09-11",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del viernes. Categoría más rezagada: traslados desde aeropuerto (6 de 13). Aeropuerto de Managua → Laguna de Apoyo: taxi o traslado privado, shuttle del lodge, shuttle compartido vía Granada y bus público hasta el borde del cráter, con fuentes de agregador, guía de traslados, foro de viajeros y marketplace. Destino nuevo 'laguna-de-apoyo': foto solicitada a Wikimedia Commons (vista desde Catarina) y revisada antes de publicar.",
+    "ficha": "managua-airport-to-laguna-de-apoyo",
+    "categoria": "Airport transfer",
+    "fuente": "https://www.rome2rio.com/s/Managua-Airport-MGA/Apoyo-Lagoon-Natural-Reserve",
+    "totalFichas": 14
   }
 ]
