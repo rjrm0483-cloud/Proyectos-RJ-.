@@ -106,5 +106,17 @@
     "width": 1200,
     "height": 568,
     "file": "File:Tegucigalpa view5 in 2021.jpg"
+  },
+  "laguna-de-apoyo": {
+    "src": "/images/laguna-de-apoyo.jpg",
+    "srcSmall": "/images/laguna-de-apoyo-sm.jpg",
+    "alt": "The Laguna de Apoyo crater lake seen from the Catarina viewpoint, Nicaragua",
+    "author": "Jesus Jimenez from Palma de Mallorca, Spain",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Laguna_de_Apoyo.jpg",
+    "width": 1200,
+    "height": 900,
+    "file": "File:Laguna de Apoyo.jpg"
   }
 }
