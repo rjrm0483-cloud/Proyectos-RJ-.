@@ -620,10 +620,10 @@
         "partner": "tours"
       },
       {
-        "mode": "Shared shuttle or marketplace transfer",
-        "cost": "From about US$21 per person on marketplace listings; San Jorge drop-offs cost more than city hotels",
+        "mode": "Shared shuttle to the San Jorge pier",
+        "cost": "From about US$35–50 per person (2026 marketplace and operator listings)",
         "duration": "About 2.5–3 h to the pier",
-        "detail": "Seat-by-seat vans consolidate travelers heading south; confirm the drop-off is the pier itself and not Rivas town.",
+        "detail": "Seat-by-seat vans with pick-up at the airport or a Managua hotel and drop-off at the San Jorge ferry, usually one fixed morning departure. Confirm the drop-off is the pier itself and not Rivas town.",
         "partner": "ground"
       },
       {
@@ -642,15 +642,27 @@
       }
     ],
     "recommended": "Land before about 1 p.m. and book a private transfer timed to a ferry; on later flights, overnight in Granada or Rivas and cross in the morning rather than racing the last boat.",
-    "caution": "Transfer prices are operator quotes that vary with vehicle size and season; the private figures here come from 2026 listings for the neighbouring San Juan del Sur run and an older Ometepe quote, so treat them as a range. Ferry times change with weather and holidays.",
+    "caution": "Transfer prices are operator quotes that vary with vehicle size and season; the private figures come from 2026 listings for the neighbouring San Juan del Sur run and an older Ometepe quote, so treat them as a range. Ferry times change with weather and holidays.",
     "confidence": "Conditional",
-    "verifiedAt": "2026-09-06",
+    "verifiedAt": "2026-09-12",
     "sources": [
       {
-        "label": "Ometepe Tours — Private transports and airport shuttle to and from San Jorge",
-        "url": "https://www.ometepe-tours.com/en/Transportation.html",
-        "type": "Island tour operator",
-        "supports": "Existence of airport-to-pier private transfers timed to the ferry."
+        "label": "Daytrip — Managua to San Jorge private transfer",
+        "url": "https://daytrip.com/landing/managua-to-san-jorge",
+        "type": "Transfer operator",
+        "supports": "Existence and timing of door-to-door private transfers to the San Jorge pier."
+      },
+      {
+        "label": "Bigfoot Hostel — Managua airport to Ometepe (Rivas) shared shuttle",
+        "url": "https://www.bigfoothostelleon.com/service-page/from-managua-airport-to-ometepe-rivas-shared-shuttle",
+        "type": "Shuttle operator",
+        "supports": "Shared shuttle with airport pick-up and drop-off at the San Jorge ferry."
+      },
+      {
+        "label": "Bookaway — Managua to San Jorge",
+        "url": "https://www.bookaway.com/routes/nicaragua/managua-to-san-jorge",
+        "type": "Ground transport marketplace",
+        "supports": "Shared shuttle fare band from US$35 and journey duration."
       },
       {
         "label": "Iskra Travel — Managua Airport and San Juan del Sur transportation",

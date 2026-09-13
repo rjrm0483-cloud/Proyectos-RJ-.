@@ -88,5 +88,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://www.rome2rio.com/s/Managua-Airport-MGA/Apoyo-Lagoon-Natural-Reserve",
     "totalFichas": 14
+  },
+  {
+    "fecha": "2026-09-12",
+    "accion": "mantenimiento",
+    "detalle": "Ciclo de mantenimiento semanal (sábado 7 p.m. Managua). Verificador con red completa sobre 59 URLs de 14 rutas: 1 rota, 28 por revisar, 30 OK. Rota: el dominio de Ometepe Tours (ometepe-tours.com) ya no resuelve; en la ruta aeropuerto → Ometepe se sustituyó por Daytrip (traslado privado), Bigfoot Hostel (shuttle compartido al muelle) y Bookaway (tarifa desde US$35), y se precisó la opción de shuttle compartido. Las 28 'por revisar' son bloqueos anti-bot 403 (Rome2Rio, Tripadvisor, Viator, Fodor's, Gekko Trails, blogs) y el certificado ya vencido de visitanicaragua.com; todas abren en navegador. Publicación disparada porque cambió una ruta.",
+    "ficha": "managua-airport-to-ometepe",
+    "categoria": "Airport transfer",
+    "fuente": "https://www.bigfoothostelleon.com/service-page/from-managua-airport-to-ometepe-rivas-shared-shuttle",
+    "totalFichas": 14
   }
 ]
