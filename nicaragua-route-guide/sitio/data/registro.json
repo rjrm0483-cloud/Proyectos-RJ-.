@@ -97,5 +97,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://www.bigfoothostelleon.com/service-page/from-managua-airport-to-ometepe-rivas-shared-shuttle",
     "totalFichas": 14
+  },
+  {
+    "fecha": "2026-09-13",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del domingo. Categoría ligeramente rezagada: islas y ciudad a ciudad (4 de 14). Granada → Ometepe vía San Jorge: shuttle compartido, paquete shuttle + ferry, ferry por cuenta propia con tarifa y tasa portuaria reportadas, y bus público vía Rivas, con fuentes de dos operadores, un marketplace, una casa de huéspedes de la isla, una guía de viajero y un agregador. El destino ya tenía foto (volcán Concepción).",
+    "ficha": "granada-to-ometepe",
+    "categoria": "Island & ferry",
+    "fuente": "https://www.holaholatours.com/shuttles/granada-ometepe",
+    "totalFichas": 15
   }
 ]

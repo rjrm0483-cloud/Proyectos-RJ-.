@@ -1048,5 +1048,88 @@
         "supports": "Starting price of marketplace airport transfers."
       }
     ]
+  },
+  {
+    "slug": "granada-to-ometepe",
+    "title": "Granada to Ometepe Island via San Jorge",
+    "origin": "Granada",
+    "destination": "Ometepe Island (Moyogalpa)",
+    "destinationSlug": "ometepe",
+    "category": "Island & ferry",
+    "distance": "South on the Pan-American Highway through Rivas to the San Jorge pier, then the lake crossing to Moyogalpa",
+    "duration": "About 2 h to the pier plus about 1 h on the ferry",
+    "summary": "Granada to Ometepe is the classic next hop on the southern circuit. Shared shuttles run from Granada hotels to the San Jorge pier with a stop in Rivas, and several operators sell the shuttle and the ferry as one ticket. The public bus works too, but adds a change in Rivas and a taxi to the pier.",
+    "options": [
+      {
+        "mode": "Shared shuttle to the San Jorge pier",
+        "cost": "About US$25–45 per person (2026 operator listings)",
+        "duration": "About 2 h to the pier",
+        "detail": "Hotel pick-up in Granada, a stop in Rivas and drop-off at the ferry. Departures are timed to the mid-day boats; an example listing leaves at 12:30 and reaches the pier around 14:30.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Shuttle plus ferry package",
+        "cost": "Shuttle fare plus the ferry ticket, sold together by several operators",
+        "duration": "About 3–3.5 h door to dock",
+        "detail": "Operators such as Gekko Explorer, Bigfoot and Adelante Express bundle the van and the crossing so you do not queue for tickets at the port.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Ferry from San Jorge (if you buy it yourself)",
+        "cost": "About C$50–75 per person depending on the boat, plus a reported port entry fee of about C$36 for foreigners",
+        "duration": "About 60–70 min",
+        "detail": "Boats run roughly 07:00–17:30; see the San Jorge to Ometepe route for the boat-by-boat detail and weather caveats.",
+        "partner": null
+      },
+      {
+        "mode": "Public bus via Rivas",
+        "cost": "A few US dollars in bus fares plus a short taxi from Rivas to the pier",
+        "duration": "About 3–4 h to the pier",
+        "detail": "Rivas-bound bus from the highway stop in Granada, then a taxi the last 5 km to San Jorge. Fine in daylight with light luggage; aim for a morning boat.",
+        "partner": null
+      }
+    ],
+    "recommended": "Take a morning shared shuttle or a shuttle-and-ferry package so you cross before the afternoon winds pick up; keep the last boat as a buffer, not a plan.",
+    "caution": "Shuttle prices come from 2026 operator listings and vary by company and season; the ferry fare and port fee are as reported by island guesthouses and can change. Lake crossings are cancelled in strong winds, so do not plan an onward connection the same evening.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-13",
+    "sources": [
+      {
+        "label": "Hola Hola Tours — Granada to Ometepe shuttle",
+        "url": "https://www.holaholatours.com/shuttles/granada-ometepe",
+        "type": "Shuttle operator",
+        "supports": "Shared shuttle service with Rivas stop and departure timing."
+      },
+      {
+        "label": "Gekko Trails Explorer — Shuttle Granada to San Jorge",
+        "url": "https://gekkotrailsexplorer.com/shuttle-granada-to-san-jorge/",
+        "type": "Shuttle operator",
+        "supports": "Shuttle to the pier and shuttle-plus-ferry packages."
+      },
+      {
+        "label": "Spring Bus — Bus from Granada to Ometepe",
+        "url": "https://spring-bus.com/buses/nicaragua/granada-to-ometepe/",
+        "type": "Bus ticket marketplace",
+        "supports": "Fare band across operators and journey time."
+      },
+      {
+        "label": "Selvista Guesthouses — Ferry Ometepe",
+        "url": "https://www.theselvistaexperience.com/ferry-ometepe",
+        "type": "Island guesthouse guide",
+        "supports": "Ferry fare in córdobas and the port entry fee for foreigners."
+      },
+      {
+        "label": "Zoe Goes Places — Ometepe to Granada in 2026",
+        "url": "https://www.zoegoesplaces.com/ometepe-to-granada/",
+        "type": "Traveler guide",
+        "supports": "Route through Rivas, van and ferry durations and the operators running the route."
+      },
+      {
+        "label": "Rome2Rio — Granada to Ometepe",
+        "url": "https://www.rome2rio.com/s/Granada-Nicaragua/Ometepe",
+        "type": "Route aggregator",
+        "supports": "Option overview and duration estimates."
+      }
+    ]
   }
 ]
