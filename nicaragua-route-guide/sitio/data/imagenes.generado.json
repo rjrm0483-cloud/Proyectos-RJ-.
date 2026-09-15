@@ -118,5 +118,17 @@
     "width": 1200,
     "height": 900,
     "file": "File:Laguna de Apoyo.jpg"
+  },
+  "popoyo": {
+    "src": "/images/popoyo.jpg",
+    "srcSmall": "/images/popoyo-sm.jpg",
+    "alt": "Surfers at Popoyo beach on Nicaragua's Pacific coast, Tola",
+    "author": "Dylan Wooters",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Surfing_in_Popoyo,_Nicaragua.jpg",
+    "width": 1200,
+    "height": 796,
+    "file": "File:Surfing in Popoyo, Nicaragua.jpg"
   }
 }
