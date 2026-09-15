@@ -106,5 +106,14 @@
     "categoria": "Island & ferry",
     "fuente": "https://www.holaholatours.com/shuttles/granada-ometepe",
     "totalFichas": 15
+  },
+  {
+    "fecha": "2026-09-14",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del lunes. Categoría más rezagada: traslados de aeropuerto (7 de 15, 47 % frente al 50 % objetivo). Aeropuerto de Managua → Popoyo (Tola): traslado privado o taxi, shuttle compartido con cambio de vehículo en Rivas, bus público vía Huembes–Rivas–Las Salinas con taxi final, y coche de alquiler; fuentes de un marketplace, un operador de shuttles, dos guías de traslados, un surf lodge y un agregador. Destino nuevo con foto de Wikimedia Commons (surfista en Popoyo, CC BY-SA 2.0, autor Dylan Wooters) verificada visualmente.",
+    "ficha": "managua-airport-to-popoyo",
+    "categoria": "Airport transfer",
+    "fuente": "https://www.bookaway.com/routes/nicaragua/managua-to-popoyo",
+    "totalFichas": 16
   }
 ]
