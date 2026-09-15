@@ -19,7 +19,7 @@ export default function Home() {
       "@type": "ListItem",
       position: index + 1,
       name: record.title,
-      url: `${SITE_URL}/routes/${record.slug}`,
+      url: `${SITE_URL}/routes/${record.slug}/`,
     })),
   };
 

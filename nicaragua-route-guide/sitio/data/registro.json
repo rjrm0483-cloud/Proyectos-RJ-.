@@ -115,5 +115,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://www.bookaway.com/routes/nicaragua/managua-to-popoyo",
     "totalFichas": 16
+  },
+  {
+    "fecha": "2026-09-15",
+    "accion": "correccion",
+    "detalle": "Rodrigo reportó un 404 al abrir el enlace de la ficha de Popoyo. Causa: la exportación generaba routes/<slug>.html y GitHub Pages solo servía la URL sin barra final; el enlace compartido llevaba barra. Se activó trailingSlash en next.config.ts para que cada página se exporte como carpeta con index.html (Pages acepta ambas formas y redirige la que no lleva barra) y se alinearon canónicas, Open Graph, JSON-LD y sitemap con la barra final. Verificado con compilación local, lint y pruebas.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": null,
+    "totalFichas": 16
   }
 ]

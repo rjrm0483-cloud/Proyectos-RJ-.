@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Nicaragua travel essentials: entry fees, car rental rules, connectivity",
   description:
     "What to sort out before landing in Nicaragua: the US$10 tourist card, passport validity, car rental age and document rules, cash, eSIM and insurance, each with its source.",
-  alternates: { canonical: `${SITE_URL}/essentials` },
+  alternates: { canonical: `${SITE_URL}/essentials/` },
 };
 
 const sources = [

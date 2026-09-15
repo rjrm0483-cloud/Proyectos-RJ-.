@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: "/Proyectos-RJ-./nicaragua",
   images: { unoptimized: true },
-  trailingSlash: false,
+  trailingSlash: true,
 };
 
 export default nextConfig;

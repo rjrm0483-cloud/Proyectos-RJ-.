@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "About and method",
   description:
     "How Nicaragua Route Guide checks every route: source hierarchy, confidence levels and publishing rules.",
-  alternates: { canonical: `${SITE_URL}/about` },
+  alternates: { canonical: `${SITE_URL}/about/` },
 };
 
 export default function AboutPage() {

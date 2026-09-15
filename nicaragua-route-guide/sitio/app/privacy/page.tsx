@@ -5,7 +5,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description: "Privacy policy for Nicaragua Route Guide: what the site collects and what it does not.",
-  alternates: { canonical: `${SITE_URL}/privacy` },
+  alternates: { canonical: `${SITE_URL}/privacy/` },
 };
 
 export default function PrivacyPage() {

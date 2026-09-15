@@ -20,18 +20,18 @@ export function GET() {
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: lastModified, priority: "1.0" },
     ...routeRecords.map((record) => ({
-      loc: `${SITE_URL}/routes/${record.slug}`,
+      loc: `${SITE_URL}/routes/${record.slug}/`,
       lastmod: record.verifiedAt,
       priority: "0.8",
     })),
     ...getUniqueDestinationSlugs().map((place) => ({
-      loc: `${SITE_URL}/places/${place}`,
+      loc: `${SITE_URL}/places/${place}/`,
       lastmod: lastModified,
       priority: "0.7",
     })),
-    { loc: `${SITE_URL}/essentials`, lastmod: lastModified, priority: "0.7" },
+    { loc: `${SITE_URL}/essentials/`, lastmod: lastModified, priority: "0.7" },
     ...["about", "disclosure", "privacy", "contact"].map((page) => ({
-      loc: `${SITE_URL}/${page}`,
+      loc: `${SITE_URL}/${page}/`,
       lastmod: lastModified,
       priority: "0.5",
     })),

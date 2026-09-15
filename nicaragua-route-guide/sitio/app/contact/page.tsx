@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description: "How to report an outdated fare or timetable, or suggest a route, for Nicaragua Route Guide.",
-  alternates: { canonical: `${SITE_URL}/contact` },
+  alternates: { canonical: `${SITE_URL}/contact/` },
 };
 
 export default function ContactPage() {

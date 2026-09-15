@@ -33,10 +33,10 @@ export async function generateMetadata({ params }: PlacePageProps): Promise<Meta
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_URL}/places/${place}` },
+    alternates: { canonical: `${SITE_URL}/places/${place}/` },
     openGraph: {
       type: "article",
-      url: `${SITE_URL}/places/${place}`,
+      url: `${SITE_URL}/places/${place}/`,
       title,
       description,
       siteName: SITE_NAME,
@@ -64,7 +64,7 @@ export default async function PlacePage({ params }: PlacePageProps) {
       "@type": "ListItem",
       position: index + 1,
       name: record.title,
-      url: `${SITE_URL}/routes/${record.slug}`,
+      url: `${SITE_URL}/routes/${record.slug}/`,
     })),
   };
 

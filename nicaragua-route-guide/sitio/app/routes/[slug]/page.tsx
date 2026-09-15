@@ -41,10 +41,10 @@ export async function generateMetadata({ params }: DetailPageProps): Promise<Met
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_URL}/routes/${record.slug}` },
+    alternates: { canonical: `${SITE_URL}/routes/${record.slug}/` },
     openGraph: {
       type: "article",
-      url: `${SITE_URL}/routes/${record.slug}`,
+      url: `${SITE_URL}/routes/${record.slug}/`,
       title,
       description,
       siteName: SITE_NAME,
@@ -73,7 +73,7 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
     description: record.summary,
     inLanguage: "en",
     dateModified: record.verifiedAt,
-    mainEntityOfPage: `${SITE_URL}/routes/${record.slug}`,
+    mainEntityOfPage: `${SITE_URL}/routes/${record.slug}/`,
     author: { "@type": "Organization", name: SITE_NAME },
     citation: record.sources.map((source) => source.url),
     ...(photo ? { image: `${SITE_URL}${photo.src}` } : {}),
@@ -83,18 +83,18 @@ export default async function RouteDetailPage({ params }: DetailPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "All routes", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "All routes", item: `${SITE_URL}/` },
       {
         "@type": "ListItem",
         position: 2,
         name: record.destination,
-        item: `${SITE_URL}/places/${record.destinationSlug}`,
+        item: `${SITE_URL}/places/${record.destinationSlug}/`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: record.title,
-        item: `${SITE_URL}/routes/${record.slug}`,
+        item: `${SITE_URL}/routes/${record.slug}/`,
       },
     ],
   };

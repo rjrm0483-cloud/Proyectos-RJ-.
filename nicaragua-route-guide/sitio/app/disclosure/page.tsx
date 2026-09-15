@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Affiliate disclosure",
   description:
     "Affiliate disclosure for Nicaragua Route Guide: current status, labelling rules and why commission never affects a route.",
-  alternates: { canonical: `${SITE_URL}/disclosure` },
+  alternates: { canonical: `${SITE_URL}/disclosure/` },
 };
 
 export default function DisclosurePage() {
