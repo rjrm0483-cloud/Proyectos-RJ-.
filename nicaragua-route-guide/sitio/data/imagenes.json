@@ -102,5 +102,14 @@
     "search": "Laguna de Apoyo Nicaragua",
     "keyword": "Apoyo",
     "alt": "The Laguna de Apoyo crater lake seen from the Catarina viewpoint, Nicaragua"
+  },
+  "popoyo": {
+    "files": [
+      "Surfing in Popoyo, Nicaragua.jpg"
+    ],
+    "search": "Popoyo Nicaragua surf beach",
+    "keyword": "Popoyo",
+    "exclude": [],
+    "alt": "Surfers at Popoyo beach on Nicaragua's Pacific coast, Tola"
   }
 }

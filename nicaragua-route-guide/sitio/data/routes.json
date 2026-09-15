@@ -1131,5 +1131,88 @@
         "supports": "Option overview and duration estimates."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-popoyo",
+    "title": "Managua Airport (MGA) to Popoyo",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Popoyo (Tola, Rivas)",
+    "destinationSlug": "popoyo",
+    "category": "Airport transfer",
+    "distance": "About 105 km south-west via the Pan-American Highway to Rivas or the Ochomogo turn-off, then the Tola coast road (partly unpaved)",
+    "duration": "About 2–2.5 h by private car; about 3 h by shared shuttle; 4–5 h by public bus with two changes",
+    "summary": "Popoyo is Nicaragua's best-known surf coast and most people land at Managua with boards. There is no direct bus: you either book a private car or a shared shuttle that changes vehicles in Rivas, or you chain buses through Rivas and Las Salinas and finish by taxi.",
+    "options": [
+      {
+        "mode": "Private transfer or airport taxi",
+        "cost": "Operator listings range from about US$80–120 for a private shuttle to roughly US$140 for an airport sedan (up to 4 people); surf lodges with 4x4 pick-ups quote on request",
+        "duration": "About 2–2.5 h",
+        "detail": "The fastest option and the only one that works for late arrivals. Ask for roof racks if you carry boards; the last stretch from Las Salinas to the lodges is a dirt road.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Shared shuttle (via Rivas)",
+        "cost": "About US$66 per person on marketplace listings; Bigfoot charges a two-passenger minimum or US$73.40 for a solo traveler",
+        "duration": "About 3 h",
+        "detail": "Door-to-door from the terminal, with a vehicle change in Rivas. Bigfoot picks up at the airport between 11:15 a.m. and 12:15 p.m.; marketplace departures run from about 6:00 a.m. Book a day ahead so the airport pick-up is confirmed.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Public bus via Rivas and Las Salinas, then taxi",
+        "cost": "About C$100 per bus leg (two legs) plus a taxi to the airport terminal and another from Las Salinas to your lodge; roughly C$550 total",
+        "duration": "About 4–5 h including waits",
+        "detail": "Taxi from the airport to Mercado Roberto Huembes, bus to Rivas (every 20–30 min), then a local bus to Las Salinas and a taxi for the last kilometres. Buses stop in the late afternoon, so this only works for morning arrivals.",
+        "partner": null
+      },
+      {
+        "mode": "Rental car",
+        "cost": "Rental rates plus fuel; about 2 h 10 min of driving",
+        "duration": "About 2–2.5 h",
+        "detail": "Sensible if you plan to move between surf breaks. Choose a high-clearance vehicle for the Tola coast road and avoid arriving after dark.",
+        "partner": "cars"
+      }
+    ],
+    "recommended": "Book a private transfer with board racks if you land after midday; morning arrivals with a small group save with the shared shuttle via Rivas.",
+    "caution": "Prices are 2026 operator and marketplace listings and change with fuel costs and group size. The shared shuttle involves a vehicle change in Rivas and a fixed afternoon departure, so it does not suit evening flights.",
+    "confidence": "Verified",
+    "verifiedAt": "2026-09-14",
+    "sources": [
+      {
+        "label": "Bookaway — Managua to Popoyo",
+        "url": "https://www.bookaway.com/routes/nicaragua/managua-to-popoyo",
+        "type": "Transport marketplace",
+        "supports": "Shared minivan and private car listings, starting price and 2.5–3 h duration."
+      },
+      {
+        "label": "Bigfoot Hostel — Managua Airport to Popoyo shared shuttle",
+        "url": "https://www.bigfoothostelleon.com/service-page/from-managua-airport-to-popoyo-shared-shuttle",
+        "type": "Shuttle operator",
+        "supports": "Airport pick-up window, two-passenger minimum, solo fare and the vehicle change in Rivas."
+      },
+      {
+        "label": "Welcome Pickups — Managua Airport to Popoyo",
+        "url": "https://www.welcomepickups.com/managua/airport-to-popoyo/",
+        "type": "Transfer operator guide",
+        "supports": "105 km distance, 2 h drive, sedan taxi price and the Huembes–Rivas–Las Salinas bus chain with fares."
+      },
+      {
+        "label": "AirportTransfer.com — Managua Airport to Popoyo",
+        "url": "https://airporttransfer.com/blog/managua-airport-to-popoyo",
+        "type": "Transfer operator guide",
+        "supports": "Private shuttle and taxi price bands."
+      },
+      {
+        "label": "Nicawaves — Managua airport transfers to Popoyo",
+        "url": "https://www.nicawaves.com/popoyo-nicaragua-surfing-2/managua-airport-popoyo-taxi-transfers/",
+        "type": "Surf lodge",
+        "supports": "4x4 lodge pick-ups with board storage and same-day surfing for arrivals before 1 p.m."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to Popoyo",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Popoyo",
+        "type": "Route aggregator",
+        "supports": "Driving time and the list of transport modes."
+      }
+    ]
   }
 ]
