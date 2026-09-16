@@ -124,5 +124,14 @@
     "categoria": null,
     "fuente": null,
     "totalFichas": 16
+  },
+  {
+    "fecha": "2026-09-15",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del martes, ejecutado con retraso porque la rutina programada no disparó a la 01:00 UTC. Categoría más rezagada: ciudad a ciudad (2 de 16). León → San Juan del Sur: shuttle compartido matutino, shuttle privado, minivan de marketplace y la cadena de tres buses públicos con taxi entre terminales de Managua; fuentes de dos operadores de shuttle, un marketplace, dos guías de viajero y un agregador. El destino ya tenía foto.",
+    "ficha": "leon-to-san-juan-del-sur",
+    "categoria": "City to city",
+    "fuente": "https://gekkotrailsexplorer.com/shuttle-leon-to-san-juan-del-sur/",
+    "totalFichas": 17
   }
 ]

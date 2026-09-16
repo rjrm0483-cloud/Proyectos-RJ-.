@@ -1214,5 +1214,88 @@
         "supports": "Driving time and the list of transport modes."
       }
     ]
+  },
+  {
+    "slug": "leon-to-san-juan-del-sur",
+    "title": "León to San Juan del Sur",
+    "origin": "León",
+    "destination": "San Juan del Sur",
+    "destinationSlug": "san-juan-del-sur",
+    "category": "City to city",
+    "distance": "About 207 km by road, south through Managua and Rivas on the Pan-American Highway",
+    "duration": "About 3.5–5 h by shuttle; 6–7 h by public bus with two changes",
+    "summary": "The colonial city in the north and the surf town in the south are the two ends of most Nicaragua itineraries, and nothing connects them directly. Tourist shuttles do the whole run door to door in one vehicle; the cheap way is three public buses with a taxi across Managua in the middle.",
+    "options": [
+      {
+        "mode": "Shared tourist shuttle",
+        "cost": "About US$25–35 per person depending on operator",
+        "duration": "About 5–6 h door to door",
+        "detail": "Morning departures around 8:30–9:00 a.m. with pick-up at your hostel in León and drop-off at your hotel in San Juan del Sur. Most routes stop in Managua, Granada or Rivas to swap passengers. Book the day before, since a single van serves the whole route.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Private shuttle",
+        "cost": "Quoted per vehicle for 1–3 travelers, with about US$35 per extra traveler beyond three",
+        "duration": "About 5 h",
+        "detail": "You choose the departure time and the vehicle goes straight through. Worth splitting between three or four people; a car is used for small groups and a van for seven or more.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Minivan on booking marketplaces",
+        "cost": "Marketplace listings for this corridor start around US$35 per person",
+        "duration": "From about 3 h 25 min on the fastest listed departure",
+        "detail": "Earliest listed departure is around 6:00 a.m. Times vary a lot by operator, so read the pick-up point before booking: some are hotel pick-ups and some are a fixed meeting spot.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Public buses via Managua and Rivas",
+        "cost": "About C$60 León–Managua, a US$5–6 taxi between Managua terminals, C$60 Managua–Rivas and C$15 Rivas–San Juan del Sur; roughly US$11–12 in total",
+        "duration": "About 6–7 h including transfers and waits",
+        "detail": "Buses from León arrive near the UCA in Managua and you must cross the city by taxi to Mercado Roberto Huembes for the Rivas bus, then change again in Rivas. Leave early, allow 30–60 min for the Managua transfer and carry small córdoba notes.",
+        "partner": null
+      }
+    ],
+    "recommended": "Take the morning shared shuttle: it costs a fraction of a private car, saves the two transfers and puts you in San Juan del Sur in the afternoon.",
+    "caution": "Prices are 2026 operator and guide listings and vary with fuel and group size. The public-bus chain depends on a taxi transfer between two Managua terminals and the last connections dry up in the late afternoon, so it only works if you start early.",
+    "confidence": "Verified",
+    "verifiedAt": "2026-09-15",
+    "sources": [
+      {
+        "label": "Bigfoot Hostel — León to San Juan del Sur private shuttle",
+        "url": "https://www.bigfoothostelleon.com/service-page/from-leon-to-san-juan-del-sur-private-shuttle",
+        "type": "Shuttle operator",
+        "supports": "Private shuttle duration, door-to-door service, per-vehicle pricing and the extra-traveler surcharge."
+      },
+      {
+        "label": "Gekko Explorer — Shuttle León to San Juan del Sur",
+        "url": "https://gekkotrailsexplorer.com/shuttle-leon-to-san-juan-del-sur/",
+        "type": "Shuttle operator",
+        "supports": "Shared shuttle with door-to-door pick-up and stops in Managua, Granada and Rivas."
+      },
+      {
+        "label": "Bookaway — León to San Juan del Sur",
+        "url": "https://www.bookaway.com/routes/nicaragua/leon-1-to-san-juan-del-sur",
+        "type": "Transport marketplace",
+        "supports": "Minivan listings, earliest departure and fastest listed duration."
+      },
+      {
+        "label": "Sunset Viaje — How to get from León to San Juan del Sur",
+        "url": "https://www.sunsetviaje.com/blog/how-to-get-from-leon-to-san-juan-del-sur",
+        "type": "Traveler guide",
+        "supports": "Fares and times for each public-bus leg, the Managua terminal transfer and the shared-shuttle price band."
+      },
+      {
+        "label": "Managua Backpackers Inn — Managua to San Juan del Sur",
+        "url": "https://www.managuahostel.com/how-to-get-from-managua-to-san-juan-del-sur-in-nicaragua/",
+        "type": "Hostel guide",
+        "supports": "Huembes departures for Rivas and the local bus on to San Juan del Sur."
+      },
+      {
+        "label": "Rome2Rio — León to San Juan del Sur",
+        "url": "https://www.rome2rio.com/s/Le%C3%B3n-Nicaragua/San-Juan-del-Sur",
+        "type": "Route aggregator",
+        "supports": "Road distance and the range of bus, shuttle and car options."
+      }
+    ]
   }
 ]
