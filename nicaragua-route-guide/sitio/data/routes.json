@@ -1297,5 +1297,82 @@
         "supports": "Road distance and the range of bus, shuttle and car options."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-esteli",
+    "title": "Managua Airport (MGA) to Estelí",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Estelí",
+    "destinationSlug": "esteli",
+    "category": "Airport transfer",
+    "distance": "About 139 km north on the Pan-American Highway, climbing into the cigar and coffee highlands",
+    "duration": "About 2 h 15 min by car; about 2.5 h by express bus; about 3.5 h on the ordinary bus",
+    "summary": "Estelí is the base for cigar factory tours and the Miraflor reserve, and it is one of the few Nicaraguan destinations where the cheap option starts almost at the airport door. The Mayoreo bus terminal is a five-minute taxi ride away and express buses leave for Estelí all day.",
+    "options": [
+      {
+        "mode": "Express bus from Terminal Mayoreo",
+        "cost": "About C$110 per person, plus a short taxi from the terminal to the airport",
+        "duration": "About 2.5 h",
+        "detail": "Departures roughly every hour from 4:30 a.m. to 6:30 p.m. Buy the ticket at the counter rather than on board, and confirm the bus actually stops in Estelí: some run through to Ocotal. Buses fill up and extra passengers ride on plastic stools in the aisle.",
+        "partner": null
+      },
+      {
+        "mode": "Ordinary bus from Terminal Mayoreo",
+        "cost": "Slightly less than the express fare",
+        "duration": "About 3.5 h",
+        "detail": "Same terminal, more stops. Only worth it if you miss the last express and still want to travel the same day.",
+        "partner": null
+      },
+      {
+        "mode": "Private transfer",
+        "cost": "Marketplace listings start around US$110 per car",
+        "duration": "About 2.5–3 h with optional stops",
+        "detail": "Booked ahead with a driver waiting in arrivals. Some operators let you add sightseeing stops on the way north. Sensible for late arrivals, for families with luggage or if you want to break the trip.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Local transfer operators",
+        "cost": "Quoted on request; no published tariff",
+        "duration": "About 2.5 h",
+        "detail": "Several Nicaraguan companies run door-to-door service between the airport and Estelí around the clock. Ask for the price in writing before confirming, since there is no public rate card.",
+        "partner": "ground"
+      }
+    ],
+    "recommended": "If you land before mid-afternoon, take a taxi to Terminal Mayoreo and the express bus: it is five minutes from the terminal and a fraction of a private transfer. For evening arrivals, book a car.",
+    "caution": "The C$110 express fare and the schedule are 2026 traveler and guide reports, not an official tariff, and the terminal does not publish times online. The last departures leave in the early evening, so a night arrival leaves only the private options.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-16",
+    "sources": [
+      {
+        "label": "Centro Coasting — Estelí bus guide",
+        "url": "https://centrocoasting.com/nicaragua/esteli/",
+        "type": "Bus travel guide",
+        "supports": "Express and ordinary durations, the hourly 4:30 a.m. to 6:30 p.m. window, the C$110 fare and the warning about buses continuing to Ocotal."
+      },
+      {
+        "label": "Centro Coasting — Managua Terminal Mercado Mayorero",
+        "url": "https://centrocoasting.com/nicaragua/managua-terminal-mayorero/",
+        "type": "Bus travel guide",
+        "supports": "The terminal serving Estelí, its distance from the airport and the advice to buy tickets at the counter."
+      },
+      {
+        "label": "Daytrip — Managua Airport to Estelí",
+        "url": "https://daytrip.com/en/transfers/managua-airport-ni/esteli-ni",
+        "type": "Transfer operator",
+        "supports": "Private car starting price, duration and optional sightseeing stops."
+      },
+      {
+        "label": "Nicaroad Transportation — Estelí",
+        "url": "https://nicaroadtransportation.com/cities/esteli_nicaragua/",
+        "type": "Transfer operator",
+        "supports": "Round-the-clock door-to-door service between the airport and Estelí without a published tariff."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to Estelí",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Estel%C3%AD",
+        "type": "Route aggregator",
+        "supports": "Road distance, driving time and the bus option out of the airport area."
+      }
+    ]
   }
 ]

@@ -111,5 +111,22 @@
     "keyword": "Popoyo",
     "exclude": [],
     "alt": "Surfers at Popoyo beach on Nicaragua's Pacific coast, Tola"
+  },
+  "esteli": {
+    "files": [
+      "Catedral Nuestra Señora del Rosario. Estelí, Nicaragua.jpg",
+      "Catedral de Estelí.jpg",
+      "Esteli Nicaragua.jpg"
+    ],
+    "search": "Estelí Nicaragua city",
+    "keyword": "Estel",
+    "exclude": [
+      "map",
+      "flag",
+      "location",
+      "department",
+      "mapa"
+    ],
+    "alt": "The cathedral of Nuestra Señora del Rosario on the central park of Estelí, Nicaragua"
   }
 }
