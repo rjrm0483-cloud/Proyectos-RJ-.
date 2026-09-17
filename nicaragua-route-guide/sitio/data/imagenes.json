@@ -116,16 +116,14 @@
     "files": [
       "Catedral Nuestra Señora del Rosario. Estelí, Nicaragua.jpg",
       "Catedral de Estelí.jpg",
-      "Esteli Nicaragua.jpg"
+      "Parque Central de Estelí.jpg"
     ],
-    "search": "Estelí Nicaragua city",
+    "search": "Catedral Estelí Nicaragua",
     "keyword": "Estel",
     "exclude": [
-      "map",
-      "flag",
-      "location",
-      "department",
-      "mapa"
+      "Nuestra Señora del Rosario de Estelí. Patrona de la Diócesis de Estelí..jpg",
+      "Esteli Department in Nicaragua.svg",
+      "Flag of Esteli.svg"
     ],
     "alt": "The cathedral of Nuestra Señora del Rosario on the central park of Estelí, Nicaragua"
   }
