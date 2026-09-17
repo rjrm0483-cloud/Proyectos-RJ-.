@@ -133,5 +133,14 @@
     "categoria": "City to city",
     "fuente": "https://gekkotrailsexplorer.com/shuttle-leon-to-san-juan-del-sur/",
     "totalFichas": 17
+  },
+  {
+    "fecha": "2026-09-16",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del miércoles. Categoría más rezagada: traslados de aeropuerto (8 de 17, 47 % frente al 50 % objetivo). Aeropuerto de Managua → Estelí: bus expreso desde la Terminal Mayoreo (a cinco minutos del aeropuerto), bus ordinario, traslado privado de marketplace y operadores locales sin tarifa publicada; fuentes de dos guías de buses, dos operadores y un agregador. Confianza condicional porque la tarifa y los horarios del expreso son reportes de viajeros, no una tarifa oficial. Destino nuevo: la primera descarga trajo una imagen devocional y se corrigió el manifiesto; la segunda trajo la fachada de la catedral (Lee Cohen, CC BY 2.0), verificada visualmente.",
+    "ficha": "managua-airport-to-esteli",
+    "categoria": "Airport transfer",
+    "fuente": "https://centrocoasting.com/nicaragua/esteli/",
+    "totalFichas": 18
   }
 ]
