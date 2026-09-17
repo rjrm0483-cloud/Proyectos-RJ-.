@@ -130,5 +130,17 @@
     "width": 1200,
     "height": 796,
     "file": "File:Surfing in Popoyo, Nicaragua.jpg"
+  },
+  "esteli": {
+    "src": "/images/esteli.jpg",
+    "srcSmall": "/images/esteli-sm.jpg",
+    "alt": "The cathedral of Nuestra Señora del Rosario on the central park of Estelí, Nicaragua",
+    "author": "Pasionyanhelo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_del_Rosario_de_Estel%C3%AD._Patrona_de_la_Di%C3%B3cesis_de_Estel%C3%AD..jpg",
+    "width": 1200,
+    "height": 900,
+    "file": "File:Nuestra Señora del Rosario de Estelí. Patrona de la Diócesis de Estelí..jpg"
   }
 }
