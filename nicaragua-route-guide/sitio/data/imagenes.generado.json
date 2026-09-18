@@ -142,5 +142,17 @@
     "width": 1200,
     "height": 793,
     "file": "File:Esteli Cathedral.jpg"
+  },
+  "el-salvador": {
+    "src": "/images/el-salvador.jpg",
+    "srcSmall": "/images/el-salvador-sm.jpg",
+    "alt": "The city of San Salvador with the San Salvador volcano rising behind it, El Salvador",
+    "author": "Xtremesv",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Great_San_Salvador.JPG",
+    "width": 1200,
+    "height": 806,
+    "file": "File:Great San Salvador.JPG"
   }
 }
