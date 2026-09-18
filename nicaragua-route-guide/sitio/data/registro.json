@@ -142,5 +142,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://centrocoasting.com/nicaragua/esteli/",
     "totalFichas": 18
+  },
+  {
+    "fecha": "2026-09-17",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del jueves. Categoría más rezagada: cruces de frontera (3 de 18, 17 % frente al 20 % objetivo). Managua → San Salvador en bus: Pullman internacional que gestiona los trámites en los dos puestos, shuttle turístico con recogida en hotel y la cadena de buses locales por Guasaule y El Amatillo. Confianza condicional porque las tasas fronterizas son reportes de viajeros y varían por puesto. Destino nuevo con foto panorámica de San Salvador (Xtremesv, CC BY-SA 4.0), verificada visualmente; se corrigió el texto alternativo porque describía mal la toma.",
+    "ficha": "managua-to-san-salvador-by-bus",
+    "categoria": "Border crossing",
+    "fuente": "https://www.bookaway.com/blog/border-crossing-nicaragua-el-salvador/",
+    "totalFichas": 19
   }
 ]
