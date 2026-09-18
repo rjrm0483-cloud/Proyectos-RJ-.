@@ -1374,5 +1374,81 @@
         "supports": "Road distance, driving time and the bus option out of the airport area."
       }
     ]
+  },
+  {
+    "slug": "managua-to-san-salvador-by-bus",
+    "title": "Managua to San Salvador by bus",
+    "origin": "Managua (international bus terminals)",
+    "destination": "San Salvador, El Salvador",
+    "destinationSlug": "el-salvador",
+    "category": "Border crossing",
+    "distance": "About 430 km north-west, crossing Honduras between the Guasaule and El Amatillo border posts",
+    "duration": "About 12–15 h on the direct international bus, including two border stops",
+    "summary": "There is no way to reach El Salvador overland without crossing Honduras, so this is a two-border day. The international Pullman lines handle the paperwork for the whole bus and are the reason most travelers pick them over doing the crossings alone.",
+    "options": [
+      {
+        "mode": "International Pullman bus",
+        "cost": "About US$45–65 per person depending on operator and class; marketplace listings start around US$57",
+        "duration": "About 12–15 h",
+        "detail": "Tica Bus, King Quality and Transporte del Sol run this corridor with reserved seats and air conditioning. Departures are usually early morning or mid-afternoon, some running overnight. The crew collects passports and walks the whole bus through both posts, which is the main reason the trip stays predictable.",
+        "partner": "ground"
+      },
+      {
+        "mode": "Tourist shuttle from León or Managua",
+        "cost": "About US$45–50 per person for the shuttle, plus border fees",
+        "duration": "A full day",
+        "detail": "Booked through hostels and marketplaces, with hotel pick-up. Expect up to an hour of driving around collecting other passengers before the run actually starts. Book early, as a single van covers the route.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Local buses and border hopping",
+        "cost": "The cheapest option, paid leg by leg; a microbus between the El Amatillo and Guasaule posts runs about US$6",
+        "duration": "Two days for most travelers",
+        "detail": "Bus to Guasaule, cross on foot, local transport across southern Honduras to El Amatillo, cross again, then the 330 bus to San Miguel and on to San Salvador. Only for travelers with time and patience, and not something to start in the afternoon.",
+        "partner": null
+      }
+    ],
+    "recommended": "Take the direct Pullman bus. The price difference against local buses is small once you add two border days, and the operator handling the paperwork is worth it.",
+    "caution": "Border fees are traveler reports and vary by post and by officer: leaving Nicaragua usually costs a few dollars, entering Honduras about US$3, and El Salvador charges nothing under the CA-4 agreement. Carry small US dollar bills in cash. The CA-4 gives most nationalities a single 90-day allowance shared by Guatemala, Honduras, El Salvador and Nicaragua, so crossing between them does not reset your time.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Bookaway — How to go from Nicaragua to El Salvador via Honduras",
+        "url": "https://www.bookaway.com/blog/border-crossing-nicaragua-el-salvador/",
+        "type": "Transport marketplace guide",
+        "supports": "The Guasaule and El Amatillo posts, the shuttle option with hotel pick-up, the bus 330 from El Amatillo and the rough cost of crossing."
+      },
+      {
+        "label": "Bookaway — Managua to San Salvador",
+        "url": "https://www.bookaway.com/routes/el-salvador/managua-to-san-salvador",
+        "type": "Transport marketplace",
+        "supports": "Starting price for bookable bus tickets on the route."
+      },
+      {
+        "label": "Tica Bus — routes, schedules and fares",
+        "url": "https://www.ticabus.com/en/rutas-horarios-y-tarifas",
+        "type": "Bus operator",
+        "supports": "Daily direct service between the Managua terminal and San Salvador."
+      },
+      {
+        "label": "Rome2Rio — Managua to San Salvador",
+        "url": "https://www.rome2rio.com/s/Managua/San-Salvador",
+        "type": "Route aggregator",
+        "supports": "Distance, journey time and the bus price band against the flight alternative."
+      },
+      {
+        "label": "Road Affair — Central America border crossing fees",
+        "url": "https://www.roadaffair.com/border-crossing-fees-central-america/",
+        "type": "Traveler guide",
+        "supports": "How variable the Nicaraguan and Honduran border fees are and the advice to carry cash dollars."
+      },
+      {
+        "label": "Along Dusty Roads — Central America border crossings",
+        "url": "https://www.alongdustyroads.com/posts/2015/10/3/overview-central-america-border-crossings-fees-entry-exit-tourist-visaproof-of-onward-departure",
+        "type": "Traveler guide",
+        "supports": "The CA-4 agreement and its shared 90-day allowance across the four countries."
+      }
+    ]
   }
 ]

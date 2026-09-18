@@ -126,5 +126,20 @@
       "Flag of Esteli.svg"
     ],
     "alt": "The cathedral of Nuestra Señora del Rosario on the central park of Estelí, Nicaragua"
+  },
+  "el-salvador": {
+    "files": [
+      "Great San Salvador.JPG",
+      "North San Salvador.JPG",
+      "El volcan de San salvador. - panoramio.jpg"
+    ],
+    "search": "San Salvador El Salvador city view",
+    "keyword": "Salvador",
+    "exclude": [
+      "San Salvador From Space.jpg",
+      "Flag of El Salvador.svg",
+      "El Salvador location map.svg"
+    ],
+    "alt": "The city of San Salvador with the San Salvador volcano rising behind it, El Salvador"
   }
 }
