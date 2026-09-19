@@ -1450,5 +1450,82 @@
         "supports": "The CA-4 agreement and its shared 90-day allowance across the four countries."
       }
     ]
+  },
+  {
+    "slug": "managua-airport-to-masaya",
+    "title": "Managua Airport (MGA) to Masaya",
+    "origin": "Managua Augusto C. Sandino International Airport (MGA)",
+    "destination": "Masaya",
+    "destinationSlug": "masaya",
+    "category": "Airport transfer",
+    "distance": "About 30 km south-east on the Managua–Granada road, passing the entrance to the Masaya volcano national park",
+    "duration": "About 30–40 min by car; about 2.5 h using city buses with a transfer in Managua",
+    "summary": "Masaya is the craft market town and the gateway to the volcano with the lava lake, close enough to the airport for a short taxi ride. No bus leaves the terminal for Masaya, so the cheap route means crossing Managua first to one of the two city terminals.",
+    "options": [
+      {
+        "mode": "Airport taxi or private transfer",
+        "cost": "About US$40–50 for an airport taxi; private transfers booked online start around US$66",
+        "duration": "About 30–40 min",
+        "detail": "The simplest option and the only one that works at night. Airport taxis charge more than street taxis: some travelers walk out to the main road and flag one there, always agreeing the fare before getting in.",
+        "partner": "tours"
+      },
+      {
+        "mode": "Microbus from the UCA terminal",
+        "cost": "About C$19–23 per person, plus a taxi from the airport to the terminal",
+        "duration": "Just under 1 h once you are on board",
+        "detail": "Microbuses leave when full, roughly every 20 minutes, from about 6 a.m. to 7 p.m. on weekdays and until 6 p.m. at weekends. The fastest of the public options, but you must cross Managua to the terminal first.",
+        "partner": null
+      },
+      {
+        "mode": "Bus from Mercado Roberto Huembes",
+        "cost": "About C$13 on the ordinary bus and C$15 on the express, plus the taxi to the terminal",
+        "duration": "About 1 h, slightly less on the express",
+        "detail": "Departures roughly every 30 minutes from early morning to mid-evening. Handy if you are already heading to Huembes for another connection.",
+        "partner": null
+      },
+      {
+        "mode": "Any of the above, getting off at the volcano",
+        "cost": "Same fare as the bus or microbus, plus the park entrance",
+        "duration": "About 20 min less than the full run",
+        "detail": "The road passes the national park gate about halfway. Tell the driver in advance and sit near the front. The park is several kilometres uphill from the gate, so plan how you will cover that stretch before getting off.",
+        "partner": null
+      }
+    ],
+    "recommended": "For a first night, take a taxi: the ride is short and the fare gap against the bus shrinks once you add the cross-town taxi to a terminal. Use the UCA microbus if you are already in central Managua.",
+    "caution": "Bus and microbus fares are guide and traveler reports rather than an official tariff, and published figures for the UCA microbus differ slightly. Taxi prices are negotiable and airport taxis start higher. There is no direct bus from the airport terminal in either direction.",
+    "confidence": "Conditional",
+    "verifiedAt": "2026-09-18",
+    "sources": [
+      {
+        "label": "Centro Coasting — Masaya bus guide",
+        "url": "https://centrocoasting.com/nicaragua/masaya/",
+        "type": "Bus travel guide",
+        "supports": "Microbus and bus fares, frequencies, terminal hours and the advice about the volcano park gate."
+      },
+      {
+        "label": "Centro Coasting — Managua UCA microbus terminal",
+        "url": "https://centrocoasting.com/nicaragua/managua-uca-microbus-terminal/",
+        "type": "Bus travel guide",
+        "supports": "Departure-when-full pattern and opening hours of the UCA terminal."
+      },
+      {
+        "label": "Centro Coasting — Mercado Roberto Huembes",
+        "url": "https://centrocoasting.com/nicaragua/managua-mercado-roberto-huembes/",
+        "type": "Bus travel guide",
+        "supports": "Ordinary and express departures for Masaya from the Huembes terminal."
+      },
+      {
+        "label": "Rome2Rio — Managua Airport to Masaya",
+        "url": "https://www.rome2rio.com/s/Managua-Airport-MGA/Masaya",
+        "type": "Route aggregator",
+        "supports": "Taxi time and price band, and the absence of a direct bus from the airport."
+      },
+      {
+        "label": "Daytrip — Managua Airport to Masaya Volcano",
+        "url": "https://daytrip.com/en/transfers/managua-airport-ni/masaya-volcano-ni",
+        "type": "Transfer operator",
+        "supports": "Starting price and duration of a booked private transfer to the volcano."
+      }
+    ]
   }
 ]

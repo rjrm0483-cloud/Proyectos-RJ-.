@@ -141,5 +141,19 @@
       "El Salvador location map.svg"
     ],
     "alt": "The city of San Salvador spread across its valley, seen from the wooded hills above, El Salvador"
+  },
+  "masaya": {
+    "files": [
+      "Masaya Volcano - crater.jpg",
+      "Volcán Masaya crater 2 - Nicaragua.jpg",
+      "Emanación de gases del Volcán Masaya.jpg"
+    ],
+    "search": "Volcán Masaya Nicaragua crater",
+    "keyword": "Masaya",
+    "exclude": [
+      "Maps of volcanoes in Nicaragua",
+      "Masaya Volcano map.png"
+    ],
+    "alt": "The smoking crater of the Masaya volcano in its national park near Masaya, Nicaragua"
   }
 }
