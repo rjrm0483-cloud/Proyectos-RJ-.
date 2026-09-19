@@ -151,5 +151,14 @@
     "categoria": "Border crossing",
     "fuente": "https://www.bookaway.com/blog/border-crossing-nicaragua-el-salvador/",
     "totalFichas": 19
+  },
+  {
+    "fecha": "2026-09-18",
+    "accion": "ficha-agregada",
+    "detalle": "Ciclo nocturno del viernes. Categoría más rezagada: traslados de aeropuerto (9 de 19, 47 %). Aeropuerto de Managua → Masaya: taxi o traslado privado, microbús desde la terminal de la UCA, bus ordinario y expreso desde Huembes, y la opción de bajarse en la entrada del parque del volcán. Confianza condicional porque las tarifas son reportes de guías y viajeros y las cifras publicadas del microbús difieren entre sí. Destino nuevo: la primera descarga trajo el lago de lava de noche con la fecha de la cámara impresa y se descartó; la segunda trajo el cráter Santiago de día con el mirador (Adalberto Hernández Vega, CC BY 2.0), verificada visualmente. Con esta ficha el sitio llega a 20 rutas, el umbral que el plan exige para preparar el borrador de afiliados; la segunda condición, tráfico real medido, sigue sin cumplirse porque no hay analítica instalada.",
+    "ficha": "managua-airport-to-masaya",
+    "categoria": "Airport transfer",
+    "fuente": "https://centrocoasting.com/nicaragua/masaya/",
+    "totalFichas": 20
   }
 ]
