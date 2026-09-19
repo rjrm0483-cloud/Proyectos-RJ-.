@@ -158,13 +158,13 @@
   "masaya": {
     "src": "/images/masaya.jpg",
     "srcSmall": "/images/masaya-sm.jpg",
-    "alt": "The smoking crater of the Masaya volcano in its national park near Masaya, Nicaragua",
-    "author": "Leon petrosyan",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "pageUrl": "https://commons.wikimedia.org/wiki/File:Masaya_Volcano_-_crater.jpg",
+    "alt": "The steaming Santiago crater of the Masaya volcano near Masaya, Nicaragua",
+    "author": "Adalberto Hernández Vega",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Masaya_crater_2_-_Nicaragua.jpg",
     "width": 1200,
-    "height": 900,
-    "file": "File:Masaya Volcano - crater.jpg"
+    "height": 899,
+    "file": "File:Volcán Masaya crater 2 - Nicaragua.jpg"
   }
 }
