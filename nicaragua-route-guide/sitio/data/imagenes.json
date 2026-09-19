@@ -144,16 +144,16 @@
   },
   "masaya": {
     "files": [
-      "Masaya Volcano - crater.jpg",
       "Volcán Masaya crater 2 - Nicaragua.jpg",
-      "Emanación de gases del Volcán Masaya.jpg"
+      "Emanación de gases del Volcán Masaya.jpg",
+      "Volcan Masaya.jpg"
     ],
-    "search": "Volcán Masaya Nicaragua crater",
+    "search": "Volcán Masaya Nicaragua",
     "keyword": "Masaya",
     "exclude": [
-      "Maps of volcanoes in Nicaragua",
+      "Masaya Volcano - crater.jpg",
       "Masaya Volcano map.png"
     ],
-    "alt": "The smoking crater of the Masaya volcano in its national park near Masaya, Nicaragua"
+    "alt": "The steaming Santiago crater of the Masaya volcano near Masaya, Nicaragua"
   }
 }
