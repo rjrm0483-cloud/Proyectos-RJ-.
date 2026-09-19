@@ -16,7 +16,7 @@ export default function PrivacyPage() {
     <StaticPage headerNote="Privacy" breadcrumb="Privacy policy">
       <p className="eyebrow">PRIVACY POLICY</p>
       <h1>What this site knows about you.</h1>
-      <p>Last updated: 3 September 2026.</p>
+      <p>Last updated: 19 September 2026.</p>
 
       <h2>What we collect</h2>
       <p>

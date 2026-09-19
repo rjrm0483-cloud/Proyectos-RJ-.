@@ -169,5 +169,14 @@
     "categoria": null,
     "fuente": null,
     "totalFichas": 20
+  },
+  {
+    "fecha": "2026-09-19",
+    "accion": "mejora",
+    "detalle": "Analítica encendida. Rodrigo creó la cuenta de GoatCounter con el código de sitio 'nicaraguarouteguide' y pasó el fragmento; se puso activa:true y el código real en data/analitica.json. Verificado en el HTML compilado: el script con data-goatcounter aparece en portada, fichas y páginas estáticas, y la política de privacidad pasó al texto que describe el servicio, sin cookies ni identificadores, con fecha de actualización 19 de septiembre de 2026. 20 pruebas en verde y lint limpio. Panel en https://nicaraguarouteguide.goatcounter.com. Con esto el sitio cumple las dos condiciones del plan para afiliados (20 rutas y medición propia), pero el tráfico aún es cero: hay que dejar correr semanas antes de evaluar ningún programa, y cualquier propuesta irá como borrador para Rodrigo.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": "https://nicaraguarouteguide.goatcounter.com",
+    "totalFichas": 20
   }
 ]
