@@ -1,0 +1,7 @@
+{
+  "activa": false,
+  "proveedor": "goatcounter",
+  "codigo": "",
+  "dominio": "",
+  "nota": "Analítica sin cookies, apagada hasta que Rodrigo cree la cuenta. GoatCounter: registrarse gratis en goatcounter.com, elegir un código de sitio (por ejemplo 'nicaragua-route-guide') y ponerlo aquí en 'codigo'; dominio se deja vacío. Plausible o Umami: poner el dominio medido en 'dominio' y, en Umami, el id del sitio en 'codigo'. Cloudflare: poner el token en 'codigo'. Después cambiar 'activa' a true. Las pruebas rechazan activarla sin datos reales."
+}

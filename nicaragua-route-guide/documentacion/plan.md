@@ -72,3 +72,39 @@ Managua Airport → Granada; → León; → San Juan del Sur; San Jorge → Omet
 Managua → Big Corn / Little Corn (La Costeña + panga). Todas en confianza
 "Conditional" porque las tarifas las fijan los operadores; cada cifra enlaza
 su fuente y cada ruta declara la fecha de verificación.
+
+## Analítica (instalada pero apagada, 19 de septiembre de 2026)
+
+El sitio ya trae el enganche de analítica listo; falta solo la cuenta, que
+crea Rodrigo. La configuración vive en `sitio/data/analitica.json`:
+
+```json
+{ "activa": false, "proveedor": "goatcounter", "codigo": "", "dominio": "" }
+```
+
+Mientras `activa` sea `false`, el HTML no carga ningún script de terceros y la
+política de privacidad sigue diciendo que no hay analítica. Al encenderla, esa
+misma página pasa a describir el servicio, sin cookies y sin identificadores.
+
+Proveedores soportados y qué pide cada uno:
+
+| Proveedor | Campo a llenar | Costo |
+| --- | --- | --- |
+| `goatcounter` | `codigo` = el código de sitio elegido al registrarse | Gratis para uso personal |
+| `plausible` | `dominio` = el dominio medido | De pago |
+| `umami` | `codigo` = id del sitio y `dominio` = el servidor de Umami | Gratis si se autoaloja |
+| `cloudflare` | `codigo` = el token del beacon | Gratis |
+
+Pasos para encenderla con GoatCounter, la opción recomendada:
+
+1. Registrarse gratis en goatcounter.com y elegir un código de sitio, por
+   ejemplo `nicaraguarouteguide`.
+2. Poner ese código en `codigo` y cambiar `activa` a `true`.
+3. `node --test tests/*.test.mjs` (las pruebas rechazan encenderla sin datos
+   reales o con un marcador de ejemplo) y publicar.
+4. Los datos aparecen en el panel del proveedor a los pocos minutos de la
+   primera visita.
+
+El agente no puede hacer el paso 1: el proxy de salida de su entorno deniega la
+conexión a goatcounter.com y a los demás proveedores, y crear cuentas es
+decisión de Rodrigo.

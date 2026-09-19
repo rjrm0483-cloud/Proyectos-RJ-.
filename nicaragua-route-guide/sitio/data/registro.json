@@ -160,5 +160,14 @@
     "categoria": "Airport transfer",
     "fuente": "https://centrocoasting.com/nicaragua/masaya/",
     "totalFichas": 20
+  },
+  {
+    "fecha": "2026-09-19",
+    "accion": "mejora",
+    "detalle": "Rodrigo pidió instalar la analítica desde el navegador del agente. No se pudo crear la cuenta: el proxy de salida del entorno deniega la conexión a goatcounter.com, counter.dev, plausible.io y search.google.com, tanto por línea de comandos como con Chromium (ERR_TUNNEL_CONNECTION_FAILED). En su lugar quedó instalado todo el enganche: data/analitica.json, lib/analitica.ts con esquema zod y soporte para GoatCounter, Plausible, Umami y Cloudflare, componente Analitica en el layout, y la política de privacidad que describe el servicio solo cuando está encendido. Apagada por defecto: con activa:false no se emite ningún script de terceros, verificado en el HTML compilado. Cuatro pruebas nuevas (20 en total) impiden encenderla sin código real o con un marcador de ejemplo. Falta que Rodrigo cree la cuenta y pegue el código; pasos en documentacion/plan.md.",
+    "ficha": null,
+    "categoria": null,
+    "fuente": null,
+    "totalFichas": 20
   }
 ]

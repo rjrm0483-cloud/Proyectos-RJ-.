@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StaticPage } from "@/components/static-page";
+import { analitica, analiticaEncendida, nombreProveedor } from "@/lib/analitica";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  const conAnalitica = analiticaEncendida();
+
   return (
     <StaticPage headerNote="Privacy" breadcrumb="Privacy policy">
       <p className="eyebrow">PRIVACY POLICY</p>
@@ -39,12 +42,29 @@ export default function PrivacyPage() {
       </p>
 
       <h2>Advertising and analytics</h2>
-      <p>
-        There is no third-party advertising or analytics active on this site
-        today. If advertising, analytics or affiliate programs are added, this
-        policy will be updated first to describe exactly what changes, including
-        any cookies or identifiers involved.
-      </p>
+      {conAnalitica ? (
+        <>
+          <p>
+            This site counts page views with {nombreProveedor[analitica.proveedor]},
+            a privacy-friendly analytics service. It sets no cookies, assigns
+            you no identifier and does not follow you to other sites. What it
+            records is aggregate: which pages were opened, the referring site
+            and a rough country, with no way to single you out.
+          </p>
+          <p>
+            There is no third-party advertising on this site. If advertising or
+            affiliate programs are added, this policy will be updated first to
+            describe exactly what changes.
+          </p>
+        </>
+      ) : (
+        <p>
+          There is no third-party advertising or analytics active on this site
+          today. If advertising, analytics or affiliate programs are added, this
+          policy will be updated first to describe exactly what changes,
+          including any cookies or identifiers involved.
+        </p>
+      )}
 
       <h2>Changes</h2>
       <p>Material changes to this policy will appear on this page with a new last-updated date.</p>
