@@ -1,7 +1,0 @@
-{
-  "activa": true,
-  "proveedor": "goatcounter",
-  "codigo": "nicaraguarouteguide",
-  "dominio": "",
-  "nota": "Analitica sin cookies con GoatCounter, activa desde el 19 de septiembre de 2026. Panel: https://nicaraguarouteguide.goatcounter.com. El codigo de sitio va en 'codigo'. Para cambiar de proveedor: Plausible pide el dominio medido en 'dominio'; Umami pide el id en 'codigo' y su servidor en 'dominio'; Cloudflare pide el token en 'codigo'. Para apagarla, poner 'activa' en false: el sitio deja de emitir el script y la politica de privacidad vuelve a decir que no hay analitica. Las pruebas rechazan activarla sin datos reales."
-}
