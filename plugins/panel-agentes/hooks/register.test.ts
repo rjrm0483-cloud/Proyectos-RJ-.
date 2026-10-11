@@ -1,6 +1,6 @@
 import { expect, test } from 'claude-code/testing'
 
-import { describeTool, parseAgent } from './register'
+import { describeTool, monkeys, parseAgent } from './register'
 
 test('lee nombre, herramientas y modelo del frontmatter', () => {
   const card = parseAgent('x.md', '---\nname: demo\ndescription: Hace cosas\ntools: Read, Grep\nmodel: opus\n---\ncuerpo')
@@ -21,4 +21,10 @@ test('describe en español lo que hace cada herramienta', () => {
   expect(describeTool({ tool: 'Bash', command: 'ls', description: 'Lista archivos' })).toBe('Ejecuta: Lista archivos')
   expect(describeTool({ tool: 'Agent', subagent_type: 'Explore', description: 'buscar rutas' })).toBe('Lanza el agente Explore: buscar rutas')
   expect(describeTool({ tool: 'mcp__github__get_me' })).toBe('Usa get_me (github)')
+})
+
+test('dibuja un miquito por agente', () => {
+  const svg = monkeys(3)
+  expect(svg.match(/🐒/g)?.length).toBe(3)
+  expect(svg).toContain('animateTransform')
 })
