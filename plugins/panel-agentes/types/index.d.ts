@@ -27,6 +27,7 @@ declare module 'claude-code' {
       live: LiveAgent[]
       activity: Activity[]
       mainBusy: boolean
+      slots: Record<string, number>
     }
   }
 }
