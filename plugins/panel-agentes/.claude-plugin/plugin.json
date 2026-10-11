@@ -1,6 +1,6 @@
 {
   "name": "panel-agentes",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Panel que muestra qué hace cada agente disponible y qué agentes están trabajando ahora.",
   "types": "./types/index.d.ts"
 }
