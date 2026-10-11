@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "proyectos-rj": {
+      "source": { "source": "github", "repo": "rjrm0483-cloud/Proyectos-RJ-." }
+    }
+  },
+  "enabledPlugins": {
+    "panel-agentes@proyectos-rj": true
+  }
+}
