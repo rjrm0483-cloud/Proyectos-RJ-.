@@ -36,7 +36,7 @@ Repositorio con el sitio público de **Agenda Psiquiátrica Pro** y la configura
 
 ## Mod: panel-agentes
 
-Panel que muestra en directo cada paso del agente principal y de cada subagente, y se abre solo al empezar cualquier tarea. Encima del cuadro de texto, una franja con un miquito 🐒 animado por cada agente que trabaja y su paso actual; en la conversación, un aviso cuando un subagente arranca y cuando termina. `/agentes` lista qué hace cada agente (los de `.claude/agents/` y los integrados).
+Panel que muestra en directo cada paso del agente principal y de cada subagente, y se abre solo al empezar cualquier tarea. Encima del cuadro de texto, una franja con un miquito animado por cada agente que trabaja, cada uno con su nombre y su color (Coco, el naranja, es siempre el agente principal; Kiki, Tito, Lola… los subagentes), y su paso actual; en la conversación, un aviso cuando un subagente arranca y cuando termina. `/agentes` lista qué hace cada agente (los de `.claude/agents/` y los integrados).
 
 Se ve en la terminal, en la app de escritorio y en claude.ai/code. La app del móvil no dibuja lo que añaden los mods; allí, toca "Ejecutando agente" para ver los pasos.
 

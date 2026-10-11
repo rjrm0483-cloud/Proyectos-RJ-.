@@ -8,7 +8,7 @@ test('la franja muestra el paso actual y los miquitos en cada superficie', async
 
   for (const surface of ['terminal', 'desktop', 'mobile'] as const) {
     const ui = await $.ui.mount({ plugin: 'panel-agentes', surface, component: 'AbovePrompt', props: {} as any })
-    expect(await ui.find({ type: 'Text', text: /Claude: Lee README\.md/ })).toBeDefined()
+    expect(await ui.find({ type: 'Text', text: /Coco \(Claude\): / })).toBeDefined()
     if (surface !== 'terminal') expect(await ui.find({ type: 'Svg' })).toBeDefined()
     await ui.unmount()
   }

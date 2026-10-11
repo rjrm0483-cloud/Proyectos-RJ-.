@@ -96,18 +96,61 @@ async function refreshLive($: any) {
   if (JSON.stringify(before) !== JSON.stringify(next)) await update($, live, () => next)
 }
 
-// Un miquito que camina y salta por cada agente que trabaja.
-export function monkeys(count: number): string {
-  const step = 44
-  const width = Math.max(1, count) * step + 40
-  const one = (i: number) => {
-    const delay = (i * 0.2).toFixed(1)
-    return `<text x="${i * step}" y="34" font-size="28">🐒` +
-      `<animateTransform attributeName="transform" type="translate" values="0 0;20 -8;40 0;20 -8;0 0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/>` +
-      `</text>`
+// Cada agente es un miquito con nombre y color propios: el principal siempre
+// el primero; cada subagente, el siguiente libre por orden de llegada.
+const MIQUITOS = [
+  { name: 'Coco', color: '#e8833a' },
+  { name: 'Kiki', color: '#3b82f6' },
+  { name: 'Tito', color: '#22c55e' },
+  { name: 'Lola', color: '#a855f7' },
+  { name: 'Pancho', color: '#ef4444' },
+  { name: 'Nina', color: '#eab308' },
+  { name: 'Bongo', color: '#14b8a6' },
+  { name: 'Mimi', color: '#ec4899' },
+]
+export type Miquito = { name: string; color: string }
+
+const slots = new Map<string, number>([[MAIN, 0]])
+const pendingSlots = new Map<string, number>()
+let nextSlot = 1
+
+const takeSlot = () => {
+  const slot = nextSlot
+  nextSlot = nextSlot + 1 >= MIQUITOS.length ? 1 : nextSlot + 1
+
+  return slot
+}
+
+export function miquitoOf(agent: string): Miquito {
+  let slot = slots.get(agent)
+  if (slot === undefined) {
+    slot = takeSlot()
+    slots.set(agent, slot)
   }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="40" viewBox="0 0 ${width} 40">${Array.from({ length: count }, (_, i) => one(i)).join('')}</svg>`
+  return MIQUITOS[slot] ?? MIQUITOS[0]!
+}
+
+// Un miquito dibujado en su color, que camina y salta, con su nombre debajo.
+export function monkeys(team: Miquito[]): string {
+  const step = 70
+  const width = Math.max(1, team.length) * step + 30
+  const one = ({ name, color }: Miquito, i: number) => {
+    const x = i * step + 20
+    const delay = (i * 0.3).toFixed(1)
+    return `<g transform="translate(${x} 0)">` +
+      `<g><animateTransform attributeName="transform" type="translate" values="0 0;12 -7;24 0;12 -7;0 0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/>` +
+      `<circle cx="4" cy="16" r="5" fill="${color}"/><circle cx="28" cy="16" r="5" fill="${color}"/>` +
+      `<circle cx="16" cy="18" r="12" fill="${color}"/>` +
+      `<ellipse cx="16" cy="22" rx="8" ry="6" fill="#f5deb3"/>` +
+      `<circle cx="12" cy="15" r="2" fill="#222"/><circle cx="20" cy="15" r="2" fill="#222"/>` +
+      `<path d="M12 24 Q16 27 20 24" stroke="#222" stroke-width="1.5" fill="none"/>` +
+      `</g>` +
+      `<text x="16" y="46" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle" fill="${color}">${name}</text>` +
+      `</g>`
+  }
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="52" viewBox="0 0 ${width} 52">${team.map(one).join('')}</svg>`
 }
 
 const ICON: Record<string, string> = {
@@ -151,17 +194,34 @@ export const register: Register = on => {
       state: 'runs',
     }
     await update($, activity, list => [...list, item].slice(-300))
-    if (e.tool === 'Agent') $.ui.log(`🐒 Arranca el agente ${e.subagent_type ?? 'general-purpose'}: ${e.description}`)
+    let who = ''
+    if (e.tool === 'Agent') {
+      const slot = takeSlot()
+      pendingSlots.set(e.tool_use_id, slot)
+      who = `${MIQUITOS[slot]?.name} (${e.subagent_type ?? 'general-purpose'})`
+      $.ui.log(`🐒 ${who} arranca: ${e.description}`)
+    }
     const ran = await next(e)
     const failed = ('deny' in ran && !!ran.deny) || ran.isError === true
     if (e.tool === 'Agent') {
       $.ui.log(failed
-        ? `✗ El agente ${e.subagent_type ?? 'general-purpose'} no pudo terminar: ${e.description}`
-        : `✓ El agente ${e.subagent_type ?? 'general-purpose'} entregó su trabajo: ${e.description}`)
+        ? `✗ ${who} no pudo terminar: ${e.description}`
+        : `✓ ${who} entregó su trabajo: ${e.description}`)
     }
     await update($, activity, list =>
       list.map(one => (one.id === item.id ? { ...one, state: failed ? 'error' : 'ok' } : one)),
     )
+
+    return ran
+  })
+
+  on('agent.spawn', async ($, e, next) => {
+    const ran = await next(e)
+    const slot = pendingSlots.get(e.tool_use_id)
+    if (ran.agentId && slot !== undefined) {
+      slots.set(ran.agentId, slot)
+      pendingSlots.delete(e.tool_use_id)
+    }
 
     return ran
   })
@@ -209,15 +269,15 @@ export const register: Register = on => {
 
     return (
       <Box flexDirection="column">
-        <Text bold>
-          {busy ? '▶' : '○'} Claude (principal) <Text dimColor>{busy ? 'trabajando' : 'en espera'}</Text>
+        <Text bold color={miquitoOf(MAIN).color}>
+          {busy ? '▶' : '○'} {miquitoOf(MAIN).name} (Claude, principal) <Text dimColor>{busy ? 'trabajando' : 'en espera'}</Text>
         </Text>
         {steps(MAIN)}
         {!busy && done.length === 0 && <Text dimColor>  Pídeme algo y verás aquí cada paso.</Text>}
         {running.map(a => (
           <Box flexDirection="column" marginTop={1}>
-            <Text bold>
-              {ICON[a.status] ?? '?'} {a.type} <Text dimColor>{clip(a.description, width - a.type.length - 4)} · {a.status}</Text>
+            <Text bold color={miquitoOf(a.id).color}>
+              {ICON[a.status] ?? '?'} {miquitoOf(a.id).name} ({a.type}) <Text dimColor>{clip(a.description, width - a.type.length - 4)} · {a.status}</Text>
             </Text>
             {steps(a.id)}
           </Box>
@@ -238,15 +298,25 @@ export const register: Register = on => {
     const done = await read($, activity)
     const lastOf = (agent: string) => [...done].reverse().find(a => a.agent === agent)?.label ?? 'pensando…'
     const width = Math.max(20, (e.viewport?.columns ?? 50) - 4)
-    const count = (busy ? 1 : 0) + running.length
+    const team = [...(busy ? [MAIN] : []), ...running.map(a => a.id)].map(miquitoOf)
+    const coco = miquitoOf(MAIN)
 
     return (
       <Box flexDirection="column">
-        {'Svg' in els && <els.Svg source={monkeys(count)} alt={`${count} agente(s) trabajando`} isInteractive />}
-        {busy && <Text>▶ Claude: {clip(lastOf(MAIN), width - 10)}</Text>}
-        {running.map(a => (
-          <Text>▶ {a.type}: {clip(lastOf(a.id), width - a.type.length - 4)}</Text>
-        ))}
+        {'Svg' in els && <els.Svg source={monkeys(team)} alt={team.map(m => m.name).join(', ') + ' trabajando'} isInteractive />}
+        {busy && (
+          <Text color={coco.color}>
+            ● {coco.name} (Claude): <Text>{clip(lastOf(MAIN), width - 20)}</Text>
+          </Text>
+        )}
+        {running.map(a => {
+          const m = miquitoOf(a.id)
+          return (
+            <Text color={m.color}>
+              ● {m.name} ({a.type}): <Text>{clip(lastOf(a.id), width - a.type.length - m.name.length - 8)}</Text>
+            </Text>
+          )
+        })}
       </Box>
     )
   })
