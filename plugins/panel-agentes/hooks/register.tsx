@@ -96,6 +96,20 @@ async function refreshLive($: any) {
   if (JSON.stringify(before) !== JSON.stringify(next)) await update($, live, () => next)
 }
 
+// Un miquito que camina y salta por cada agente que trabaja.
+export function monkeys(count: number): string {
+  const step = 44
+  const width = Math.max(1, count) * step + 40
+  const one = (i: number) => {
+    const delay = (i * 0.2).toFixed(1)
+    return `<text x="${i * step}" y="34" font-size="28">🐒` +
+      `<animateTransform attributeName="transform" type="translate" values="0 0;20 -8;40 0;20 -8;0 0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/>` +
+      `</text>`
+  }
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="40" viewBox="0 0 ${width} 40">${Array.from({ length: count }, (_, i) => one(i)).join('')}</svg>`
+}
+
 const ICON: Record<string, string> = {
   pending: '…', running: '▶', waiting: '⏸', idle: '○', completed: '✓', failed: '✗', killed: '■',
 }
@@ -108,7 +122,7 @@ export const register: Register = on => {
     })
     const project = await loadProject($)
     await update($, catalogue, () => [...project, ...INTEGRADOS])
-    void $.ui.open({ id: PANE, title: 'Agentes' })
+    void $.ui.open({ id: PANE, title: 'Agentes' }).catch(() => undefined)
     $.clock.every(2000, () => void refreshLive($))
 
     return next(e)
@@ -117,7 +131,7 @@ export const register: Register = on => {
   on('turn.start', async ($, e, next) => {
     await update($, mainBusy, () => true)
     await update($, activity, () => [])
-    void $.ui.open({ id: PANE, title: 'Agentes' })
+    void $.ui.open({ id: PANE, title: 'Agentes' }).catch(() => undefined)
 
     return next(e)
   })
@@ -137,8 +151,14 @@ export const register: Register = on => {
       state: 'runs',
     }
     await update($, activity, list => [...list, item].slice(-300))
+    if (e.tool === 'Agent') $.ui.log(`🐒 Arranca el agente ${e.subagent_type ?? 'general-purpose'}: ${e.description}`)
     const ran = await next(e)
     const failed = ('deny' in ran && !!ran.deny) || ran.isError === true
+    if (e.tool === 'Agent') {
+      $.ui.log(failed
+        ? `✗ El agente ${e.subagent_type ?? 'general-purpose'} no pudo terminar: ${e.description}`
+        : `✓ El agente ${e.subagent_type ?? 'general-purpose'} entregó su trabajo: ${e.description}`)
+    }
     await update($, activity, list =>
       list.map(one => (one.id === item.id ? { ...one, state: failed ? 'error' : 'ok' } : one)),
     )
@@ -204,6 +224,29 @@ export const register: Register = on => {
         ))}
         <Text dimColor> </Text>
         <Text dimColor>/agentes: qué hace cada agente</Text>
+      </Box>
+    )
+  })
+
+  on('ui.render', { component: 'AbovePrompt' }, async ($, e, next) => {
+    const busy = await read($, mainBusy)
+    const running = (await read($, live)).filter(a => a.status === 'running' || a.status === 'pending')
+    if (!busy && running.length === 0) return next(e)
+
+    const els = $.ui.resolve(e)
+    const { Box, Text } = els
+    const done = await read($, activity)
+    const lastOf = (agent: string) => [...done].reverse().find(a => a.agent === agent)?.label ?? 'pensando…'
+    const width = Math.max(20, (e.viewport?.columns ?? 50) - 4)
+    const count = (busy ? 1 : 0) + running.length
+
+    return (
+      <Box flexDirection="column">
+        {'Svg' in els && <els.Svg source={monkeys(count)} alt={`${count} agente(s) trabajando`} isInteractive />}
+        {busy && <Text>▶ Claude: {clip(lastOf(MAIN), width - 10)}</Text>}
+        {running.map(a => (
+          <Text>▶ {a.type}: {clip(lastOf(a.id), width - a.type.length - 4)}</Text>
+        ))}
       </Box>
     )
   })
