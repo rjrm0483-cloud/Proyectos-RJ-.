@@ -13,8 +13,20 @@ export type LiveAgent = {
   status: string
 }
 
+export type Activity = {
+  id: string
+  agent: string
+  label: string
+  state: 'runs' | 'ok' | 'error'
+}
+
 declare module 'claude-code' {
   interface PluginState {
-    'panel-agentes': { catalogue: AgentCard[]; live: LiveAgent[] }
+    'panel-agentes': {
+      catalogue: AgentCard[]
+      live: LiveAgent[]
+      activity: Activity[]
+      mainBusy: boolean
+    }
   }
 }

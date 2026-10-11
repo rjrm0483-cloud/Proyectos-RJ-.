@@ -3,7 +3,7 @@
 
 ## Mod: panel-agentes
 
-Panel que explica qué hace cada agente (`.claude/agents/` y los integrados) y muestra los que están trabajando ahora. Se abre solo al empezar la sesión o con `/agentes`.
+Panel que muestra en directo cada paso del agente principal y de cada subagente, y se abre solo al empezar cualquier tarea. `/agentes` lista qué hace cada agente (los de `.claude/agents/` y los integrados).
 
 Instalación manual desde una terminal:
 
