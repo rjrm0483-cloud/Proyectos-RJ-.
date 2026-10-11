@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Obtener main
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Componer el sitio (solo la política de privacidad)
         run: |
