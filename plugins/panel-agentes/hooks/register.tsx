@@ -1,11 +1,14 @@
 import { atom, read, update } from 'claude-code'
 import type { Register } from 'claude-code'
 
-import type { AgentCard, LiveAgent } from '../types'
+import type { Activity, AgentCard, LiveAgent } from '../types'
 
 const PANE = 'panel-agentes'
 const catalogue = atom({ plugin: 'panel-agentes', key: 'catalogue' } as const, [])
 const live = atom({ plugin: 'panel-agentes', key: 'live' } as const, [])
+const activity = atom({ plugin: 'panel-agentes', key: 'activity' } as const, [])
+const mainBusy = atom({ plugin: 'panel-agentes', key: 'mainBusy' } as const, false)
+const MAIN = 'main'
 
 // Agentes que trae el propio Claude Code: qué hace cada uno, en una línea.
 const INTEGRADOS: AgentCard[] = [
@@ -28,7 +31,7 @@ export function parseAgent(file: string, source: string): AgentCard | undefined 
   const head = /^---\r?\n([\s\S]*?)\r?\n---/.exec(source)
   if (!head) return undefined
   const fields: Record<string, string> = {}
-  for (const line of head[1].split(/\r?\n/)) {
+  for (const line of (head[1] ?? "").split(/\r?\n/)) {
     const at = line.indexOf(':')
     if (at > 0) fields[line.slice(0, at).trim()] = line.slice(at + 1).trim()
   }
@@ -40,6 +43,30 @@ export function parseAgent(file: string, source: string): AgentCard | undefined 
     tools: fields.tools,
     model: fields.model,
   }
+}
+
+const base = (path: unknown) => String(path ?? '').split('/').pop() || String(path ?? '')
+
+// Una frase en español de lo que hace cada llamada a herramienta.
+export function describeTool(e: Record<string, any>): string {
+  switch (e.tool) {
+    case 'Bash': return `Ejecuta: ${clip(String(e.description ?? e.command ?? ''), 70)}`
+    case 'Read': return `Lee ${base(e.file_path)}`
+    case 'Edit': return `Edita ${base(e.file_path)}`
+    case 'Write': return `Escribe ${base(e.file_path)}`
+    case 'NotebookEdit': return `Edita el cuaderno ${base(e.notebook_path)}`
+    case 'Grep': return `Busca «${clip(String(e.pattern ?? ''), 40)}» en el código`
+    case 'Glob': return `Busca archivos ${clip(String(e.pattern ?? ''), 40)}`
+    case 'Agent': return `Lanza el agente ${e.subagent_type ?? 'general-purpose'}: ${clip(String(e.description ?? ''), 50)}`
+    case 'WebFetch': return `Abre ${clip(String(e.url ?? ''), 60)}`
+    case 'WebSearch': return `Busca en la web «${clip(String(e.query ?? ''), 50)}»`
+    case 'Skill': return `Usa la habilidad ${e.skill ?? ''}`
+    case 'TaskCreate': case 'TaskUpdate': return 'Actualiza la lista de tareas'
+  }
+  const mcp = /^mcp__(.+?)__(.+)$/.exec(String(e.tool))
+  if (mcp) return `Usa ${mcp[2]} (${mcp[1]})`
+
+  return `Usa ${e.tool}`
 }
 
 async function loadProject($: any): Promise<AgentCard[]> {
@@ -87,40 +114,96 @@ export const register: Register = on => {
     return next(e)
   })
 
+  on('turn.start', async ($, e, next) => {
+    await update($, mainBusy, () => true)
+    await update($, activity, () => [])
+    void $.ui.open({ id: PANE, title: 'Agentes' })
+
+    return next(e)
+  })
+
+  on('turn.complete', async ($, e, next) => {
+    if (e.agentId === undefined) await update($, mainBusy, () => false)
+    void refreshLive($)
+
+    return next(e)
+  })
+
+  on('tool.call', async ($, e, next) => {
+    const item: Activity = {
+      id: e.tool_use_id,
+      agent: e.agentId ?? MAIN,
+      label: describeTool(e as Record<string, any>),
+      state: 'runs',
+    }
+    await update($, activity, list => [...list, item].slice(-300))
+    const ran = await next(e)
+    const failed = ('deny' in ran && !!ran.deny) || ran.isError === true
+    await update($, activity, list =>
+      list.map(one => (one.id === item.id ? { ...one, state: failed ? 'error' : 'ok' } : one)),
+    )
+
+    return ran
+  })
+
   on('command.run', { command: 'agentes' }, async $ => {
     const project = await loadProject($)
     await update($, catalogue, () => [...project, ...INTEGRADOS])
-    await $.ui.open({ id: PANE, title: 'Agentes' })
+    const opened = await $.ui.open({ id: PANE, title: 'Agentes' })
+    await refreshLive($)
+    const cards = await read($, catalogue)
+    const running = await read($, live)
+    const lines = [
+      opened.isPlaced
+        ? 'Panel de agentes abierto. También aquí:'
+        : 'Esta pantalla no muestra el panel; aquí tienes los agentes:',
+      '',
+      'En marcha ahora:',
+      ...(running.length === 0
+        ? ['  Ningún agente trabajando.']
+        : running.map(a => `  ${ICON[a.status] ?? '?'} ${a.type} — ${a.description} (${a.status})`)),
+      '',
+      'Qué hace cada agente:',
+      ...cards.map(c => `  • ${c.name} [${c.origin}]: ${c.summary}`),
+    ]
 
-    return { text: 'Panel de agentes abierto.' }
+    return { text: lines.join('\n') }
   })
 
   on('ui.render', { component: 'Pane', requestId: PANE }, async ($, e) => {
     const { Box, Text } = $.ui.resolve(e)
-    const cards = await read($, catalogue)
+    const busy = await read($, mainBusy)
     const running = await read($, live)
+    const done = await read($, activity)
     const width = Math.max(30, (e.viewport?.columns ?? 60) - 6)
+    const rows = Math.max(8, (e.viewport?.rows ?? 24) - 2)
+    const groups = 1 + running.length
+    const per = Math.max(2, Math.floor((rows - groups * 2) / groups))
+
+    const steps = (agent: string) =>
+      done.filter(a => a.agent === agent).slice(-per).map(a => (
+        <Text dimColor={a.state === 'ok'} color={a.state === 'error' ? 'red' : undefined}>
+          {'  '}{a.state === 'runs' ? '▶' : a.state === 'ok' ? '✓' : '✗'} {clip(a.label, width - 4)}
+        </Text>
+      ))
 
     return (
       <Box flexDirection="column">
-        <Text bold>En marcha ahora</Text>
-        {running.length === 0 && <Text dimColor>Ningún agente trabajando.</Text>}
+        <Text bold>
+          {busy ? '▶' : '○'} Claude (principal) <Text dimColor>{busy ? 'trabajando' : 'en espera'}</Text>
+        </Text>
+        {steps(MAIN)}
+        {!busy && done.length === 0 && <Text dimColor>  Pídeme algo y verás aquí cada paso.</Text>}
         {running.map(a => (
-          <Text>
-            {ICON[a.status] ?? '?'} {a.type} — {clip(a.description, width)} ({a.status})
-          </Text>
-        ))}
-        <Text> </Text>
-        <Text bold>Qué hace cada agente</Text>
-        {cards.map(card => (
           <Box flexDirection="column" marginTop={1}>
             <Text bold>
-              {card.name} <Text dimColor>[{card.origin}{card.model ? `, ${card.model}` : ''}]</Text>
+              {ICON[a.status] ?? '?'} {a.type} <Text dimColor>{clip(a.description, width - a.type.length - 4)} · {a.status}</Text>
             </Text>
-            <Text>{clip(card.summary, width * 3)}</Text>
-            {card.tools && <Text dimColor>Herramientas: {card.tools}</Text>}
+            {steps(a.id)}
           </Box>
         ))}
+        <Text dimColor> </Text>
+        <Text dimColor>/agentes: qué hace cada agente</Text>
       </Box>
     )
   })

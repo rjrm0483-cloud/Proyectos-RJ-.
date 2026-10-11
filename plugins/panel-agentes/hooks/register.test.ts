@@ -1,6 +1,6 @@
 import { expect, test } from 'claude-code/testing'
 
-import { parseAgent } from './register'
+import { describeTool, parseAgent } from './register'
 
 test('lee nombre, herramientas y modelo del frontmatter', () => {
   const card = parseAgent('x.md', '---\nname: demo\ndescription: Hace cosas\ntools: Read, Grep\nmodel: opus\n---\ncuerpo')
@@ -14,4 +14,11 @@ test('usa el resumen en español de los agentes conocidos', () => {
 
 test('ignora archivos sin frontmatter', () => {
   expect(parseAgent('x.md', 'solo texto')).toBeUndefined()
+})
+
+test('describe en español lo que hace cada herramienta', () => {
+  expect(describeTool({ tool: 'Read', file_path: '/a/b/README.md' })).toBe('Lee README.md')
+  expect(describeTool({ tool: 'Bash', command: 'ls', description: 'Lista archivos' })).toBe('Ejecuta: Lista archivos')
+  expect(describeTool({ tool: 'Agent', subagent_type: 'Explore', description: 'buscar rutas' })).toBe('Lanza el agente Explore: buscar rutas')
+  expect(describeTool({ tool: 'mcp__github__get_me' })).toBe('Usa get_me (github)')
 })
