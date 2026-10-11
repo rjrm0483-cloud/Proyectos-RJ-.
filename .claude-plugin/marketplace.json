@@ -1,0 +1,11 @@
+{
+  "name": "proyectos-rj",
+  "owner": { "name": "rjrm0483-cloud" },
+  "plugins": [
+    {
+      "name": "panel-agentes",
+      "source": "./plugins/panel-agentes",
+      "description": "Panel que muestra qué hace cada agente y cuáles están trabajando ahora."
+    }
+  ]
+}
