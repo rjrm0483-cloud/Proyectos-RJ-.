@@ -30,6 +30,12 @@ En la computadora, "Tomar foto" abre el explorador de archivos para elegir una i
 
 No necesita instalar Android Studio. Cada vez que se suben cambios de la app, GitHub arma el APK solo.
 
+**La forma más fácil:** abra este enlace desde el teléfono y se descarga el APK más reciente:
+
+https://github.com/rjrm0483-cloud/Proyectos-RJ-./releases/download/apk-inspeccion/Inspeccion-Vivienda.apk
+
+Si prefiere buscarlo a mano:
+
 1. Entre al repositorio en GitHub y abra la pestaña **Actions**.
 2. A la izquierda, elija **Generar APK de Inspección Vivienda**.
 3. Abra la ejecución más reciente que tenga el círculo verde ✓. Si no hay ninguna, pulse **Run workflow → Run workflow** y espere unos 5 minutos.

@@ -2,7 +2,9 @@ name: Generar APK de Inspección Vivienda
 
 # Arma el APK de la app de inspecciones (carpeta inspeccion-app).
 # Se lanza solo al subir cambios de la app, o a mano desde la pestaña Actions.
-# El APK queda para descargar en la sección "Artifacts" de la ejecución.
+# El APK queda en la sección "Artifacts" de la ejecución y, además, en la
+# versión (Release) "apk-inspeccion", con un enlace directo para el teléfono:
+# https://github.com/rjrm0483-cloud/Proyectos-RJ-./releases/download/apk-inspeccion/Inspeccion-Vivienda.apk
 
 on:
   workflow_dispatch:
@@ -12,7 +14,7 @@ on:
       - '.github/workflows/apk-inspeccion.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   apk:
@@ -64,3 +66,15 @@ jobs:
           name: Inspeccion-Vivienda-APK
           path: inspeccion-app/Inspeccion-Vivienda.apk
           if-no-files-found: error
+
+      - name: Publicar el APK con enlace directo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete apk-inspeccion --yes --cleanup-tag --repo "$GITHUB_REPOSITORY" || true
+          gh release create apk-inspeccion Inspeccion-Vivienda.apk \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Inspección Vivienda (APK)" \
+            --notes "APK más reciente de la app de inspección de vivienda. Descárguelo desde el teléfono e instálelo." \
+            --prerelease
