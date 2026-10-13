@@ -1,12 +1,14 @@
 # Proyectos-RJ-.
 
-Repositorio con el sitio público de **Agenda Psiquiátrica Pro** y la configuración de Claude Code del proyecto: agentes, skills, comandos y el mod `panel-agentes`.
+Repositorio con el sitio público de **Agenda Psiquiátrica Pro**, la app **Inspección de Vivienda** y la configuración de Claude Code del proyecto: agentes, skills, comandos y el mod `panel-agentes`.
 
 ## Contenido
 
 | Ruta | Qué es |
 | --- | --- |
 | `index.html` | Política de privacidad de Agenda Psiquiátrica Pro |
+| `inspeccion-app/` | App móvil de inspección de vivienda nueva (ver su [README](inspeccion-app/README.md)) |
+| `.github/workflows/apk-inspeccion.yml` | Arma el APK de la app de inspección |
 | `.github/workflows/publicar-sitio.yml` | Publica el sitio en GitHub Pages (se lanza a mano desde Actions) |
 | `.claude/agents/` | Agentes del proyecto |
 | `.claude/skills/` | Skills del proyecto |

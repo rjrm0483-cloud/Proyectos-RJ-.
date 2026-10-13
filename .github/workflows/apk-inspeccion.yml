@@ -1,0 +1,66 @@
+name: Generar APK de Inspección Vivienda
+
+# Arma el APK de la app de inspecciones (carpeta inspeccion-app).
+# Se lanza solo al subir cambios de la app, o a mano desde la pestaña Actions.
+# El APK queda para descargar en la sección "Artifacts" de la ejecución.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'inspeccion-app/**'
+      - '.github/workflows/apk-inspeccion.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: inspeccion-app
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Crear el proyecto Android
+        run: npx cap add android
+
+      - name: Poner el logo como ícono
+        run: |
+          pip install pillow
+          python3 scripts/iconos.py
+
+      - name: Copiar la app al proyecto Android
+        run: npx cap sync android
+
+      - name: Compilar el APK
+        working-directory: inspeccion-app/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          cp app/build/outputs/apk/debug/app-debug.apk ../Inspeccion-Vivienda.apk
+
+      - name: Subir el APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Inspeccion-Vivienda-APK
+          path: inspeccion-app/Inspeccion-Vivienda.apk
+          if-no-files-found: error

@@ -1,0 +1,21 @@
+{
+  "name": "inspeccion-vivienda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App para inspecciones de vivienda nueva en etapa de entrega sustancial. Funciona sin internet.",
+  "scripts": {
+    "probar": "http-server www -p 8080 -c-1",
+    "android": "cap add android && python3 scripts/iconos.py && cap sync android",
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/filesystem": "8.1.3",
+    "@capacitor/share": "8.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "http-server": "14.1.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "appId": "com.rjrm.inspeccionvivienda",
+  "appName": "Inspección Vivienda",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}
