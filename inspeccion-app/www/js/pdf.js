@@ -184,7 +184,7 @@ var PDF = (function () {
       body: [
         [etiqueta('Cliente'), valor(d.cliente), etiqueta('Teléfono / correo'), valor(d.telefono)],
         [etiqueta('Dirección del inmueble'), valor(d.direccion), etiqueta('Proyecto / residencial'), valor(d.proyecto)],
-        [etiqueta('Constructor / desarrollador'), valor(d.constructor), etiqueta('Tipo de vivienda'), opciones([['1', '1 planta'], ['2', '2 plantas']], d.tipo)],
+        [etiqueta('Constructor / desarrollador'), valor(d.constructor), etiqueta('Tipo de vivienda'), Object.assign(opciones([['1', '1 planta'], ['2', '2 plantas'], ['3', '3 plantas']], d.tipo), { tam: 7.4 })],
         [etiqueta('Área construida (m²)'), valor(d.area ? d.area + ' m²' : ''), etiqueta('Fecha de inspección'), valor(fecha(d.fecha))],
         [etiqueta('Hora inicio – fin'), valor((d.horaInicio || '__:__') + ' – ' + (d.horaFin || '__:__')), etiqueta('Condición del clima'), opciones([['Seco', 'Seco'], ['Lluvia reciente', 'Lluvia reciente']], d.clima)],
         [etiqueta('Planos disponibles'), opciones([['Sí', 'Sí'], ['No', 'No']], d.planos), etiqueta('Presentes en la visita'), valor(d.presentes)],

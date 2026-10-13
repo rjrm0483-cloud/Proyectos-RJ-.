@@ -253,7 +253,7 @@ function vistaDatos() {
   h += campoTexto('datos.direccion', 'Dirección del inmueble');
   h += campoTexto('datos.proyecto', 'Proyecto / residencial');
   h += campoTexto('datos.constructor', 'Constructor / desarrollador');
-  h += campoOpciones('datos.tipo', 'Tipo de vivienda', [['1', '1 planta'], ['2', '2 plantas']]);
+  h += campoOpciones('datos.tipo', 'Tipo de vivienda', [['1', '1 planta'], ['2', '2 plantas'], ['3', '3 plantas']]);
   h += '<div class="dos-col">' + campoTexto('datos.area', 'Área construida (m²)', 'number', 'inputmode="decimal" min="0" step="0.01"') +
     campoTexto('datos.fecha', 'Fecha de inspección', 'date') + '</div>';
   h += '<div class="dos-col">' + campoTexto('datos.horaInicio', 'Hora de inicio', 'time') +
