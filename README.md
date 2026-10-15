@@ -1,12 +1,13 @@
 # Proyectos-RJ-.
 
-Repositorio con el sitio público de **Agenda Psiquiátrica Pro** y la configuración de Claude Code del proyecto: agentes, skills, comandos y el mod `panel-agentes`.
+Repositorio con el sitio público de **Agenda Psiquiátrica Pro**, la app **Sola FV Pro** la configuración de Claude Code del proyecto: agentes, skills, comandos y el mod `panel-agentes`.
 
 ## Contenido
 
 | Ruta | Qué es |
 | --- | --- |
 | `index.html` | Política de privacidad de Agenda Psiquiátrica Pro |
+| `sola-fv-pro/` | App Sola FV Pro: calculadora de dimensionamiento fotovoltaico (ver su README) |
 | `.github/workflows/publicar-sitio.yml` | Publica el sitio en GitHub Pages (se lanza a mano desde Actions) |
 | `.claude/agents/` | Agentes del proyecto |
 | `.claude/skills/` | Skills del proyecto |
