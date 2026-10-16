@@ -56,6 +56,10 @@ jobs:
       - name: Compilar el APK
         working-directory: inspeccion-app/android
         run: |
+          # Siempre la misma llave de firma: así cada APK nuevo se instala
+          # encima del anterior sin desinstalar ni perder datos.
+          mkdir -p ~/.android
+          cp ../firma/debug.keystore ~/.android/debug.keystore
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
           cp app/build/outputs/apk/debug/app-debug.apk ../Inspeccion-Vivienda.apk
