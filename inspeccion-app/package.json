@@ -5,7 +5,7 @@
   "description": "App para inspecciones de vivienda nueva en etapa de entrega sustancial. Funciona sin internet.",
   "scripts": {
     "probar": "http-server www -p 8080 -c-1",
-    "android": "cap add android && python3 scripts/iconos.py && cap sync android",
+    "android": "cap add android && python3 scripts/iconos.py && python3 scripts/firma.py && cap sync android",
     "sync": "cap sync android"
   },
   "dependencies": {
