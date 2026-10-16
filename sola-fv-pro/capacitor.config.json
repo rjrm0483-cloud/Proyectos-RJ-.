@@ -1,0 +1,8 @@
+{
+  "appId": "com.rjrm.solafvpro",
+  "appName": "Sola FV Pro",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}

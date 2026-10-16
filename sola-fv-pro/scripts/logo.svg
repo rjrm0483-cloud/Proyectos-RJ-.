@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="1024" height="1024">
+  <defs>
+    <radialGradient id="sol" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </radialGradient>
+  </defs>
+  <rect width="192" height="192" rx="22" fill="#0F172A"/>
+  <circle cx="96" cy="60" r="19.6" fill="url(#sol)"/>
+  <g stroke="#F59E0B" stroke-width="2.8" stroke-linecap="butt">
+    <line x1="96" y1="22.5" x2="96" y2="33.5"/><line x1="96" y1="86.5" x2="96" y2="97.5"/>
+    <line x1="58.5" y1="60" x2="69.5" y2="60"/><line x1="122.5" y1="60" x2="133.5" y2="60"/>
+    <line x1="69.5" y1="33.5" x2="77.3" y2="41.3"/><line x1="114.7" y1="78.7" x2="122.5" y2="86.5"/>
+    <line x1="122.5" y1="33.5" x2="114.7" y2="41.3"/><line x1="77.3" y1="78.7" x2="69.5" y2="86.5"/>
+  </g>
+  <rect x="52" y="109.5" width="88" height="51.5" rx="3" fill="#1E3A5F" stroke="#334155" stroke-width="1.2"/>
+  <g stroke="#334155" stroke-width="0.9">
+    <line x1="81.3" y1="109.5" x2="81.3" y2="161"/><line x1="110.7" y1="109.5" x2="110.7" y2="161"/>
+    <line x1="52" y1="135.25" x2="140" y2="135.25"/>
+  </g>
+  <text x="96" y="178" text-anchor="middle" font-family="DejaVu Sans, Verdana, sans-serif" font-weight="bold" font-size="13.4" letter-spacing="0.5" fill="#F7880A">SOLAR FV</text>
+</svg>

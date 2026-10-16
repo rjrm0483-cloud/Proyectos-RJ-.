@@ -7,7 +7,8 @@ Repositorio con el sitio público de **Agenda Psiquiátrica Pro**, la app **Sola
 | Ruta | Qué es |
 | --- | --- |
 | `index.html` | Política de privacidad de Agenda Psiquiátrica Pro |
-| `sola-fv-pro/` | App Sola FV Pro: calculadora de dimensionamiento fotovoltaico (ver su README) |
+| `sola-fv-pro/` | App Sola FV Pro: calculadora de dimensionamiento fotovoltaico, sin anuncios (ver su README) |
+| `.github/workflows/apk-solar.yml` | Arma el APK de Sola FV Pro y lo publica con enlace directo |
 | `.github/workflows/publicar-sitio.yml` | Publica el sitio en GitHub Pages (se lanza a mano desde Actions) |
 | `.claude/agents/` | Agentes del proyecto |
 | `.claude/skills/` | Skills del proyecto |

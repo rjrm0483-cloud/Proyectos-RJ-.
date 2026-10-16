@@ -1,0 +1,21 @@
+{
+  "name": "sola-fv-pro",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Calculadora de dimensionamiento fotovoltaico (On-Grid, Off-Grid, Híbrido). Funciona sin internet y sin anuncios.",
+  "scripts": {
+    "probar": "http-server www -p 8080 -c-1",
+    "android": "cap add android && python3 scripts/iconos.py && python3 scripts/firma.py && python3 scripts/version.py && cap sync android",
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/filesystem": "8.1.3",
+    "@capacitor/share": "8.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "http-server": "14.1.1"
+  }
+}

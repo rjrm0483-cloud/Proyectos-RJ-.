@@ -1,6 +1,30 @@
 # Sola FV Pro
 
-Calculadora de dimensionamiento fotovoltaico (On-Grid, Off-Grid, Híbrido OG, Híbrido OF) para Nicaragua y Centroamérica. Es un único `index.html` que WebIntoApp empaqueta como app de Android (`assets/htmlapp/root/index.html` dentro del APK).
+Calculadora de dimensionamiento fotovoltaico (On-Grid, Off-Grid, Híbrido OG, Híbrido OF) para Nicaragua y Centroamérica. Es de uso personal: funciona **sin internet** y **sin anuncios**.
+
+Desde la versión 1.2 la app ya no se arma con WebIntoApp (que en modo gratis agrega anuncios). Ahora es una app Android propia hecha con Capacitor, igual que la app de Inspección de Vivienda.
+
+## Instalarla en el teléfono
+
+Abra este enlace desde el teléfono y se descarga el APK más reciente:
+
+https://github.com/rjrm0483-cloud/Proyectos-RJ-./releases/download/apk-solar/Sola-FV-Pro.apk
+
+1. Toque el archivo `Sola-FV-Pro.apk`. Android pedirá permitir "instalar apps desconocidas" para la app desde donde lo abrió (Chrome, WhatsApp, Archivos…): acepte.
+2. Pulse **Instalar**. Si Google Play Protect avisa que la app es desconocida, toque **Más detalles → Instalar de todas formas**.
+3. La app aparece con su logo como **Sola FV Pro**.
+
+Si tenía la versión de WebIntoApp, desinstálela: es otra app y es la que muestra los anuncios. Las versiones nuevas de esta app se instalan encima sin perder nada.
+
+Para compartirla (por ejemplo, con la familia), mande el APK por WhatsApp **como Documento** o pase el enlace de arriba.
+
+El botón **PDF** abre el menú Compartir del teléfono: elija WhatsApp, Drive, correo o "Guardar en Archivos".
+
+## Versión 1.2
+
+- App propia sin WebIntoApp: **sin anuncios**.
+- El PDF se comparte o guarda desde el menú del teléfono.
+- Mismo logo, ahora nítido en todas las pantallas.
 
 ## Versión 1.1
 
@@ -10,28 +34,35 @@ Calculadora de dimensionamiento fotovoltaico (On-Grid, Off-Grid, Híbrido OG, H�
 - **Porcentaje fuera de rango al cambiar de modo**: de Híbrido OG con 50 % a Híbrido OF, el deslizador se veía en 80 % pero el cálculo usaba 50 %. Ahora se ajusta al rango de cada modo.
 - **PDF con datos distintos a los de pantalla**: si se cambiaba la batería o el tipo después de calcular, el PDF mezclaba datos nuevos con resultados viejos. Ahora resultados y PDF usan los datos con los que se calculó.
 - **Tipo Casa/Edificio**: al reabrir la app siempre aparecía "Casa" aunque se hubiera guardado "Edificio".
-- **Datos guardados dañados** podían hacer fallar la app al abrir (por ejemplo, un índice de batería que no existe). Ahora se validan.
+- **Datos guardados dañados** podían hacer fallar la app al abrir. Ahora se validan.
 - **PDF**: la unidad se montaba encima del número grande, la última fila se salía de cada tarjeta y, en un salto de página, la tarjeta de la derecha podía quedar en la página equivocada.
-- **PDF sin internet**: la librería jsPDF se descargaba de internet, y sin conexión el botón PDF no funcionaba aunque la app decía "funcionalidad completa offline". Ahora va incluida en el archivo.
-- **Área de paneles**: se calculaba con 5 m² por kW para cualquier panel. Ahora usa las medidas reales de cada clase (630 W ≈ 2.38 × 1.13 m = 2.70 m²) y muestra el área de techo con un 20 % de margen.
+- **PDF sin internet**: la librería jsPDF ahora va incluida en el archivo.
+- **Área de paneles**: usa las medidas reales de cada clase (630 W ≈ 2.38 × 1.13 m = 2.70 m²) y muestra el área de techo con un 20 % de margen.
 
 ### Novedades
 
-- **Panel de 630 W** (N-type bifacial, 2382 × 1134 mm) en la lista.
+- **Panel de 630 W** (N-type bifacial, 2382 × 1134 mm).
 - **Tecnología del panel**: monofacial o bifacial (+3 %, +7 % o +10 % según el montaje).
-- **Baterías rack LFP de 51.2 V** (100, 200 y 314 Ah), las más usadas hoy con inversores híbridos. Solo aparecen con Litio.
-- **Demanda pico (kW)**: el inversor se dimensiona también por la carga máxima × 1.25 (arranque de motores), no solo por el tamaño del array.
-- **Relación DC/AC** en el inversor, y en On-Grid una alternativa de inversor con DC/AC 1.2.
-- **Recomendaciones de instalación** según el diseño:
-  - corriente de los paneles de ≥ 580 W (Isc 14–18 A) frente al límite por entrada MPPT del inversor;
-  - manipulación y fijación de módulos grandes;
-  - tensión de banco recomendada según los kWp;
-  - demasiadas baterías en paralelo.
-- **Notas técnicas actualizadas**: paneles N-type TOPCon/HJT, relación DC/AC, apagado rápido (NEC 690.12) y comunicación BMS–inversor.
+- **Baterías rack LFP de 51.2 V** (100, 200 y 314 Ah). Solo aparecen con Litio.
+- **Demanda pico (kW)**: el inversor se dimensiona también por la carga máxima × 1.25.
+- **Relación DC/AC** en el inversor, y en On-Grid una alternativa con DC/AC 1.2.
+- **Recomendaciones de instalación** según el diseño (corriente de paneles ≥ 580 W frente al MPPT, módulos grandes, tensión de banco, baterías en paralelo).
+- **Notas técnicas actualizadas**: paneles N-type TOPCon/HJT, DC/AC, apagado rápido (NEC 690.12), comunicación BMS–inversor.
 
-## Publicar
+---
 
-- **Instalación directa (APK)**: el APK 1.1 se firmó con la misma llave que el 1.0 (`solafvpro`), así que se instala encima y conserva los datos. Mantiene `versionName 1.0` y `versionCode 100`, porque esos valores van dentro del manifiesto compilado.
-- **Google Play**: sube este `index.html` a WebIntoApp y genera allí la versión 1.1, con un `versionCode` mayor que 100.
+## Para quien programe
 
-La llave (`my-release-key.jks`) y su contraseña no se guardan en este repositorio.
+- `www/index.html`: la app completa (HTML, CSS y JavaScript, con jsPDF incluido). Se prueba abriéndolo en Chrome.
+- Empaquetado con Capacitor 8 (`capacitor.config.json`, id `com.rjrm.solafvpro`). Plugins `@capacitor/filesystem` y `@capacitor/share` para el PDF.
+- `scripts/iconos.py` (necesita Pillow) genera el ícono y la pantalla de inicio desde `www/img/logo.png`; el original vectorial está en `scripts/logo.svg`.
+- `scripts/firma.py` firma siempre con `firma/debug.keystore`; `scripts/version.py` pone la versión de `package.json` en el APK.
+- `.github/workflows/apk-solar.yml` arma el APK en GitHub y lo publica en la versión `apk-solar`.
+- En una computadora (Node 22, JDK 21 y Android Studio):
+
+  ```
+  cd sola-fv-pro
+  npm install
+  npm run android      # crea android/, pone ícono, firma y versión, y copia la app
+  npx cap open android # Android Studio: Build → Build APK(s)
+  ```
